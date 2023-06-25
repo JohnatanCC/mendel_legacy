@@ -1,0 +1,186 @@
+.anim-long-entrance  {
+    animation-duration: 1s;
+    animation-name: entrance;
+    animation-iteration-count: initial;
+}
+.anim-entrance  {
+    animation-duration: 0.4s;
+    animation-name: entrance;
+    animation-iteration-count: initial;
+}
+
+.anim-greenShine {
+    animation-duration: 2s;
+    animation-name: greenShine;
+    animation-iteration-count: infinite;
+}
+
+.anim-cardSelected {
+    animation-duration: 2s;
+    animation-name: cardSelected;
+    animation-iteration-count: initial; 
+}
+
+.anim-navbarAnimation {
+    animation-duration: .4s;
+    animation-name: navbarAnimation;
+    animation-iteration-count: initial; 
+}
+
+.anim-next {
+    animation-duration: 2s;
+    animation-name: buttonRight;
+    animation-iteration-count: infinite; 
+}
+
+.anim-opacity {
+    animation-duration: 1s;
+    animation-name: opacity;
+    animation-iteration-count: initial; 
+}
+
+.anim-prev {
+    animation-duration: 2s;
+
+    animation-name: buttonLeft;
+    animation-iteration-count: infinite; 
+}
+
+.anim-preload {
+    animation-duration: 3s;
+    animation-name: preload;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    animation-iteration-count: initial; 
+}
+
+
+
+@keyframes rotation {
+
+    from {
+      transform: rotate(0deg);
+
+    }
+
+    to {
+      transform: rotate(360deg);
+  
+    }
+  }
+  
+  .rotate {
+    animation-name: rotation;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+
+
+@keyframes preload {
+    0% {
+        top: 0;
+    }
+
+
+    50% {
+        top: 0;
+
+    }
+
+
+   
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    50% {
+        transform: scaleX(1);
+    }
+  
+    100% {
+        opacity: 1;
+        
+    }
+
+}
+
+@keyframes buttonRight {
+    0% {
+       transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes buttonLeft {
+    0% {
+       transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes navbarAnimation {
+    0% {
+        width: 50px;
+    }
+}
+
+
+
+@keyframes cardSelected {
+    0%{
+        transform: scale(1.1);
+    }
+
+    50% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+
+
+
+
+}
+
+@keyframes greenShine {
+    0% {
+        box-shadow: 0 0 10px var(--green);
+    }
+
+    50% {
+        box-shadow:  0 0 20px var(--dark-green);
+    }
+
+    100% {
+        box-shadow: 0 0 10px var(--green);
+    }
+}
+
+@keyframes entrance {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}

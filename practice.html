@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Practice</title>
+  <link rel="shortcut icon" href="Assets/icons/system-icon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="Assets/css/anim.css" />
+  <link rel="stylesheet" href="Assets/css/class.css" />
+  <link rel="stylesheet" href="Assets/css/style.css" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Tauri&display=swap');
+  </style>
+
+  </style>
+</head>
+
+<body class="bg-practice">
+
+  <div class="preload-practice flex-column anim-preload">
+
+    <img src="Assets/imgs/preload-pratica.jpg" alt="Logo">
+
+  </div>
+
+  <div class="checkbox-wrapper-54">
+    <label class="switch">
+      <input id="darkmodePractice" type="checkbox">
+      <span class="slider"></span>
+    </label>
+  </div>
+  <main class="anim-long-entrance container">
+    <div class="container-nav">
+      <nav class="navbar  navbar-expand-lg">
+        <div class="container-fluid">
+          <div class="nav-icon">
+            <div class="navbar-toggler-m">
+             <img src="Assets/icons/system-icon.png" alt="">
+            </div>
+          </div>
+
+          <div class="container">
+            <div id="collapse-m" class="justify-content-center d-block">
+              <ul class="nav-buttons">
+                <li>
+                  <a href="home.html"><button type="reset">home</button></a>
+                </li>
+                <li>
+                  <a href="theory.html"><button id="practice" type="button">Teoria</button></a>
+                </li>
+                <li>
+                  <button style="filter: grayscale(1)" id="quest" type="button">
+                    Exercícios
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="d-centered">
+      <div class="selection">
+        <h1>Seleção inicial</h1>
+        <h2 class="title-bar ">Organismo</h2>
+        <div class="selection-area p-20">
+
+          <form id="formularioOrganismo" method="post">
+            <div class="d-centered">
+              <div class="custom-radio">
+                <div class="row justify-center">
+
+
+                  <div class="p-10 interaction">
+
+                    <div class="tex-center gap-10 d-centered flex-row">
+                      <img src="Assets/icons/plant-icon-5.png" width="50px">
+                      <h2 style="color: #6DB47C;">Plantas</h2>
+                    </div>
+                    <div class="d-flex flex-column">
+                    <input type="radio" id="organismo" name="organismo" value="ervilha" required>
+                    <label for="organismo">Ervilha</label>
+                  </div>
+
+                  </div>
+
+                  <!--NÃO IMPLEMENTADO-->
+
+              
+
+                  <div class="p-10 interaction">
+                    <div class="tex-center gap-10 d-centered flex-row">
+                      <img src="Assets/icons/people-icon-1.png" width="50px">
+                      <h2 style="color: #6DB47C;">Humanos</h2>
+                    </div>
+                    <div class="d-flex flex-column">
+                    <input type="radio" id="organismo" name="organismo" value="pessoas" required>
+                    <label class="notyetimplemented " for="organismo">Pessoa</label>
+                    </div>
+                  </div>
+
+                  <div class="p-10 interaction">
+                    <div class="tex-center  gap-10 d-centered flex-row">
+                      <img src="Assets/icons/mosquito-icon-3.png" width="50px">
+                      <h2 style="color: #6DB47C;">Insetos</h2>
+                    </div>
+                    <div class="d-flex flex-column">
+                    <input type="radio" id="organismo" name="organismo" value="moscas" required>
+                    <label class="notyetimplemented " for="organismo">Mosca</label>
+                    </div>
+                  </div>
+
+                  <div class="p-10 interaction">
+
+                    <div class="tex-center gap-10 d-centered flex-row">
+                      <img src="Assets/icons/chinchilla-icon-4.png" width="50px">
+                      <h2 style="color: #6DB47C;">Coelhos</h2>
+                    </div>
+                    <div class="d-flex flex-column">
+                    <input type="radio" id="organismo" name="organismo" value="coelhos" required>
+                    <label class="notyetimplemented "  for="organismo">Chinchila</label>
+                    </div>
+                  </div>
+
+
+
+                  <div class="p-10 interaction">
+                    <div class="tex-center gap-10 d-centered flex-row">
+                      <img src="Assets/icons/bird-icon-2.png" width="50px">
+                      <h2 style="color: #6DB47C;">Pássaros</h2>
+                    </div>
+                    <div class="d-flex flex-column">
+                    <input type="radio" id="organismo" name="organismo" value="periquito" required>
+                    <label class="notyetimplemented " for="organismo">Periquito</label>
+                    <input  type="radio" id="organismo" name="organismo" value="periquito" required>
+                   
+                      
+                    
+                    </div>
+                  </div>
+
+                </div>
+                <p class="text-center">Quantas características?</p>
+                <input id="uma" type="radio" name="qtdcaracter" value="uma" required>
+                <label for="uma">Uma característica</label>
+                <input id="duas" type="radio" name="qtdcaracter" value="duas" required>
+                <label for="duas">Duas características</label>
+              </div>
+
+          </form>
+        </div>
+      </div>
+      <button type="button" onclick="qualOrganismo()">Prosseguir</button>
+      <script>
+        function qualOrganismo() {
+          var organismo = document.querySelector('input[name="organismo"]:checked');
+          var qtdcaracter = document.querySelector('input[name="qtdcaracter"]:checked');
+
+          if (!organismo || !qtdcaracter) {
+            alert("Por favor, selecione um organismo e a quantidade de características.");
+            return;
+          }
+
+          // Armazene os valores selecionados nas variáveis
+          var organismoSelecionado = organismo.value;
+          var qtdcaracterSelecionada = qtdcaracter.value;
+
+          // Faça o que você precisa com os valores selecionados
+          console.log("Organismo selecionado:", organismoSelecionado);
+          console.log("Quantidade de características selecionada:", qtdcaracterSelecionada);
+
+
+          if (organismo.value === "ervilha") {
+            if (qtdcaracter.value === "uma") {
+              window.location.href = "./Assets/pages/1caracteristica.html";
+            } else if (qtdcaracter.value === "duas") {
+              window.location.href = "./Assets/pages/2caracteristicas.html";
+            }
+          }
+        }
+      </script>
+    </div>
+    </div>
+
+  </main>
+
+</body>
+
+<script>
+  const bodyEl = document.body;
+  const darkModePracticeBtn = document.querySelector('#darkmodePractice');
+
+  const c = (el) => document.querySelector(el);
+
+
+
+
+  c(".navbar-toggler-m").addEventListener("click", () => {
+    if (c("#collapse-m").classList.contains("d-block")) {
+      c("#collapse-m").classList.add("d-none");
+      c("#collapse-m").classList.remove("d-block");
+
+      c(".navbar").style.width = "50px";
+      // c(".navbar").style.width = "0%";
+    } else {
+      // erro ta nessa primeira linha abaixo
+      c("#collapse-m").classList.remove("d-none");
+      c("#collapse-m").classList.add("d-block");
+
+      c(".navbar").style.width = "100%";
+    }
+  });
+
+
+  if (darkModePracticeBtn) {
+    darkModePracticeBtn.addEventListener('click', () => {
+      if (bodyEl.classList.contains('dark-mode-practice')) {
+        bodyEl.classList.remove('dark-mode-practice');
+
+      } else {
+        bodyEl.classList.add('dark-mode-practice');
+
+      }
+    });
+  }
+
+</script>
+
+<script src="Assets/js/script.js"></script>
+
+</html>

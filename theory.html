@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Quicksand:wght@500&display=swap");
+  </style>
+  <link rel="shortcut icon" href="Assets/icons/system-icon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="Assets/css/anim.css" />
+  <link rel="stylesheet" href="Assets/css/class.css" />
+  <link rel="stylesheet" href="Assets/css/style.css" />
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+  </style>
+
+  <title>Theory of Mendel</title>
+</head>
+
+<body>
+  <div class="checkbox-wrapper-54">
+    <label class="switch">
+      <input id="darkmode" type="checkbox">
+      <span class="slider"></span>
+    </label>
+  </div>
+  <main id="theoryPage" class="anim-long-entrance container">
+    <div class="container-nav">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <div class="nav-icon">
+            <div class="navbar-toggler-m">
+              <img src="Assets/icons/system-icon.png" alt="">
+            </div>
+          </div>
+
+          <div class="container">
+            <div id="collapse-m" class="justify-content-center d-block">
+              <ul class="nav-buttons">
+                <li>
+                  <a href="home.html"><button type="reset">home</button></a>
+                </li>
+             
+                <li>
+                  <a href="practice.html"><button id="practice" type="button">prática</button></a>
+                </li>
+                <li>
+                  <button style="filter: grayscale(1)" id="quest" type="button">
+                    Exercícios
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="slider-container">
+      <div class="slider">
+        <div class="container-content">
+          <article id="activeSlide" class="activeSlide"></article>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+
+  <div class="page-buttons anim-opacity">
+    <button id="prev">
+      <div class="page-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFF" class="bi bi-arrow-left-circle-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+        </svg>
+      </div>
+
+      <p class="text-butao">Anterior</p>
+    </button>
+    <div class="d-flex number-page flex-column">
+      <p class="numero" id="index">1</p>
+      <span class="outline"></span>
+    </div>
+
+
+    <button id="next">
+
+      <p class="text-butao">Próximo</p>
+      <div class="page-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFF" class="bi bi-arrow-right-circle-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+        </svg>
+      </div>
+    </button>
+  </div>
+
+
+
+</body>
+<script>
+
+  const bodyEl = document.body;
+  const darkModeBtn = document.querySelector("#darkmode");
+  const c = (el) => document.querySelector(el);
+
+
+
+
+  c(".navbar-toggler-m").addEventListener("click", () => {
+    if (c("#collapse-m").classList.contains("d-block")) {
+      c("#collapse-m").classList.add("d-none");
+      c("#collapse-m").classList.remove("d-block");
+
+      c(".navbar").style.width = "50px";
+      // c(".navbar").style.width = "0%";
+    } else {
+      // erro ta nessa primeira linha abaixo
+      c("#collapse-m").classList.remove("d-none");
+      c("#collapse-m").classList.add("d-block");
+
+      c(".navbar").style.width = "100%";
+    }
+  });
+
+  if (darkModeBtn) {
+    darkModeBtn.addEventListener("click", () => {
+      if (bodyEl.classList.contains("dark-mode")) {
+        bodyEl.classList.remove("dark-mode");
+     
+      } else {
+        bodyEl.classList.add("dark-mode");
+      
+      }
+    });
+  }
+
+  
+const sliders = [
+  {
+    title: "O que é génetica?",
+    content:
+      "A genética é o estudo da hereditariedade e da variação dos organismos vivos. Ela explora como as características são passadas de uma geração para outra, bem  como as diferenças genéticas podem levar a variações individuais e até mesmo a doenças. A genética também está envolvida em muitas áreas da biologia, incluindo evolução, biotecnologia e medicina. Os genes são a unidade básica da hereditariedade e são compostos de DNA, que contém as instruções para a produção de proteínas. A genética moderna usa ferramentas como sequenciamento de DNA e edição de genes para estudar e manipular o material genético de organismos vivos. ",
+    img: "Assets/imgs/theory/img1.jpg",
+  },
+  {
+    title: "A teoria de mendel",
+    content:
+      "A teoria de Mendel, também conhecida como leis da hereditariedade de Mendel, foi desenvolvida  pelo monge e botânico austríaco Gregor Mendel no século XIX. Ele realizou experimentos com ervilhas e formulou três leis fundamentais da hereditariedade: <br> <br>  1.Lei da Segregação: os dois alelos de um gene segregam-se durante a formação dos gametas, de modo que cada gameta recebe apenas um dos alelos.  <br>   <br>   2.Lei da Dominância: quando dois alelos diferentes estão presentes em um indivíduo, um deles (o alelo dominante) mascara o efeito do outro (o alelo recessivo). <br> <br> 3.Lei da Distribuição Independente: alelos de diferentes genes segregam-se independentemente uns dos outros durante a formação dos gametas, de modo que a presença de um alelo em um gene não afeta a presença de um alelo em outro gene.",
+    img: "Assets/imgs/theory/img3.png",
+  },
+  {
+    title: "Gene,Alelo,Fenótipo e Genótipo",
+    content:
+      "Essas leis explicam como as características são herdadas de uma geração para outra e por que algumas características são mais comuns em uma população do que em outra. Além das leis fundamentais da hereditariedade, a teoria de Mendel também introduziu os conceitos de gene, alelo, fenótipo e genótipo. <br> <br> Gene: é uma unidade hereditária que contém a informação genética para a produção de uma proteína ou outra molécula funcional. <br> <br> Alelo: é uma das diferentes formas de um gene que podem existir em um locus cromossômico específico.<br> <br> Fenótipo: é a aparência física ou características observáveis de um organismo, que são determinadas pela interação entre o genótipo e o ambiente.<br> <br> Genótipo: é a composição genética de um organismo, ou seja, os alelos que estão presentes em seus cromossomos.",
+    img: "Assets/imgs/theory/img4.webp",
+  },
+  {
+    title: "Experimentos com Ervilhas",
+    content:
+      "Gregor Mendel conduziu seus experimentos utilizando ervilhas pelos seguintes motivos: <br> <br>•  Planta de fácil cultivo e desenvolvimento em curto período;<Br>• Produção de muitas sementes;<br>• Rápido ciclo reprodutivo;<br>• Facilidade de controlar a fecundação das plantas; <br>• Capacidade de realizar autofecundação. <br> <br> <br>Os seus experimentos analisaram sete características das ervilhas: cor da flor, posição da flor no caule, cor da semente, textura da semente, forma da vagem, cor da vagem e altura da planta.",
+    img: "Assets/imgs/theory/img2.jpg",
+  },
+];
+
+//current slide
+let i = 0;
+
+//total slides
+let j = sliders.length;
+
+let slideContainer = c("#activeSlide");
+let nextBtn = c("#next");
+let prevBtn = c("#prev");
+
+nextBtn.addEventListener("click", () => {
+  i = (j + i + 1) % j;
+  c("#index").innerHTML = i + 1;
+  displaySlide();
+});
+
+prevBtn.addEventListener("click", () => {
+  i = (j + i - 1) % j;
+  c("#index").innerHTML = i + 1;
+
+  displaySlide();
+});
+
+let displaySlide = () => {
+  slideContainer.innerHTML = `
+  <div class="theory-area">
+        <div class="gap-20 d-centered">
+       <div class="img-fluid">
+          <img src="${sliders[i].img}" alt="image" />
+       </div>
+<div class="">
+<header>
+            <h1>${sliders[i].title}</h1>
+          </header>
+          <p class="text">
+          ${sliders[i].content}
+         </p>
+          
+             </div>
+     </div>
+  `;
+};
+window.onload = displaySlide;
+
+
+</script>
+
+<script src="Assets/js/script.js"></script>
+
+</html>
