@@ -1395,7 +1395,7 @@ input {
 }
 
 .expanded {
-    width: 98% !important;
+    width: 100% !important;
 }
 
 .overlay {
@@ -1489,6 +1489,9 @@ input {
     }
     #tabelaAlelos {
         transform: scale(0.9);
+    }
+    .preload img {
+        max-width: 400px;
     }
 }
 
