@@ -5,163 +5,137 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Practice</title>
-  <link rel="shortcut icon" href="Assets/icons/system-icon.png" type="image/x-icon" />
+  <title>Mendel's Legancy | Prática </title>
+    <!-- Outros Links -->
+  <link rel="shortcut icon"   href="Assets/icons/system-icon.png" type="image/x-icon" />
   <link rel="stylesheet" href="Assets/css/anim.css" />
   <link rel="stylesheet" href="Assets/css/class.css" />
   <link rel="stylesheet" href="Assets/css/style.css" />
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Tauri&display=swap');
-  </style>
-
-  </style>
+  <!-- Estilos de fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&family=Tauri&display=swap" rel="stylesheet" />
 </head>
 
 <body class="bg-practice">
 
-  <div class="preload-practice flex-column anim-preload">
+  <!-- <div class="preload-practice flex-column anim-preload">
 
-    <img src="Assets/imgs/preload-pratica.jpg" alt="Logo">
+    <img src="Assets/imgs/sticker-practice.png" alt="Logo">
 
+  </div> -->
+
+  <div class="menu-expand">
+    <img id="expand-icon" src="Assets/icons/expand-menu-icon.png" alt="Menu expand">
+    Menu
   </div>
 
-  <div class="checkbox-wrapper-54">
-    <label class="switch">
-      <input id="darkmodePractice" type="checkbox">
-      <span class="slider"></span>
-    </label>
-  </div>
-  <main class="anim-long-entrance container">
-    <div class="container-nav">
-      <nav class="navbar  navbar-expand-lg">
-        <div class="container-fluid">
-          <div class="nav-icon">
-            <div class="navbar-toggler-m">
-             <img src="Assets/icons/system-icon.png" alt="">
-            </div>
-          </div>
+  <div class="navigation">
 
-          <div class="container">
-            <div id="collapse-m" class="justify-content-center d-block">
-              <ul class="nav-buttons">
-                <li>
-                  <a href="home.html"><button type="reset">home</button></a>
-                </li>
-                <li>
-                  <a href="theory.html"><button id="practice" type="button">Teoria</button></a>
-                </li>
-                <li>
-                  <button style="filter: grayscale(1)" id="quest" type="button">
-                    Exercícios
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
+    <ul>
+      <li class="list">
+        <a href="index.html">
+          <span class="icon"><img src="Assets/icons/home-icon-navbar.png"/></span>
+          <span class="title">Home</span>
+        </a>
+      </li>
+      <li class="list active">
+        <a class="active-link" href="#">
+          <span class="icon"><img src="Assets/icons/practice-icon-navbar.png"/></span>
+          <span class="title">Prática</span>
+        </a>
+      </li>
+      <li class="list ">
+        <a  href="theory.html">
+          <span class="icon"><img src="Assets/icons/theory-icon-navbar.png"/></span>
+          <span class="title">Teoria</span>
+        </a>
+      </li>
+      <li class="list disabled">
+        <a href="#">
+          <span class="icon"><img src="Assets/icons/lab-icon-navbar.png"/></span>
+          <span class="title">Laboratorio</span>
+        </a>
+      </li>
+      <li class="list disabled">
+        <a href="#">
+          <span class="icon"><img src="Assets/icons/questions-icon-navbar.png"/></span>
+          <span class="title">Questões</span>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <div class="message-box" id="message-box">
+      <div id="close-message">
+        <img src="Assets/icons/close-icon.png" alt="Close button">
+      </div>
+      <p>Por favor, selecione um organismo e a quantidade de características.</p>
     </div>
+  </div>
+
+  <!-- Sounds -->
+
+  <audio id="click-sound" src="Assets/sounds/click-sound.wav"></audio>
+  <audio id="error-sound" src="Assets/sounds/error-sound.wav"></audio>
+
+  <main class="anim-long-entrance container d-centered h-100vh">
+  
 
     <div class="d-centered">
       <div class="selection">
         <h1>Seleção inicial</h1>
-        <h2 class="title-bar ">Organismo</h2>
-        <div class="selection-area p-20">
-
+   
+        <div class="selection-area">
+          <h2 class="text-center">Organismo</h2>
           <form id="formularioOrganismo" method="post">
             <div class="d-centered">
               <div class="custom-radio">
                 <div class="row justify-center">
 
 
-                  <div class="p-10 interaction">
+                  <div class="w-100 interaction">
 
                     <div class="tex-center gap-10 d-centered flex-row">
                       <img src="Assets/icons/plant-icon-5.png" width="50px">
                       <h2 style="color: #6DB47C;">Plantas</h2>
                     </div>
                     <div class="d-flex flex-column">
-                    <input type="radio" id="organismo" name="organismo" value="ervilha" required>
+                    <input class="playable-sound" type="radio" id="organismo" name="organismo" value="ervilha" required>
                     <label for="organismo">Ervilha</label>
                   </div>
 
                   </div>
-
-                  <!--NÃO IMPLEMENTADO-->
-
-              
-
-                  <div class="p-10 interaction">
-                    <div class="tex-center gap-10 d-centered flex-row">
-                      <img src="Assets/icons/people-icon-1.png" width="50px">
-                      <h2 style="color: #6DB47C;">Humanos</h2>
-                    </div>
-                    <div class="d-flex flex-column">
-                    <input type="radio" id="organismo" name="organismo" value="pessoas" required>
-                    <label class="notyetimplemented " for="organismo">Pessoa</label>
-                    </div>
-                  </div>
-
-                  <div class="p-10 interaction">
-                    <div class="tex-center  gap-10 d-centered flex-row">
-                      <img src="Assets/icons/mosquito-icon-3.png" width="50px">
-                      <h2 style="color: #6DB47C;">Insetos</h2>
-                    </div>
-                    <div class="d-flex flex-column">
-                    <input type="radio" id="organismo" name="organismo" value="moscas" required>
-                    <label class="notyetimplemented " for="organismo">Mosca</label>
-                    </div>
-                  </div>
-
-                  <div class="p-10 interaction">
-
-                    <div class="tex-center gap-10 d-centered flex-row">
-                      <img src="Assets/icons/chinchilla-icon-4.png" width="50px">
-                      <h2 style="color: #6DB47C;">Coelhos</h2>
-                    </div>
-                    <div class="d-flex flex-column">
-                    <input type="radio" id="organismo" name="organismo" value="coelhos" required>
-                    <label class="notyetimplemented "  for="organismo">Chinchila</label>
-                    </div>
-                  </div>
-
-
-
-                  <div class="p-10 interaction">
-                    <div class="tex-center gap-10 d-centered flex-row">
-                      <img src="Assets/icons/bird-icon-2.png" width="50px">
-                      <h2 style="color: #6DB47C;">Pássaros</h2>
-                    </div>
-                    <div class="d-flex flex-column">
-                    <input type="radio" id="organismo" name="organismo" value="periquito" required>
-                    <label class="notyetimplemented " for="organismo">Periquito</label>
-                    <input  type="radio" id="organismo" name="organismo" value="periquito" required>
-                   
-                      
-                    
-                    </div>
-                  </div>
-
                 </div>
-                <p class="text-center">Quantas características?</p>
-                <input id="uma" type="radio" name="qtdcaracter" value="uma" required>
+                <h2 class="text-center">Quantidade de características</h2>
+                <input id="uma" class="playable-sound" type="radio" name="qtdcaracter" value="uma" required>
                 <label for="uma">Uma característica</label>
-                <input id="duas" type="radio" name="qtdcaracter" value="duas" required>
+                <input id="duas" class="playable-sound" type="radio" name="qtdcaracter" value="duas" required>
                 <label for="duas">Duas características</label>
               </div>
 
           </form>
         </div>
       </div>
-      <button type="button" onclick="qualOrganismo()">Prosseguir</button>
+
+      
+        <button type="button" onclick="qualOrganismo()">
+          Prosseguir
+        </button>
+ 
+
+    
       <script>
+          const errorSound = document.getElementById('error-sound');
         function qualOrganismo() {
+         
+        
           var organismo = document.querySelector('input[name="organismo"]:checked');
           var qtdcaracter = document.querySelector('input[name="qtdcaracter"]:checked');
 
           if (!organismo || !qtdcaracter) {
-            alert("Por favor, selecione um organismo e a quantidade de características.");
+            errorSound.play();
+            overlay.style.transform = 'scale(1)';
             return;
           }
 
@@ -189,47 +163,8 @@
   </main>
 
 </body>
+<script async src="Assets/js/actions.js"></script>
+<script async src="Assets/js/script.js"></script>
 
-<script>
-  const bodyEl = document.body;
-  const darkModePracticeBtn = document.querySelector('#darkmodePractice');
-
-  const c = (el) => document.querySelector(el);
-
-
-
-
-  c(".navbar-toggler-m").addEventListener("click", () => {
-    if (c("#collapse-m").classList.contains("d-block")) {
-      c("#collapse-m").classList.add("d-none");
-      c("#collapse-m").classList.remove("d-block");
-
-      c(".navbar").style.width = "50px";
-      // c(".navbar").style.width = "0%";
-    } else {
-      // erro ta nessa primeira linha abaixo
-      c("#collapse-m").classList.remove("d-none");
-      c("#collapse-m").classList.add("d-block");
-
-      c(".navbar").style.width = "100%";
-    }
-  });
-
-
-  if (darkModePracticeBtn) {
-    darkModePracticeBtn.addEventListener('click', () => {
-      if (bodyEl.classList.contains('dark-mode-practice')) {
-        bodyEl.classList.remove('dark-mode-practice');
-
-      } else {
-        bodyEl.classList.add('dark-mode-practice');
-
-      }
-    });
-  }
-
-</script>
-
-<script src="Assets/js/script.js"></script>
 
 </html>

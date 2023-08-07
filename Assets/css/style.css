@@ -2,10 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Rubik, sans-serif;
     /* color: #333*/
 
 }
+
+
+
+section {
+    margin: 50px 0;
+}
+
 
 /*Preload*/
 
@@ -20,13 +27,14 @@
     position: fixed;
     top: -5000px;
     left: 0;
-    z-index: 98;
+    z-index: 1000;
     width: 100%;
     height: 100%;
     background-color: #ffffff;
 }
 
-.preload-practice {
+.preload-practice,
+.preload-theory {
 
     display: flex;
     justify-content: center;
@@ -34,10 +42,10 @@
     position: fixed;
     top: -5000px;
     left: 0;
-    z-index: 98;
+    z-index: 100;
     width: 100%;
     height: 100%;
-    background-color: #9cf2ff;
+    background-color: #ffffff;
 
 }
 
@@ -60,18 +68,6 @@
 }
 
 
-
-
-
-
-.dark-mode-button {
-    top: 20px;
-    right: 20px;
-    position: fixed;
-
-    z-index: 99;
-}
-
 body {
     background-attachment: fixed;
     background-image: url("../imgs/light_background.jpg");
@@ -79,6 +75,34 @@ body {
     background-size: cover;
     overflow-x: hidden;
     transition: all ease 0.5s;
+
+}
+
+body::-webkit-scrollbar {
+    width: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--green);
+    border: var(--dark-green) 4px solid;
+}
+
+/* Define a largura e a cor da scrollbar no Firefox */
+
+body::-moz-scrollbar {
+    width: 20px;
+}
+
+body::-moz-scrollbar-thumb {
+    background-color: var(--green);
+}
+
+.logotipo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
 
 .bg-practice {
@@ -141,9 +165,8 @@ h6 {
 
 
 .title-bar {
-
-    border: 4px solid;
-    border-color: transparent transparent var(--green) transparent;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--dark-green);
     width: 100%;
     text-align: center;
 }
@@ -223,6 +246,9 @@ h6 {
 .theory-area img {
     width: 500px;
     border: 4px solid var(--dark-green);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    background: #FFF;
 }
 
 .theory-area ul li {
@@ -241,8 +267,8 @@ h6 {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background-color: #ffffff5b;
-    margin: 20px 0;
+    background-color: var(--background-light);
+    margin: 20px 0 40px 0;
     padding: 10px;
     border: var(--dark-green) 2px solid;
     border-radius: 10px 10px 5px 5px;
@@ -267,34 +293,12 @@ h6 {
     background-color: #6db47c6d;
 }
 
-
-
-body::-webkit-scrollbar {
-    width: 20px;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #6db47c;
-    border: #388c5a 4px solid;
-}
-
-/* Define a largura e a cor da scrollbar no Firefox */
-
-body::-moz-scrollbar {
-    width: 20px;
-}
-
-body::-moz-scrollbar-thumb {
-    background-color: #6db47c;
-}
-
 .page-buttons:hover {
     opacity: 1;
 }
 
 .page-buttons {
-    margin: 20px 0;
-    display: flex;
+    margin-bottom: 10px;
     position: fixed;
     bottom: 0;
     padding: 5px;
@@ -358,12 +362,12 @@ body::-moz-scrollbar-thumb {
 .number-page>p {
     color: #FFF;
     z-index: 1;
-    width: 40px;
+    width: 30px;
     text-align: center;
     font-weight: bold;
     font-size: 24px;
     background-color: var(--green);
-    border-radius: 50px;
+    border-radius: 50%;
     border: var(--dark-green) 2px solid;
 
 }
@@ -375,7 +379,7 @@ body::-moz-scrollbar-thumb {
 
 }
 
-.text-butao {
+.text-button {
     color: #fff;
     margin: 14px;
 
@@ -404,29 +408,31 @@ body::-moz-scrollbar-thumb {
     text-align: center;
     font-weight: bold;
     text-shadow: 2px 2px 1px var(--dark-green);
-    background-image: url('../imgs/default-bg.png');
-    background-position: center;
-    background-size: contain;
-    background-position: fixed;
     font-family: 'Tauri', sans-serif;
 }
 
 .selection button:hover {
-    background-color: var(--light);
-    color: #333;
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.selection button::before {
+    content: '⇰';
+    position: absolute;
+    font-size: 18px;
+
+    right: 70px;
+    color: var(--green);
 }
 
 .selection button {
-    background-color: var(--green);
-    color: var(--light);
-    border-top: 4px solid var(--dark-green);
-    border-right: 4px solid var(--dark-green);
-    border-left: 4px solid var(--dark-green);
-    border-bottom: none;
-    cursor: pointer;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+
+    color: var(--green);
+    border: none;
+    background: none;
     padding: 10px;
+
+    cursor: pointer;
     font-size: 18px;
     font-weight: bold;
     margin: 0 10px;
@@ -481,9 +487,6 @@ body::-moz-scrollbar-thumb {
 
 .calc-features h1 {
     background-color: var(--green);
-    background-image: url('../imgs/default-bg.png');
-    background-position: center;
-    background-size: contain;
     margin: 0 0 10px 0;
     padding: 10px;
     color: var(--light);
@@ -568,46 +571,63 @@ table th {
 
 }
 
-
-
 .especial-button {
-    border: 4px solid var(--dark-green);
-    background-color: var(--green);
-    padding: 10px;
-    font-size: 18px;
-
-
-    color: var(--light);
-    width: 100%;
-    font-weight: bold;
-    border-radius: 10px;
     cursor: pointer;
-    transition: all ease 0.4s;
+    background-color: #ecebeb;
+    font-weight: bold;
     text-transform: uppercase;
+    font-size: large;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    border: solid var(--dark-green) 2px;
+    color: #333;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+    background: transparent;
+    box-shadow: 0 5px 0 var(--dark-green);
 }
 
+.especial-button:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--green);
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+}
 
-.especial-button:active {
-    opacity: 0.4;
-    transition: 0s;
+.especial-button:hover:before {
+    width: 100%;
 }
 
 .especial-button:hover {
-    background: #5da26b;
-    box-shadow: #388c5aae 0 0 0px 5px;
+    color: #f1f1f1;
+    border-color: var(--green);
 }
+
+.especial-button:active:before {
+    opacity: 0.6;
+}
+
+.especial-button:active {
+    opacity: 0.6;
+}
+
+.especial-button:focus {
+    outline: none
+}
+
 
 .result-area {
     display: flex;
 }
 
-.checkbox-wrapper-54 {
-    top: 20px;
-    right: 60px;
-    position: fixed;
-    z-index: 99;
 
-}
 
 .checkbox-wrapper-54 input[type="checkbox"] {
     visibility: hidden;
@@ -640,7 +660,7 @@ table th {
     cursor: pointer;
     top: 0;
     left: 0;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
     right: 0;
     bottom: 0;
     width: 100px;
@@ -823,20 +843,26 @@ table th {
     padding: 5px;
 }
 
-.custom-radio input {
-    display: none;
+
+.vizu2 {
+    display: block !important;
 }
 
 input {
     padding: 10px;
     font-size: larger;
     font-weight: bold;
+
     width: 150px;
     border: 2px solid #388C5A;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     text-align: center;
 
+}
+
+.custom-radio input {
+    display: none;
 }
 
 .custom-radio {
@@ -862,20 +888,76 @@ input {
     padding: 10px;
     cursor: pointer;
     border: var(--dark-green) 2px solid;
-    border-radius: 50px;
+    border-radius: 10px;
     text-align: center;
     width: 100%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 30px -12px inset, rgba(0, 0, 0, 0.3) 0px 9px 16px -18px inset;
-    transform: .4s;
+
+    transition: all ease .4s;
+    box-shadow: 0 5px 0px var(--dark-green);
 }
 
 .custom-radio label:hover {
-
-
-
-    box-shadow: var(--dark-green) 0px 1px 4px, var(--green) 0px 0px 0px 3px;
-    border-radius: 50px;
+    position: relative;
 }
+
+.custom-radio label:hover::before {
+    content: "»";
+    position: absolute;
+}
+
+
+.custom-radio label:hover::after {
+    content: "«";
+    position: absolute;
+
+}
+
+.custom-radio label:hover::before {
+    top: 50%;
+    left: -15px;
+    transform: translate(-50%, -50%);
+    color: var(--green);
+    font-size: 2em;
+}
+
+.custom-radio label:hover::after {
+    top: 50%;
+    right: -35px;
+    transform: translate(-50%, -50%);
+    color: var(--green);
+    font-size: 2em;
+}
+
+.custom-radio input:disabled+label:hover::before {
+    content: "⤫";
+    position: absolute;
+}
+
+
+.custom-radio input:disabled+label:hover::after {
+    content: "⤫";
+    position: absolute;
+
+}
+
+.custom-radio input:disabled+label:hover::before {
+    top: 50%;
+    left: -15px;
+    transform: translate(-50%, -50%);
+    color: #d03333ba;
+    font-size: 2em;
+}
+
+.custom-radio input:disabled+label:hover::after {
+    top: 50%;
+    right: -40px;
+    transform: translate(-50%, -50%);
+    color: #d03333ba;
+    font-size: 2em;
+}
+
+
+
 
 
 
@@ -886,6 +968,9 @@ input {
     background-color: var(--green);
     color: #FFF;
 
+    box-shadow: 0 2px 0px var(--dark-green);
+    transform: translateY(5px);
+
 
 
 }
@@ -893,9 +978,10 @@ input {
 
 .notyetimplemented {
     background-color: #d03333ba;
-    ;
     border: 2px solid #6d2222ba !important;
     color: #FFF;
+    transform: translateY(5px);
+    box-shadow: 0 2px 0px var(#6d2222ba);
 }
 
 
@@ -903,8 +989,10 @@ input {
     background-color: #d03333ba;
     ;
     color: #FFF;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 30px -12px inset, rgba(0, 0, 0, 0.3) 0px 9px 16px -18px inset;
+
     border: 2px solid #6d2222ba;
+    box-shadow: 0 2px 0px #6d2222ba;
+    transform: translateY(5px);
 
 }
 
@@ -929,36 +1017,6 @@ input {
     text-align: center;
     font-size: 18px;
 }
-
-@media (max-width:1200px) {
-    .container-box {
-        flex-direction: column;
-    }
-
-    .d-centered {
-        flex-direction: column;
-    }
-}
-
-
-@keyframes scale {
-
-    0%,
-    100% {
-        transform: scale(0.0);
-    }
-
-    7%,
-    90% {
-        transform: scale(0.4);
-    }
-
-    50% {
-        transform: scale(1);
-    }
-}
-
-
 
 
 
@@ -1102,7 +1160,7 @@ input {
 }
 
 .carousel-caption {
-    background: linear-gradient(90deg, transparent, #aaaaaa4f, transparent);
+    background: linear-gradient(90deg, transparent, #d3d3d34f, transparent);
     padding: 10px;
     position: initial;
 }
@@ -1114,6 +1172,7 @@ input {
 .carousel-item img {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     height: 250px;
+    max-width: 100%;
     transition: all ease .5s;
     border-radius: 10px;
 
@@ -1132,18 +1191,7 @@ input {
     overflow: hidden;
 }
 
-.interaction {
-    transition: all ease .2s;
-}
 
-.interaction:hover {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background: linear-gradient(180deg, transparent, #a1ceaa64);
-    transform: scale(1.05);
-
-
-}
 
 .version:hover {
     opacity: 1;
@@ -1162,4 +1210,306 @@ input {
     justify-content: space-around;
     color: #5da26b;
     background-color: #FFF;
-    box-shadow: -5px 5px 0 0 rgba(65,117,5,1), -10px 10px 0 0 rgba(65,117,5,0.6), -15px 15px 0 0 rgba(65,117,5,0.4), -20px 20px 0 0 rgba(65,117,5,0.2), -25px 25px 0 0 rgba(65,117,5,0.1);
+    box-shadow: -5px 5px 0 0 rgba(65, 117, 5, 1), -10px 10px 0 0 rgba(65, 117, 5, 0.6), -15px 15px 0 0 rgba(65, 117, 5, 0.4), -20px 20px 0 0 rgba(65, 117, 5, 0.2), -25px 25px 0 0 rgba(65, 117, 5, 0.1);
+}
+
+
+
+.navigation {
+    position: fixed;
+    width: 90px;
+    height: 100vh;
+    transition: all ease 0.4s;
+    left: 0;
+
+    top: 0;
+    background-color: var(--light);
+    border-right:var(--green) 10px solid;
+    overflow-x: hidden;
+
+    z-index: 98;
+    box-shadow: rgba(143, 191, 136, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+
+}
+
+.navigation ul {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 80px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.navigation:hover {
+    width: 220px;
+}
+
+
+.navigation ul li a:hover {
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: var(--green);
+}
+
+.navigation ul li a {
+    position: relative;
+    width: 100%;
+    display: block;
+    display: flex;
+    font-size: 18px;
+    text-decoration: none;
+    color: initial;
+    font-weight: bold;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.navigation ul li a .icon img {
+    position: relative;
+    width: 50px;
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #FFF;
+    z-index: 1;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    padding-left: 10px;
+    line-height: 70px;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.navigation ul li.active {
+    background-color: var(--green);
+}
+
+.navigation ul li a.active-link {
+    color: var(--light);
+}
+
+.navigation ul li.active a::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    width: 30px;
+    height: 30px;
+    right: 0;
+
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 var(--green);
+}
+
+.navigation ul li.active a::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    width: 30px;
+    height: 30px;
+    right: 0;
+
+    border-radius: 50%;
+    box-shadow: 15px -15px 0 var(--green);
+}
+
+.content img {
+    filter: drop-shadow(15px 12px 5px #aba3aa89);
+}
+
+
+.link {
+    color: var(--dark-green);
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.link:hover {
+    text-decoration: underline !important;
+  
+}
+
+
+.menu-expand:hover {
+    opacity: 1;
+    background-color: #ecebeb;
+}
+
+.menu-expand {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 10px;
+    padding: 10px 10px 10px 0px;
+    position: fixed;
+    opacity: 0.8;
+    background: var(--light);
+    z-index: 99;
+    transition: all ease-in-out 0.4s;
+    color: var(--green);
+    font-size: larger;
+    font-weight: bold;
+    border-right: 4px solid var(--dark-green);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+#expand-icon {
+    transition: all ease-in .3s;
+}
+
+.menu-expand img {
+    max-width: 50px;
+    padding: 5px;
+    transition: all ease 0.4s;
+    cursor: pointer;
+}
+
+.menu-expand img:active {
+    filter: grayscale(1);
+    transition: 0s;
+}
+
+.menu-expand:hover {
+    transform: scale(1.1);
+
+}
+
+.expanded {
+    width: 98% !important;
+}
+
+.overlay {
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(0);
+    align-items: center;
+    transition: all ease 0.2s;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Estilos para a caixa de mensagem */
+.message-box {
+    max-width: 500px;
+    background-color: #fa6450;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    box-shadow: 0 0 0 1px #fa6450;
+    display: flex;
+    align-items: center;
+}
+
+.message-box p {
+    padding: 20px 20px 20px 5px;
+    background-color: var(--light);
+    border-radius: 5px;
+}
+
+#close-message {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    align-items: center;
+    background: #fa6450;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+}
+
+#close-message img {
+    width: 60px;
+}
+
+
+@media (max-width:1200px) {
+    .container-box {
+        flex-direction: column;
+    }
+
+    .d-centered {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:600px) {
+    .menu-expand {
+        display: flex;
+    }
+    .navigation {
+        width: 0px;
+        opacity: 0;
+    }
+    .ml-default {
+        margin: 0;
+    }
+    .theory-area img {
+        width: 350px;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .calc-features {
+        width: 100%;
+    }
+    .check-area #espacoDisplay{
+        flex-direction: column !important;
+    }
+    .ml-default {
+        margin: 0;
+    }
+    #tabelaAlelos {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width:800px) {
+    .col-6 {
+        width: 100%;
+    }
+
+    .page-buttons>button {
+        font-size: 0;
+    }
+
+    .text-button {
+        margin: 0;
+    }
+
+    .page-buttons {
+        justify-content: center;
+        gap: 60px;
+    }
+}
+
+
+

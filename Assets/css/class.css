@@ -222,46 +222,7 @@ svg {
     justify-content: space-between;
 }
 
-.navbar {
-    filter: drop-shadow(0px 5px 1px #388c5a7f);
-    border-radius: 100px;
-    margin: 16px 0;
-    background: var(--green);
-    background-image: url('../imgs/default-bg.png');
-    background-position: center;
-    background-size: 25%;
-    padding: 5px;
-    border-right: var(--dark-green) 4px solid;
-    border-top: var(--dark-green) 4px solid;
-    border-bottom: var(--dark-green) 4px solid;
-}
 
-.nav-buttons {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    gap: 10px;
-    padding-right: 20px;
-    padding-left: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-
-}
-
-.menu-expand {
-    background: #6DB47C;
-    border-radius: 0 0 15px 15px;
-    border-right: #388C5A 4px solid;
-    border-left: #388C5A 4px solid;
-    border-top: transparent;
-    border-bottom: #388C5A 4px solid;
-    flex-wrap: wrap;
-    padding: 20px;
-
-    flex-direction: column;
-}
 
 .gap-10 {
     gap: 10px;
@@ -323,7 +284,7 @@ svg {
     font-weight: bold;
     color: var(--dark-green);
     font-size: 18px;
-    background-color: #5ca26b6e;
+    background-color: #cff4d26d;
     padding: 5px;
     margin: 10px 0;
 }
@@ -398,13 +359,27 @@ svg {
     width: 100%;
 }
 
+.ml-default {
+    margin-left: 20px;
+}
+
+.disabled {
+    filter:grayscale(1);
+}
+
+.cc-default {
+    color: var(--green);
+    font-weight: bold;
+
+}
 
 
 :root {
-    --green: #6DB47C;
-    --dark-green: #388C5A;
-    --light-green: #77C06A;
+    --green: #56c696;
+    --dark-green: #3fa77a;
+    --light-green: #7be495;
     --light: #FFF;
+    --background-light:  #f4f5f4;
     --title: 'Merriweather', serif;
     --rounded-sm: 10px;
     --rounded-lg: 50px;

@@ -1,0 +1,43 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cta {
+      display: flex;
+      padding: 10px 45px;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      color: white;
+      background: #56c596;
+      transition: 1s;
+      display: flex;
+      align-items: center;
+      box-shadow: 6px 6px 0 #2d7455;
+      transform: skewX(-15deg);
+  }
+  
+  .cta:focus {
+     outline: none; 
+  }
+  
+  .cta:hover {
+      transition: 0.5s;
+      box-shadow: 10px 10px 0 #FBC638;
+      color: #FFF;
+      transform: scale(1.1);
+
+  }
+
+  
+  
+
+
+
+  :root {
+    --bg: #f3f8fa;
+    --white: #fff;
+    --black: #282936;
+  }
+  

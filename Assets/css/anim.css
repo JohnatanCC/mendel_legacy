@@ -49,11 +49,31 @@
 .anim-preload {
     animation-duration: 3s;
     animation-name: preload;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     animation-iteration-count: initial; 
 }
 
 
+.anim-floating {
+    animation-duration: 4s;
+    animation-name: floating;
+    animation-iteration-count: infinite; 
+}
+
+
+
+.rotate {
+    animation-name: rotation;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+@keyframes floating {
+ 
+    50% {
+        transform: translateY(5px);
+    }
+}
 
 @keyframes rotation {
 
@@ -68,12 +88,7 @@
     }
   }
   
-  .rotate {
-    animation-name: rotation;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
+
 
 
 
