@@ -15,7 +15,8 @@
       display: flex;
       align-items: center;
       box-shadow: 6px 6px 0 #2d7455;
-      transform: skewX(-15deg);
+      border-radius: 5px;
+   
   }
   
   .cta:focus {
@@ -24,9 +25,9 @@
   
   .cta:hover {
       transition: 0.5s;
-      box-shadow: 10px 10px 0 #FBC638;
+      box-shadow: -6px -6px 0 #FBC638;
       color: #FFF;
-      transform: scale(1.1);
+      transform: translateY(5px);
 
   }
 
