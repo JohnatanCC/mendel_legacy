@@ -1516,8 +1516,9 @@ footer .placeholder {
         flex-direction: column;
     }
 
-    .d-centered {
+    .d-centered , .d-centered-no-align {
         flex-direction: column;
+        align-items: center;
     }
 }
 
