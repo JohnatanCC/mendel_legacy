@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mendel | Duas características</title>
-    <link rel="shortcut icon" href="../Assets/icons/system-icon.png" type="image/x-icon" />
+    <link rel="shortcut icon"   href="../Assets/icons/system-icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../Assets/css/anim.css" />
     <link rel="stylesheet" href="../Assets/css/class.css" />
     <link rel="stylesheet" href="../Assets/css/style.css" />
@@ -16,6 +16,10 @@
 </head>
 
 <body class=" bg-practice ml-default">
+    <div class="play-buttom">
+        <img src="../Assets/icons/play-icon.png" id="playMusic" alt="">
+      </div>
+    <div id="volumeDisplay" class="volume-display">Volume: 100%</div>
 
     <div class="menu-expand">
         <img id="expand-icon" src="../Assets/icons/expand-menu-icon.png" alt="Menu expand">
@@ -50,7 +54,7 @@
             <li class="list disabled">
                 <a href="#">
                     <span class="icon"><img src="../Assets/icons/lab-icon-navbar.png" /></span>
-                    <span class="title">Laboratorio</span>
+                    <span class="title">Em breve...</span>
                 </a>
             </li>
             <li class="list disabled">
@@ -63,7 +67,9 @@
     </div>
 
     <!-- Sounds -->
-
+    <audio id="audioElement">
+        <source src="../Assets/sounds/music.mp3" type="audio/mpeg" />
+      </audio>
     <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
     <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
 

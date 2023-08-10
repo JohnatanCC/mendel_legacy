@@ -16,9 +16,16 @@
       align-items: center;
       box-shadow: 6px 6px 0 #2d7455;
       border-radius: 5px;
+      min-width: 250px;
+      text-align: center;
+      justify-content: center;
    
   }
   
+  .text-bold {
+    font-weight: bold;
+  }
+
   .cta:focus {
      outline: none; 
   }

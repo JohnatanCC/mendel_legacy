@@ -22,6 +22,10 @@
 
 <body>
 
+  <div id="volumeDisplay" class="volume-display">Volume: 100%</div>
+  <div class="play-buttom">
+    <img src="Assets/icons/play-icon.png" id="playMusic" alt="">
+  </div>
   <!-- <div class="preload-practice flex-column anim-preload">
 
     <img src="Assets/imgs/sticker-theory.png" alt="Logo">
@@ -56,7 +60,7 @@
       <li class="list disabled">
         <a href="#">
           <span class="icon"><img src="Assets/icons/lab-icon-navbar.png"/></span>
-          <span class="title">Laboratorio</span>
+          <span class="title">Em breve...</span>
         </a>
       </li>
       <li class="list disabled">
@@ -68,6 +72,10 @@
     </ul>
   </div>
 
+  <!-- Sounds -->
+  <audio id="audioElement">
+    <source src="Assets/sounds/music.mp3" type="audio/mpeg" />
+  </audio>
   <audio id="click-sound" src="Assets/sounds/click-sound.wav"></audio>
   <audio id="error-sound" src="Assets/sounds/error-sound.wav"></audio>
 
