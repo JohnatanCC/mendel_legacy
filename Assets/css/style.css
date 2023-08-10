@@ -1387,6 +1387,7 @@ input {
     top: 0;
     left: 0;
     width: 100%;
+    padding: 5px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     transform: scale(0);
@@ -1450,7 +1451,7 @@ input {
 }
 
 .iframe-area iframe {
-    width: 100%;
+    max-width:100% ;
 }
 
 
