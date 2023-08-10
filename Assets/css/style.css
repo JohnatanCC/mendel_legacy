@@ -1450,7 +1450,7 @@ input {
 }
 
 .iframe-area iframe {
-    max-width: 500px;
+    width: 100%;
 }
 
 
@@ -1492,11 +1492,8 @@ input {
         display: flex;
         flex-direction: column;
     }
-    .iframe-area iframe {
-        max-width: 350px;
-    }
     .iframe-area  {
-        max-width: 400px;
+        max-width: 350px;
     }
     .check-area #espacoDisplay{
         flex-direction: column !important;
