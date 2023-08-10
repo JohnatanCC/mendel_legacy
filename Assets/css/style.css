@@ -7,7 +7,9 @@
 
 }
 
-
+main {
+    min-height: 100vh;
+}
 
 section {
     margin: 50px 0;
@@ -75,7 +77,8 @@ body {
     background-size: cover;
     overflow-x: hidden;
     transition: all ease 0.5s;
-    
+
+
 
 }
 
@@ -99,7 +102,7 @@ body::-moz-scrollbar-thumb {
 }
 
 .logotipo {
- max-width: 350px;
+    max-width: 350px;
 }
 
 .bg-practice {
@@ -1207,7 +1210,7 @@ input {
     left: 0;
     top: 0;
     background-color: var(--light);
-    border-right:var(--green) 10px solid;
+    border-right: var(--green) 10px solid;
     overflow-x: hidden;
 
     z-index: 98;
@@ -1325,7 +1328,7 @@ input {
 
 .link:hover {
     text-decoration: underline !important;
-  
+
 }
 
 
@@ -1448,11 +1451,11 @@ input {
     border-bottom-right-radius: 10px;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .iframe-area iframe {
-    max-width:100% ;
+    max-width: 100%;
 }
 
 
@@ -1462,6 +1465,47 @@ input {
     padding: 10px;
 
     font-size: 18px;
+}
+
+footer {
+    padding: 10px;
+    background-color: var(--green);
+    box-shadow: 0 -5px 0 var(--dark-green);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+footer .placeholder {
+    background-color: var(--light);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 20px;
+    justify-content: center;
+    background-image: url('../imgs/bg.jpg');
+    background-size: contain;
+    align-items: center;
+}
+
+.updates {
+    color: #FFF;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.update {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--dark-green);
+    font-weight: bold;
+
 }
 
 
@@ -1480,35 +1524,45 @@ input {
     .menu-expand {
         display: flex;
     }
+
     .navigation {
         width: 0px;
         opacity: 0;
     }
+
     main {
         padding: 5px;
     }
+
     .logotipo {
         max-width: 250px;
-       }
+    }
+
     .theory-area img {
         width: 350px;
     }
+
     .content {
         display: flex;
         flex-direction: column;
     }
-    .iframe-area  {
+
+    .iframe-area {
         max-width: 350px;
     }
-    .check-area #espacoDisplay{
+
+    .check-area #espacoDisplay {
         flex-direction: column !important;
     }
+
     .ml-default {
         margin: 0;
     }
+
     #tabelaAlelos {
         transform: scale(0.8);
     }
+
     .preload img {
         max-width: 300px;
     }
@@ -1518,30 +1572,38 @@ input {
     .col-6 {
         width: 100%;
     }
+
+    .update {
+        font-size: 14px;
+    }
+
     .calc-features {
         width: 100%;
     }
+
     .page-buttons>button {
         font-size: 0;
     }
+
     .menu-expand {
         display: flex;
     }
+
     .navigation {
         width: 0px;
         opacity: 0;
     }
+
     .text-button {
         margin: 0;
     }
+
     .ml-default {
         margin: 0;
     }
+
     .page-buttons {
         justify-content: center;
         gap: 60px;
     }
 }
-
-
-
