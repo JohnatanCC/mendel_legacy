@@ -68,6 +68,9 @@
     </ul>
   </div>
 
+  <audio id="click-sound" src="Assets/sounds/click-sound.wav"></audio>
+  <audio id="error-sound" src="Assets/sounds/error-sound.wav"></audio>
+
   <main  id="theoryPage" class="anim-long-entrance ml-default d-centered ">
    
 
@@ -83,7 +86,7 @@
   </main>
 
   <div class="page-buttons anim-opacity">
-    <button id="prev">
+    <button  id="prev" class="playable-sound">
       <div class="page-icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFF" class="bi bi-arrow-left-circle-fill"
           viewBox="0 0 16 16">
@@ -92,14 +95,14 @@
         </svg>
       </div>
 
-      <p class="text-button">Anterior</p>
+      <p class="text-button ">Anterior</p>
     </button>
     <div class="d-flex number-page flex-column">
       <p class="numero" id="index">1</p>
     </div>
 
 
-    <button id="next">
+    <button class="playable-sound" id="next">
 
       <p class="text-button">Próximo</p>
       <div class="page-icon">
@@ -115,8 +118,8 @@
 </body>
 
 
-<script async src="Assets/js/script.js"></script>
-<script async src="Assets/js/actions.js"></script>
+<script async src="Assets/js/menu.js"></script>
+<script async src="Assets/js/sounds.js"></script>
 <script async src="Assets/js/theory.js"></script>
 
 </html>

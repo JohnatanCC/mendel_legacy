@@ -1527,6 +1527,10 @@ footer .placeholder {
         display: flex;
     }
 
+    .slider-container  {
+        margin: 0;
+    }
+
     .navigation {
         width: 0px;
         opacity: 0;
