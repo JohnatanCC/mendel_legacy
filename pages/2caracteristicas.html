@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mendel | Duas características</title>
-    <link rel="shortcut icon" href="../icons/system-icon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/anim.css" />
-    <link rel="stylesheet" href="../css/class.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="../Assets/icons/system-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../Assets/css/anim.css" />
+    <link rel="stylesheet" href="../Assets/css/class.css" />
+    <link rel="stylesheet" href="../Assets/css/style.css" />
     <!-- Estilos de fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&family=Tauri&display=swap"
         rel="stylesheet" />
@@ -18,44 +18,44 @@
 <body class=" bg-practice ml-default">
 
     <div class="menu-expand">
-        <img id="expand-icon" src="../icons/expand-menu-icon.png" alt="Menu expand">
+        <img id="expand-icon" src="../Assets/icons/expand-menu-icon.png" alt="Menu expand">
         Menu
       </div>
 
     <div class="navigation">
 
         <div class="menu-expand">
-            <img id="expand-icon" src="../icons/expand-menu-icon.png" alt="Menu expand">
+            <img id="expand-icon" src="../Assets/icons/expand-menu-icon.png" alt="Menu expand">
         </div>
 
         <ul>
             <li class="list">
-                <a href="../../index.html">
-                    <span class="icon"><img src="../icons/home-icon-navbar.png" /></span>
+                <a href="../index.html">
+                    <span class="icon"><img src="../Assets/icons/home-icon-navbar.png" /></span>
                     <span class="title">Home</span>
                 </a>
             </li>
             <li class="list active">
                 <a class="active-link" href="#">
-                    <span class="icon"><img src="../icons/practice-icon-navbar.png" /></span>
+                    <span class="icon"><img src="../Assets/icons/practice-icon-navbar.png" /></span>
                     <span class="title">Prática</span>
                 </a>
             </li>
             <li class="list ">
-                <a href="../../theory.html">
-                    <span class="icon"><img src="../icons/theory-icon-navbar.png" /></span>
+                <a href="../theory.html">
+                    <span class="icon"><img src="../Assets/icons/theory-icon-navbar.png" /></span>
                     <span class="title">Teoria</span>
                 </a>
             </li>
             <li class="list disabled">
                 <a href="#">
-                    <span class="icon"><img src="../icons/lab-icon-navbar.png" /></span>
+                    <span class="icon"><img src="../Assets/icons/lab-icon-navbar.png" /></span>
                     <span class="title">Laboratorio</span>
                 </a>
             </li>
             <li class="list disabled">
                 <a href="#">
-                    <span class="icon"><img src="../icons/questions-icon-navbar.png" /></span>
+                    <span class="icon"><img src="../Assets/icons/questions-icon-navbar.png" /></span>
                     <span class="title">Questões</span>
                 </a>
             </li>
@@ -64,19 +64,19 @@
 
     <!-- Sounds -->
 
-    <audio id="click-sound" src="../sounds/click-sound.wav"></audio>
-    <audio id="error-sound" src="../sounds/error-sound.wav"></audio>
+    <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
+    <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
 
     <div class="overlay" id="overlay">
         <div class="message-box" id="message-box">
             <div id="close-message">
-                <img src="../icons/close-icon.png" alt="Close button">
+                <img src="../Assets/icons/close-icon.png" alt="Close button">
             </div>
             <p id="text">Carregando...</p>
         </div>
     </div>
 
-    <main class="anim-entrance container ml-default ">
+    <main class="anim-entrance  d-centered  ml-default ">
 
 
         <div class="d-centered mtb-10">
@@ -85,7 +85,7 @@
                 <p class="text-center text-important">
                     Utilize os botões abaixo para alternar entre as guias.
                 </p>
-                <a class="m-10 link" href="../../practice.html"> « Retornar a
+                <a class="m-10 link" href="../practice.html"> « Retornar a
                     seleção</a>
 
 
@@ -339,7 +339,7 @@
 
                     </div>
 
-                    <script src="../js/fraction2.js"></script>
+                    <script src="../Assets/js/fraction2.js"></script>
                     <script>
                         const text = document.getElementById('text');
                         const errorSound = document.getElementById('error-sound');
@@ -856,7 +856,7 @@
                                 if (paternoString1 == '' || maternoString1 == '' || paternoString2 == '' || maternoString2 == '') {
 
                                     errorSound.play();
-                                    text.innerHTML = 'O cruzamento não pôde ser realizado. Por favor, verifique se os alelos foram selecionados corretamente e tente novamente. Lembre-se de que é necessário preencher os alelos de ambas as características.'
+                                    text.innerHTML = 'O cruzamento não pôde ser realizado. Por favor, verifique se os alelos foram selecionados corretamente e tente novamente. Lembre-se de que é necessário preencher os genes de ambas as características.'
                                     overlay.style.transform = 'scale(1)';
                                     return;
                                     btnGeral.removeAttribute('disabled');
@@ -872,7 +872,7 @@
 
                                     let headerRow = document.createElement("tr");
                                     let headers = [
-                                        "<th class='bg-transparent' ><img src='../icons/table-icon.png' class='rotate' width='80px'></th>",
+                                        "<th class='bg-transparent' ><img src='../Assets/icons/table-icon.png' class='rotate' width='80px'></th>",
                                         `<th>${aleloMae[0] + aleloMae[2]}</th>`,
                                         `<th>${aleloMae[0] + aleloMae[3]}</th>`,
                                         `<th>${aleloMae[1] + aleloMae[2]}</th>`,
@@ -1421,7 +1421,7 @@
     </main>
 </body>
 
-<script async src="../js/actions.js"></script>
-<script async src="../js/script.js"></script>
+<script async src="../Assets/js/actions.js"></script>
+<script async src="../Assets/js/script.js"></script>
 
 </html>

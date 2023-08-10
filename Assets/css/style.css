@@ -98,11 +98,7 @@ body::-moz-scrollbar-thumb {
 }
 
 .logotipo {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
+ max-width: 350px;
 }
 
 .bg-practice {
@@ -503,7 +499,7 @@ h6 {
     border: 4px solid var(--dark-green);
     background-color: var(--light);
     display: flex;
-    width: 80%;
+    width: 1000px;
     flex-direction: column;
     border-radius: 10px;
     background-image: url('../imgs/bg.jpg');
@@ -976,20 +972,10 @@ input {
 }
 
 
-.notyetimplemented {
-    background-color: #d03333ba;
-    border: 2px solid #6d2222ba !important;
-    color: #FFF;
-    transform: translateY(5px);
-    box-shadow: 0 2px 0px var(#6d2222ba);
-}
-
-
 .custom-radio input:disabled+label {
     background-color: #d03333ba;
-    ;
     color: #FFF;
-
+    opacity: 0.4;
     border: 2px solid #6d2222ba;
     box-shadow: 0 2px 0px #6d2222ba;
     transform: translateY(5px);
@@ -1007,9 +993,7 @@ input {
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 
-.table-list ul li:hover {
-    background-color: #cccccc7a;
-}
+
 
 .table-list ul li {
     padding: 10px;
@@ -1160,7 +1144,6 @@ input {
 }
 
 .carousel-caption {
-    background: linear-gradient(90deg, transparent, #d3d3d34f, transparent);
     padding: 10px;
     position: initial;
 }
@@ -1221,7 +1204,6 @@ input {
     height: 100vh;
     transition: all ease 0.4s;
     left: 0;
-
     top: 0;
     background-color: var(--light);
     border-right:var(--green) 10px solid;
@@ -1417,6 +1399,7 @@ input {
 /* Estilos para a caixa de mensagem */
 .message-box {
     max-width: 500px;
+    margin: 10px;
     background-color: #fa6450;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
@@ -1449,6 +1432,38 @@ input {
 }
 
 
+.video-box {
+    text-align: center;
+    color: var(--light);
+}
+
+.iframe-area {
+    background-color: #2b2b2b;
+    border: #3a3a3a 4px solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.iframe-area iframe {
+    max-width: 500px;
+}
+
+
+
+
+.iframe-area span {
+    padding: 10px;
+
+    font-size: 18px;
+}
+
+
+
 @media (max-width:1200px) {
     .container-box {
         flex-direction: column;
@@ -1467,9 +1482,9 @@ input {
         width: 0px;
         opacity: 0;
     }
-    .ml-default {
-        margin: 0;
-    }
+    .logotipo {
+        max-width: 250px;
+       }
     .theory-area img {
         width: 350px;
     }
@@ -1477,9 +1492,11 @@ input {
         display: flex;
         flex-direction: column;
     }
-
-    .calc-features {
-        width: 100%;
+    .iframe-area iframe {
+        max-width: 350px;
+    }
+    .iframe-area  {
+        max-width: 400px;
     }
     .check-area #espacoDisplay{
         flex-direction: column !important;
@@ -1488,10 +1505,10 @@ input {
         margin: 0;
     }
     #tabelaAlelos {
-        transform: scale(0.9);
+        transform: scale(0.8);
     }
     .preload img {
-        max-width: 400px;
+        max-width: 300px;
     }
 }
 
@@ -1499,15 +1516,25 @@ input {
     .col-6 {
         width: 100%;
     }
-
+    .calc-features {
+        width: 100%;
+    }
     .page-buttons>button {
         font-size: 0;
     }
-
+    .menu-expand {
+        display: flex;
+    }
+    .navigation {
+        width: 0px;
+        opacity: 0;
+    }
     .text-button {
         margin: 0;
     }
-
+    .ml-default {
+        margin: 0;
+    }
     .page-buttons {
         justify-content: center;
         gap: 60px;

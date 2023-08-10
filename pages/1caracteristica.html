@@ -7,12 +7,12 @@
     <title>Mendel | Uma característica</title>
     <link
       rel="shortcut icon"
-      href="../icons/system-icon.png"
+
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../css//anim.css" />
-    <link rel="stylesheet" href="../css//class.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../Assets/css/anim.css" />
+    <link rel="stylesheet" href="../Assets/css/class.css" />
+    <link rel="stylesheet" href="../Assets/css/style.css" />
     <!-- Estilos de fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&family=Tauri&display=swap"
@@ -20,23 +20,22 @@
     />
   </head>
 
-
-  
   <body class="bg-practice ml-default">
-
     <div class="menu-expand">
-      <img id="expand-icon" src="../icons/expand-menu-icon.png" alt="Menu expand">
+      <img
+        id="expand-icon"
+        src="../Assets/icons/expand-menu-icon.png"
+        alt="Menu expand"
+      />
       Menu
     </div>
 
     <div class="navigation">
-
-
       <ul>
         <li class="list">
-          <a href="../../index.html">
+          <a href="../index.html">
             <span class="icon"
-              ><img src="../icons/home-icon-navbar.png"
+              ><img src="../Assets/icons/home-icon-navbar.png"
             /></span>
             <span class="title">Home</span>
           </a>
@@ -44,29 +43,31 @@
         <li class="list active">
           <a class="active-link" href="#">
             <span class="icon"
-              ><img src="../icons/practice-icon-navbar.png"
+              ><img src="../Assets/icons/practice-icon-navbar.png"
             /></span>
             <span class="title">Prática</span>
           </a>
         </li>
         <li class="list">
-          <a href="../../theory.html">
+          <a href="../theory.html">
             <span class="icon"
-              ><img src="../icons/theory-icon-navbar.png"
+              ><img src="../Assets/icons/theory-icon-navbar.png"
             /></span>
             <span class="title">Teoria</span>
           </a>
         </li>
         <li class="list disabled">
           <a href="#">
-            <span class="icon"><img src="../icons/lab-icon-navbar.png" /></span>
+            <span class="icon"
+              ><img src="../Assets/icons/lab-icon-navbar.png"
+            /></span>
             <span class="title">Laboratorio</span>
           </a>
         </li>
         <li class="list disabled">
           <a href="#">
             <span class="icon"
-              ><img src="../icons/questions-icon-navbar.png"
+              ><img src="../Assets/icons/questions-icon-navbar.png"
             /></span>
             <span class="title">Questões</span>
           </a>
@@ -76,22 +77,19 @@
 
     <!-- Sounds -->
 
-    <audio id="click-sound" src="../sounds/click-sound.wav"></audio>
-    <audio id="error-sound" src="../sounds/error-sound.wav"></audio>
+    <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
+    <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
 
     <div class="overlay" id="overlay">
-        <div class="message-box" id="message-box">
-          <div id="close-message">
-            <img src="../icons/close-icon.png" alt="Close button">
-          </div>
-          <p id="text">Carregando...</p>
+      <div class="message-box" id="message-box">
+        <div id="close-message">
+          <img src="../Assets/icons/close-icon.png" alt="Close button" />
         </div>
-
-      
-
+        <p id="text">Carregando...</p>
       </div>
+    </div>
 
-    <main class="anim-long-entrance container ml-default">
+    <main class="anim-long-entrance d-centered  ml-default">
       <div class="d-centered mtb-10" id="d-centered">
         <div class="calc-features">
           <h1>Calculando uma característica</h1>
@@ -100,9 +98,7 @@
             Utilize os botões abaixo para alternar entre as guias.
           </p>
 
-          <a class="m-10 link" href="../../practice.html">
-            « Retornar a seleção</a
-          >
+          <a class="m-10 link" href="../practice.html"> « Retornar a seleção</a>
 
           <!-- INTERFACE 1 -->
 
@@ -355,8 +351,8 @@
             </div>
           </div>
           <script>
-            const text = document.getElementById('text');
-            const errorSound = document.getElementById('error-sound');
+            const text = document.getElementById("text");
+            const errorSound = document.getElementById("error-sound");
             function mostrarInterface(id) {
               // Esconde todas as interfaces
               let interfaces = document.querySelectorAll(".interface");
@@ -502,7 +498,8 @@
 
               /*CASO NÃO ESCOLHER NEM UMA OU OUTRA*/
               if (classificarPai == "" || caracterPai == "") {
-                text.innerHTML = "Por favor, escolha uma característica e proceda à sua classificação."
+                text.innerHTML =
+                  "Por favor, escolha uma característica e proceda à sua classificação.";
                 errorSound.play();
                 overlay.style.transform = "scale(1)";
                 return;
@@ -654,11 +651,12 @@
                 inputMaeVerificar.value = maternoString;
 
                 if (paternoString == "" || maternoString == "") {
-                    errorSound.play();
-                overlay.style.transform = "scale(1)";
-                text.innerHTML = "Lamento informar que a realização do cruzamento não foi possível. Solicitamos gentilmente que verifique se os alelos foram selecionados de forma adequada e tente novamente."
-                return;
-                   
+                  errorSound.play();
+                  overlay.style.transform = "scale(1)";
+                  text.innerHTML =
+                    "Lamento informar que a realização do cruzamento não foi possível. Solicitamos gentilmente que verifique se os alelos foram selecionados de forma adequada e tente novamente.";
+                  return;
+
                   btnGeral.removeAttribute("disabled");
                 } else {
                   const table = document.createElement("table");
@@ -668,7 +666,7 @@
                   const headerRow = document.createElement("tr");
 
                   const headers = [
-                    "<th class='bg-transparent' ><img src='../icons/table-icon.png' class='rotate' width='80px'></th>",
+                    "<th class='bg-transparent' ><img src='../Assets/icons/table-icon.png' class='rotate' width='80px'></th>",
                     `<th>${maternoString[0]}</th>`,
                     `<th>${maternoString[1]}</th>`,
                   ];
@@ -906,10 +904,8 @@
       </div>
     </main>
 
-    
-
-    <script async src="../js/fraction.js"></script>
-    <script async src="../js/script.js"></script>
-    <script async src="../js/actions.js"></script>
+    <script async src="../Assets/js/fraction.js"></script>
+    <script async src="../Assets/js/script.js"></script>
+    <script async src="../Assets/js/actions.js"></script>
   </body>
 </html>
