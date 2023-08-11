@@ -59,7 +59,11 @@
     animation-iteration-count: infinite; 
 }
 
-
+.anim-pbc {
+    animation-duration: 1s;
+    animation-name: PBC;
+    animation-iteration-count: infinite;
+}
 
 .rotate {
     animation-name: rotation;
@@ -67,6 +71,10 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
+
+  @keyframes PBC {
+    50% {color: var(--dark-green);}
+}
 
 @keyframes floating {
  

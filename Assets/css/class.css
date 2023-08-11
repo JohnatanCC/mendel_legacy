@@ -12,7 +12,7 @@
 .container {
     max-width: 1500px;
     margin: 0 auto;
-
+    padding: 0;
 }
 
 
@@ -258,6 +258,9 @@ svg {
     align-items: center;
 }
 
+.content {
+    width: 500px;
+}
 
 .nav-buttons button {
     padding: 5px;

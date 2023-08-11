@@ -32,6 +32,19 @@
   </div>
 
   <main id="homePage" class="container">
+    <div class="alert-box container ">
+    <div class="warning d-centered alert ">
+      <div class="alert-content  ">
+        <div class="icon">
+          <svg height="50" viewBox="0 0 512 512" width="50" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M449.07,399.08,278.64,82.58c-12.08-22.44-44.26-22.44-56.35,0L51.87,399.08A32,32,0,0,0,80,446.25H420.89A32,32,0,0,0,449.07,399.08Zm-198.6-1.83a20,20,0,1,1,20-20A20,20,0,0,1,250.47,397.25ZM272.19,196.1l-5.74,122a16,16,0,0,1-32,0l-5.74-121.95v0a21.73,21.73,0,0,1,21.5-22.69h.21a21.74,21.74,0,0,1,21.73,22.7Z"/></svg>
+      </div>
+        <p>Aviso! Este sistema ainda está em fase de desenvolvimento e aprimoramento. Valorizamos sua paciência e compreensão enquanto trabalhamos para aperfeiçoar a experiência. Se você tiver algum feedback ou sugestão para tornar nosso sistema ainda melhor, ficaríamos muito gratos por ouvir sua opinião. Obrigado!</p>
+      </div>
+      <button class="close">
+       <svg height="18px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="18px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#69727D" d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"/></svg>
+      </button>
+    </div>
+  </div>
     <section>
       <h1 class="title-bar">
         <img class="logotipo" src="Assets/imgs/Mendel_legancy_logo.png" alt="Logotipo" />
@@ -110,7 +123,7 @@
             <div class="carousel-caption d-md-block">
               <h5>Interface do usuário</h5>
               <p>
-                O sistema web fornecerá uma interface do usuário intuitiva
+                O sistema web fornece uma interface do usuário intuitiva
                 onde os usuários podem interagir e selecionar as
                 características que desejam analisar.
               </p>
@@ -263,7 +276,7 @@
             <img class="" src="Assets/icons/lab-icon.png" alt="" />
             <div class="box-text">
               <p class="text-center">
-                Em breve, será adicionada uma nova e inovadora funcionalidade.
+                Em breve, o sistema fornecerá uma nova funcionadade bem complexa.Qual será?
               </p>
 
               <!-- <div class="wrapper mb-10">
@@ -311,11 +324,13 @@
     </div>
     <div class="updates">
       <span class="mb-10 text-bold">Desenvolvedores:</span>
-      <div class="flex-row">
-      <span class="update">Pedro Otávio (Back-end)</span>
-      <span class="update">Tiago (Back-end)</span>
-      <span class="update">Johnatan Cavalcante (Front-end)</span>
-      <span class="update">Jenniffer Lira (Front-end)</span>
+      <div class="update-flex-row">
+      <span class="update">PEDRO OTÀVIO<br> (Back-end)</span>
+      <span class="update">TIAGO FERREIRA <br> (Back-end)</span>
+      <span class="update">JOHNATAN CAVALCANTE <br> (Front-end)</span>
+      <span class="update">JENNIFFER LIRA <br> (Front-end)</span>
+      <span class="update">JENNIFER KELLY <br> (Planejamento de Layout)</span>
+      <span class="update">Maria Helena <br> (Planejamento de Layout)</span>
     </div>
     </div>
   </footer>
@@ -326,7 +341,8 @@
     <audio id="audioElement">
       <source src="Assets/sounds/music.mp3" type="audio/mpeg" />
     </audio>
-
+    <audio id="click-sound" src="Assets/sounds/click-sound.wav"></audio>
+    <audio id="error-sound" src="Assets/sounds/error-sound.wav"></audio>
       
     <div id="volumeDisplay" class="volume-display">Volume: 100%</div>
 
@@ -341,38 +357,16 @@
   //   overlay.style.transform = "scale(1)";
   // })
 
-  const audioElement = document.getElementById('audioElement');
-  let volume = 1.0; // Valor inicial do volume
-  const volumeDisplay = document.getElementById('volumeDisplay');
 
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'm' || event.key === 'M') {
-      audioElement.play();
-    } else if (event.key === 's' || event.key === 'S') {
-      audioElement.pause();
-      audioElement.currentTime = 0;
-    } else if (event.key === '+' || event.key === 'Add') {
-      volume = Math.min(volume + 0.1, 1.0);
-      audioElement.volume = volume;
-      volumeDisplay.textContent = `Volume: ${Math.round(volume * 100)}%`;
-      volumeDisplay.style.opacity = 1;
-      setTimeout(() => {
-        volumeDisplay.style.opacity = 0;
-      }, 1000); // Após 1 segundo, o elemento de exibição de volume desaparece
-    } else if (event.key === '-' || event.key === 'Subtract') {
-      volume = Math.max(volume - 0.1, 0.0);
-      audioElement.volume = volume;
-      volumeDisplay.textContent = `Volume: ${Math.round(volume * 100)}%`;
-      volumeDisplay.style.opacity = 1;
-      setTimeout(() => {
-        volumeDisplay.style.opacity = 0;
-      }, 1000);
-    }
-  });
+  const close = document.querySelector(".close");
+  const alert = document.querySelector(".alert");
+
+close.addEventListener("click", function() {
+  alert.parentElement.removeChild(alert);
+});
 
 </script>
-
-<script async src="Assets/js/script.js"></script>
+<script src="Assets/js/sounds.js"></script>
 <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
