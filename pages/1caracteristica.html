@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mendel | Uma característica</title>
-    <link rel="shortcut icon"   href="../Assets/icons/system-icon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../Assets/icons/system-icon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="../Assets/css/anim.css" />
     <link rel="stylesheet" href="../Assets/css/class.css" />
     <link rel="stylesheet" href="../Assets/css/style.css" />
@@ -18,7 +22,7 @@
 
   <body class="bg-practice ml-default">
     <div class="play-buttom">
-      <img src="../Assets/icons/play-icon.png" id="playMusic" alt="">
+      <img src="../Assets/icons/play-icon.png" id="playMusic" alt="" />
     </div>
     <div id="volumeDisplay" class="volume-display">Volume: 100%</div>
 
@@ -92,7 +96,7 @@
       </div>
     </div>
 
-    <main class="anim-long-entrance d-centered  ml-default">
+    <main class="anim-long-entrance d-centered ml-default">
       <div class="d-centered mtb-10" id="d-centered">
         <div class="calc-features">
           <h1>Calculando uma característica</h1>
@@ -355,7 +359,7 @@
           </div>
           <script>
             const text = document.getElementById("text");
-        
+
             function mostrarInterface(id) {
               // Esconde todas as interfaces
               let interfaces = document.querySelectorAll(".interface");
@@ -914,3 +918,35 @@
     <script async src="../Assets/js/sounds.js"></script>
   </body>
 </html>
+
+<!--
+
+Seleção de Elementos:
+
+const text = document.getElementById("text");: Pega o elemento com o ID "text".
+Função mostrarInterface(id):
+
+Essa função recebe um id como argumento e serve para alternar entre diferentes interfaces no documento. Ela esconde todas as interfaces, remove a classe "ativa" delas, e adiciona a classe "ativa" à interface com o id especificado, tornando-a visível.
+Função caracteristicas():
+
+Essa função é chamada para calcular e exibir valores com base nas características das plantas e cruzamento de alelos.
+Ela obtém os valores selecionados nos formulários e, dependendo das escolhas, atribui valores específicos a um elemento de visualização (input). Isso é feito para diferentes combinações de características, como altura, posição das flores, cor da flor, cor da vagem, forma da vagem, cor da semente e textura da semente.
+Função createTable():
+
+Essa função é responsável por criar uma tabela de resultados com base nos alelos cruzados.
+Ela é acionada por um botão chamado "criadorTabela" e manipula os valores inseridos nos campos de visualização.
+Dependendo dos valores, ela cria uma tabela com resultados de combinações de alelos das plantas paternas e maternas.
+Ela também verifica se os campos estão vazios e exibe uma mensagem de erro se necessário.
+Função disabledBtn():
+
+Essa função trata do comportamento dos botões em relação à habilitação e desabilitação.
+O botão "criadorTabela" é desabilitado quando os campos de alelos paternos e maternos estão preenchidos, para evitar a criação de múltiplas tabelas.
+O botão "btnLimpar" permite remover a tabela de resultados e reativar o botão "criadorTabela".
+Execução das Funções:
+
+disabledBtn();: Chama a função para tratar a habilitação e desabilitação de botões.
+createTable();: Chama a função para criar a tabela de resultados com base nas combinações de alelos.
+No geral, este código é utilizado para criar uma ferramenta interativa que calcula e exibe combinações de alelos de plantas com base em características específicas.
+Ele manipula a exibição de interfaces, cálculos de cruzamento de alelos e criação de tabelas de resultados. Note que este código presume a existência de elementos HTML com IDs e classes específicas para funcionar corretamente.
+
+-->

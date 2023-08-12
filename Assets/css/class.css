@@ -278,6 +278,18 @@ svg {
 
 }
 
+.success {
+    color: #198754;
+}
+
+.yellow {
+    color: #FFC107;
+}
+
+.danger {
+    color: #DC3545;
+}
+
 .text-center {
     text-align: center;
 }

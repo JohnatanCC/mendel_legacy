@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="Assets/css/class.css" />
   <link rel="stylesheet" href="Assets/css/style.css" />
   <link rel="stylesheet" href="Assets/css/extra.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <!-- Estilos de fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&family=Tauri&display=swap" rel="stylesheet" />
 
@@ -79,9 +79,32 @@
   <main class="anim-long-entrance ml-default d-centered ">
     <div class="content">
     
+    
+
 
     <div class="flex-column d-flex">
     <h1 class="d-centered title-bar" >Quiz</h1>
+
+    <!-- <div class="levelSelection">
+      <label for="difficulty">Escolha o nível de difuldade:</label>
+      <select id="difficulty">
+          <option class="success" value="easy">questões de nível fácil</option>
+          <option class="yellow" value="medium">questões de nível médio</option>
+          <option class="danger" value="hard">questões de nível dificíl</option>
+      </select>
+
+
+  </div> -->
+
+  <div class="custom-select">
+    <div class="select-styled">Escolha um nível de dificuldade</div>
+    <ul class="select-options" id="difficulty">
+      <li class="select-option success" value="easy">questões de nível fácil</li>
+      <li class="select-option yellow" value="medium">questões de nível médio</li>
+      <li class="select-option danger" value="hard">questões de nível dificíl</li>
+    </ul>
+    <button id="startQuizButton" class="especial-button mtb-10">Iniciar Quiz</button>
+  </div>
 
     <div class="questionArea">
         <div class="question">...</div>
@@ -100,8 +123,11 @@
         <div class="scorePct">Acertou x%</div>
         <div class="scoreText2">Carregando...</div>
         <div class="wrapper">
-        <button class="cta">Fazer novamente</button>
+        <button class="especial-button mb-10">Fazer novamente</button>
     </div>
+
+    <a href="#" id="back">Voltar</a>
+
     </div>
 </div>
   </main>
@@ -115,8 +141,8 @@
 
 </body>
 
-<script src="Assets/js/questions.js"></script>
-<script src="Assets/js/questionsScript.js"></script>
+<script async src="Assets/js/questions.js"></script>
+<script async src="Assets/js/questionsScript.js"></script>
 <script async src="Assets/js/menu.js"></script>
 <script async src="Assets/js/sounds.js"></script>
 

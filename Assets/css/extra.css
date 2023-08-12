@@ -23,6 +23,11 @@
    
   }
   
+  .row  {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
   .text-bold {
     font-weight: bold;
   }

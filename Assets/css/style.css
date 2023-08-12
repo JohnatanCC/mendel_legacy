@@ -585,7 +585,7 @@ table th {
     z-index: 1;
     transition: all 0.5s ease-in-out;
     border-radius: 5px;
-    background: transparent;
+    background: var(--light);
     box-shadow: 0 5px 0 var(--dark-green);
 }
 
@@ -1404,8 +1404,7 @@ input {
 }
 
 .menu-expand:hover {
-    transform: scale(1.1);
-
+    opacity: 1;
 }
 
 .expanded {
@@ -1668,6 +1667,22 @@ footer .placeholder {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 30px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 16px -18px inset;
 }
 
+
+.scoreArea a:hover {
+    text-decoration: underline;
+}
+
+.scoreArea a {
+    color: var(--green);
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin:10px;
+    transition: all ease .4s;
+}
+
 .scoreArea {
     background-color: var(--light);
     padding: 20px;
@@ -1699,8 +1714,8 @@ footer .placeholder {
 }
 
 .alert-box {
-    position: fixed;
-    top: 10px;
+
+    margin: 20px 0;
     display: flex;
     width: 100%;
     z-index: 99;
@@ -1767,6 +1782,92 @@ footer .placeholder {
   .warning .icon{
     background-color: #b77306;
   }
+
+  .levelSelection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    gap: 20px;
+  }
+
+  #difficulty {
+    padding: 5px;
+    width: 100%;
+    border-left: 2px solid var(--dark-green);
+    border-bottom: 2px solid var(--dark-green);
+     border-right: 2px solid var(--dark-green);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+ /* Estilização do seletor */
+ .custom-select {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+  }
+
+  .select-styled {
+    background-color: #f7f7f7;
+    padding: 10px;
+    border: 2px solid var(--dark-green);
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+    padding-right: 20px; 
+    text-transform: uppercase;
+  }
+
+  .select-styled::before {
+    content: '';
+    position: absolute;
+    right: 8px;
+    top: 40%;
+    transform: translateY(-50%);
+    border: solid #333;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+  }
+  .disabled {
+    pointer-events: none; /* Impede a interação */
+    opacity: 0.6; /* Opacidade reduzida */
+}
+
+  .select-options {
+    display: none;
+    text-transform: uppercase;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    margin-top: -1px;
+    width: 100%;
+    z-index: 2;
+    list-style: none;
+    padding: 0;
+  }
+
+  .select-option {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .select-option:hover {
+    background-color: #f0f0f0;
+  }
+
+  .open .select-options {
+    display: block;
+  }
+
+
 
 @media (max-width:1200px) {
     .container-box {
@@ -1841,6 +1942,7 @@ footer .placeholder {
 }
 
 @media (max-width:800px) {
+ 
     .col-6 {
         width: 100%;
     }
