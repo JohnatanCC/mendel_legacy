@@ -694,45 +694,6 @@ table th {
     box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
 
-.btn-group button:hover {
-    background-color: #4f925e;
-}
-
-.btn-group button:active {
-    opacity: 0.5;
-}
-
-.btn-group button {
-    padding: 10px;
-    border: transparent;
-    width: 100%;
-    height: 60px;
-    color: var(--light);
-    font-size: 18px;
-    cursor: pointer;
-    font-weight: bold;
-    background-color: var(--green);
-    border-bottom: 4px solid var(--dark-green);
-    border-top: 4px solid var(--dark-green);
-
-
-}
-
-.btn-group {
-    padding: 10px 0;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    cursor: pointer;
-    flex-direction: column;
-    border: 4px solid var(--dark-green);
-    background-color: var(--light);
-    border-radius: 5px;
-    gap: 10px;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-
-}
 
 .check-area .criador {
     display: flex;
@@ -754,8 +715,15 @@ table th {
     padding-top: 30px;
 }
 
+.btn-active {
+    background: var(--dark-green);
+}
 
-
+.btn-default {
+    background-color: var(--green);
+    border: 2px solid var(--dark-green);
+    color: var(--light);
+}
 
 /*
   

@@ -136,18 +136,6 @@ svg {
     vertical-align: middle;
 }
 
-.btn-default {
-    border-radius: var(--rounded-lg);
-    border: var(--dark-green) 4px solid;
-    padding: 5px;
-
-    background-color: var(--green);
-    color: #FFF;
-    font-size: larger;
-    font-family: var(--title);
-}
-
-
 
 .btn-light {
     border-radius: var(--rounded-lg);
@@ -163,14 +151,30 @@ svg {
 }
 
 .btn:hover {
-    box-shadow: #388c5ab3 0 0 0 10px;
+    background: var(--dark-green);
     transition: 0.4s;
+    color: #FFF;
 }
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 230px;
+    
+}
+
 
 .btn {
     outline: 2px;
     transition: 0.4s;
     cursor: pointer;
+    width: 120px;
 }
 
 .mt-4 {
