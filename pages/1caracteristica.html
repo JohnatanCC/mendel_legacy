@@ -1,922 +1,822 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mendel | Uma característica</title>
-    <link
-      rel="shortcut icon"
-      href="../Assets/icons/system-icon.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="../Assets/css/anim.css" />
-    <link rel="stylesheet" href="../Assets/css/class.css" />
-    <link rel="stylesheet" href="../Assets/css/style.css" />
-    <!-- Estilos de fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&family=Tauri&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body class="bg-practice ml-default">
-    <div class="play-buttom">
-      <img src="../Assets/icons/play-icon.png" id="playMusic" alt="" />
-    </div>
-    <div id="volumeDisplay" class="volume-display">Volume: 100%</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mendel | Uma característica</title>
+  <link rel="shortcut icon" href="../Assets/icons/system-icon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../Assets/css/anim.css" />
+  <link rel="stylesheet" href="../Assets/css/class.css" />
+  <link rel="stylesheet" href="../Assets/css/style.css" />
+  <!-- Estilos de fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&family=Tauri&display=swap" rel="stylesheet" />
+</head>
 
-    <div class="menu-expand">
-      <img
-        id="expand-icon"
-        src="../Assets/icons/expand-menu-icon.png"
-        alt="Menu expand"
-      />
-      Menu
-    </div>
+<body class="bg-practice ml-default">
+  <div class="play-buttom">
+    <img src="../Assets/icons/play-icon.png" id="playMusic" alt="" />
+  </div>
+  <div id="volumeDisplay" class="volume-display">Volume: 100%</div>
 
-    <div class="navigation">
-      <ul>
-        <li class="list">
-          <a href="../index.html">
-            <span class="icon"
-              ><img src="../Assets/icons/home-icon-navbar.png"
-            /></span>
-            <span class="title">Home</span>
-          </a>
-        </li>
-        <li class="list active">
-          <a class="active-link" href="#">
-            <span class="icon"
-              ><img src="../Assets/icons/practice-icon-navbar.png"
-            /></span>
-            <span class="title">Prática</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="../theory.html">
-            <span class="icon"
-              ><img src="../Assets/icons/theory-icon-navbar.png"
-            /></span>
-            <span class="title">Teoria</span>
-          </a>
-        </li>
-        <li class="list disabled">
-          <a href="#">
-            <span class="icon"
-              ><img src="../Assets/icons/lab-icon-navbar.png"
-            /></span>
-            <span class="title">Em breve...</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="../questions.html">
-            <span class="icon"
-              ><img src="../Assets/icons/questions-icon-navbar.png"
-            /></span>
-            <span class="title">Questões</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+  <div class="menu-expand">
+    <img id="expand-icon" src="../Assets/icons/expand-menu-icon.png" alt="Menu expand" />
+    Menu
+  </div>
 
-    <!-- Sounds -->
-    <audio id="audioElement">
-      <source src="../Assets/sounds/music.mp3" type="audio/mpeg" />
-    </audio>
-    <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
-    <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
+  <div class="navigation">
+    <ul>
+      <li class="list">
+        <a href="../index.html">
+          <span class="icon"><img src="../Assets/icons/home-icon-navbar.png" /></span>
+          <span class="title">Home</span>
+        </a>
+      </li>
+      <li class="list active">
+        <a class="active-link" href="#">
+          <span class="icon"><img src="../Assets/icons/practice-icon-navbar.png" /></span>
+          <span class="title">Prática</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="../theory.html">
+          <span class="icon"><img src="../Assets/icons/theory-icon-navbar.png" /></span>
+          <span class="title">Teoria</span>
+        </a>
+      </li>
+      <li class="list disabled">
+        <a href="#">
+          <span class="icon"><img src="../Assets/icons/lab-icon-navbar.png" /></span>
+          <span class="title">Em breve...</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="../questions.html">
+          <span class="icon"><img src="../Assets/icons/questions-icon-navbar.png" /></span>
+          <span class="title">Questões</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 
-    <div class="overlay" id="overlay">
-      <div class="message-box" id="message-box">
-        <div id="close-message">
-          <img src="../Assets/icons/close-icon.png" alt="Close button" />
-        </div>
-        <p id="text">Carregando...</p>
+  <!-- Sounds -->
+  <audio id="audioElement">
+    <source src="../Assets/sounds/music.mp3" type="audio/mpeg" />
+  </audio>
+  <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
+  <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
+
+  <div class="overlay" id="overlay">
+    <div class="message-box" id="message-box">
+      <div id="close-message">
+        <img src="../Assets/icons/close-icon.png" alt="Close button" />
       </div>
+      <p id="text">Carregando...</p>
     </div>
+  </div>
 
-    <main class="anim-long-entrance d-centered ml-default">
-      <div class="d-centered mtb-10" id="d-centered">
-        <div class="calc-features">
-          <h1>Calculando uma característica</h1>
+  <main class="anim-long-entrance d-centered ml-default">
+    <div class="d-centered mtb-10" id="d-centered">
+      <div class="calc-features">
+        <h1>Calculando uma característica</h1>
 
-          <p class="text-center text-important">
-            Utilize os botões abaixo para alternar entre as guias.
-          </p>
+        <p class="text-center text-important">
+          Utilize os botões abaixo para alternar entre as guias.
+        </p>
 
-          <a class="m-10 link" href="../practice.html"> « Retornar a seleção</a>
+        <a class="m-10 link" href="../practice.html"> « Retornar a seleção</a>
 
-          <!-- INTERFACE 1 -->
+        <!-- INTERFACE 1 -->
 
-          <div class="interface ativa d-centered-no-align row" id="interface1">
-            <div class="row p-20 flex-row">
-              <button
-                class="especial-button"
-                onclick="mostrarInterface('interface1')"
-              >
-                Classificação dos alelos
-              </button>
+        <div class="interface ativa d-centered-no-align row" id="interface1">
+          <div class="row p-20 flex-row">
 
-              <div class="col-6 p-20">
+            <button class="especial-button" onclick="mostrarCaracteristica()">
+              Selecionar característica
+            </button>
+            <button class="especial-button" onclick="mostrarPais()">
+              Classificação dos pais
+            </button>
+
+
+            <div class="col-6 p-20">
+              <div class="pais d-none">
                 <h2 class="title-bar">Alelo Paterno</h2>
                 <form id="formulario">
                   <div class="custom-radio">
                     <p class="text-center">Classificação do gene:</p>
-                    <input
-                      type="radio"
-                      class="playable-sound"
-                      id="heterozigotico"
-                      name="classificacao"
-                      value="heterozigotico"
-                    />
+                    <input type="radio" class="playable-sound" id="heterozigotico" name="classificacao"
+                      value="heterozigotico" />
                     <label for="heterozigotico">Heterozigótico</label>
-                    <input
-                      type="radio"
-                      class="playable-sound"
-                      id="homozigoticoDominante"
-                      name="classificacao"
-                      value="homozigoticoDominante"
-                    />
-                    <label for="homozigoticoDominante"
-                      >Homozigótico dominante</label
-                    >
-                    <input
-                      type="radio"
-                      class="playable-sound"
-                      id="homozigoticoRecessivo"
-                      name="classificacao"
-                      value="homozigoticoRecessivo"
-                    />
-                    <label for="homozigoticoRecessivo"
-                      >Homozigótico recessivo</label
-                    >
+                    <input type="radio" class="playable-sound" id="homozigoticoDominante" name="classificacao"
+                      value="homozigoticoDominante" />
+                    <label for="homozigoticoDominante">Homozigótico dominante</label>
+                    <input type="radio" class="playable-sound" id="homozigoticoRecessivo" name="classificacao"
+                      value="homozigoticoRecessivo" />
+                    <label for="homozigoticoRecessivo">Homozigótico recessivo</label>
                   </div>
-
-                  <div class="d-centered mtb-10">
-                    <div class="flex-column d-centered">
-                      <h2 class="text-bold">Visualizar</h2>
-                      <input
-                        placeholder="??"
-                        class="vizu2"
-                        id="visualizacao"
-                        name="visualizacao"
-                        value=""
-                        size="1"
-                        disabled
-                      />
-                    </div>
-                  </div>
-
-                  <h2 class="title-bar">Escolha uma característica:</h2>
-                  <div class="custom-radio">
-                    <input
-                      type="radio"
-                      class="playable-sound"
-                      id="altura"
-                      name="caracteristicas"
-                      value="altura"
-                    />
-                    <label for="altura"
-                      >Altura das flores
-                      <abbr
-                        title="Planta alta (TT) dominante sobre planta baixa (tt)"
-                        >(TT)</abbr
-                      ></label
-                    >
-                    <input
-                      type="radio"
-                      class="playable-sound"
-                      id="posicao"
-                      name="caracteristicas"
-                      value="posicao"
-                    />
-                    <label for="posicao">Posição das flores (AA)</label>
-                    <input
-                      type="radio"
-                      class="playable-sound"
-                      id="corFlor"
-                      name="caracteristicas"
-                      value="corFlor"
-                    />
-                    <label for="corFlor">Cor da flor (PP)</label>
-                    <input
-                      type="radio"
-                      class="playable-sound"
-                      id="corVagem"
-                      name="caracteristicas"
-                      value="corVagem"
-                    />
-                    <label for="corVagem">Cor da vagem (GG)</label>
-                    <input
-                      type="radio"
-                      class="playable-sound"
-                      id="formaVagem"
-                      name="caracteristicas"
-                      value="formaVagem"
-                    />
-                    <label for="formaVagem">Forma da vagem (SS)</label>
-                    <input
-                      type="radio"
-                      class="playable-sound"
-                      id="corSemente"
-                      name="caracteristicas"
-                      value="corSemente"
-                    />
-                    <label for="corSemente">Cor da Semente (YY)</label>
-                    <input
-                      type="radio"
-                      class="playable-sound"
-                      id="texturaSemente"
-                      name="caracteristicas"
-                      value="texturaSemente"
-                    />
-                    <label for="texturaSemente">Forma da semente (RR)</label>
-                  </div>
-                </form>
               </div>
 
-              <div class="col-6 p-20">
-                <h2 class="title-bar">Alelo Materno</h2>
-                <form id="formulario2">
-                  <div class="custom-radio">
-                    <p class="text-center">Classificação do gene:</p>
-                    <input
-                      type="radio"
-                      class="playable-sound"
-                      id="heterozigoticoM"
-                      name="classificacao"
-                      value="heterozigotico"
-                    />
-                    <label for="heterozigoticoM">Heterozigótico</label>
-                    <input
-                      type="radio"
-                      class="playable-sound"
-                      id="homozigoticoDominanteM"
-                      name="classificacao"
-                      value="homozigoticoDominante"
-                    />
-                    <label for="homozigoticoDominanteM"
-                      >Homozigótico dominante</label
-                    >
-                    <input
-                      type="radio"
-                      class="playable-sound"
-                      id="homozigoticoRecessivoM"
-                      name="classificacao"
-                      value="homozigoticoRecessivo"
-                    />
-                    <label for="homozigoticoRecessivoM"
-                      >Homozigótico recessivo</label
-                    >
-                  </div>
-
-                  <div class="d-centered mtb-10">
-                    <div class="flex-column d-centered">
-                      <h2 class="text-bold">Visualizar</h2>
-                      <input
-                        placeholder="??"
-                        type=""
-                        id="visualizacao2"
-                        name="visualizacao2"
-                        value=""
-                        size="1"
-                        disabled
-                      />
-                    </div>
-                  </div>
-                </form>
+              <div class="d-centered pais mtb-10 d-none">
+                <div class="flex-column d-centered">  
+                  <h2 class="text-bold">Visualizar</h2>
+                  <input placeholder="??" class="vizu2" id="visualizacao" name="visualizacao" value="" size="1"
+                    disabled />
+                </div>
               </div>
 
-              <div class="gap-10 m-10 d-flex w-100">
-                <button
-                  class="especial-button"
-                  type="button"
-                  id="btncalcular"
-                  onclick="caracteristicas()"
-                >
-                  Visualizar Alelos
-                </button>
+              <div class="caracteristicas">
+              <h2 class="title-bar">Escolha uma característica:</h2>
+              <div class="custom-radio">
+                <input type="radio" class="playable-sound" id="altura" name="caracteristicas" value="altura" />
+                <label for="altura">Altura das flores
+                  <abbr title="Planta alta (TT) dominante sobre planta baixa (tt)">(TT)</abbr></label>
+                <input type="radio" class="playable-sound" id="posicao" name="caracteristicas" value="posicao" />
+                <label for="posicao">Posição das flores (AA)</label>
+                <input type="radio" class="playable-sound" id="corFlor" name="caracteristicas" value="corFlor" />
+                <label for="corFlor">Cor da flor (PP)</label>
+                <input type="radio" class="playable-sound" id="corVagem" name="caracteristicas" value="corVagem" />
+                <label for="corVagem">Cor da vagem (GG)</label>
+                <input type="radio" class="playable-sound" id="formaVagem" name="caracteristicas" value="formaVagem" />
+                <label for="formaVagem">Forma da vagem (SS)</label>
+                <input type="radio" class="playable-sound" id="corSemente" name="caracteristicas" value="corSemente" />
+                <label for="corSemente">Cor da Semente (YY)</label>
+                <input type="radio" class="playable-sound" id="texturaSemente" name="caracteristicas"
+                  value="texturaSemente" />
+                <label for="texturaSemente">Forma da semente (RR)</label>
+              </div>
+            </form>
+          </div>
+            </div>
 
-                <button
-                  class="especial-button"
-                  onclick="mostrarInterface('interface2')"
-                >
-                  Concluído
-                </button>
+            <div class="col-6 p-20 d-none pais">
+              <h2 class="title-bar">Alelo Materno</h2>
+              <form id="formulario2">
+                <div class="custom-radio">
+                  <p class="text-center">Classificação do gene:</p>
+                  <input type="radio" class="playable-sound" id="heterozigoticoM" name="classificacao"
+                    value="heterozigotico" />
+                  <label for="heterozigoticoM">Heterozigótico</label>
+                  <input type="radio" class="playable-sound" id="homozigoticoDominanteM" name="classificacao"
+                    value="homozigoticoDominante" />
+                  <label for="homozigoticoDominanteM">Homozigótico dominante</label>
+                  <input type="radio" class="playable-sound" id="homozigoticoRecessivoM" name="classificacao"
+                    value="homozigoticoRecessivo" />
+                  <label for="homozigoticoRecessivoM">Homozigótico recessivo</label>
+                </div>
+
+                <div class="d-centered mtb-10">
+                  <div class="flex-column d-centered">
+                    <h2 class="text-bold">Visualizar</h2>
+                    <input placeholder="??" type="" id="visualizacao2" name="visualizacao2" value="" size="1"
+                      disabled />
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="gap-10 m-10 d-flex w-100">
+              <button class="especial-button d-none pais" type="button" id="btncalcular" onclick="caracteristicas()">
+                Finalizar seleção
+              </button>
+
+              <button class="especial-button d-none pais disabled concluido" id="btnPassar" onclick="mostrarInterface('interface2')">
+                Concluído
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="interface d-centered" id="interface2">
+          <div class="p-20 check-area">
+            <button class="especial-button" onclick="mostrarInterface('interface1')">
+              Classificação dos alelos
+            </button>
+            <div id="espacoDisplay" class="gap-10">
+              <div class="criador">
+                <h2 class="title-bar mtb-10">Verificação e finalização</h2>
+
+                <label for="posicao">Visualização alelo Paterno</label>
+                <input placeholder="??" class="mtb-10" id="verAleloPai" size="1" disabled />
+                <label for="posicao">Visualização alelo Materno</label>
+                <input class="mtb-10" placeholder="??" id="verAleloMae" size="1" disabled />
+              </div>
+
+              <div class="d-centered flex-column d-none" id="divlista">
+                <div class="table-list">
+                  <ul id="lista"></ul>
+                </div>
+
+                <div id="resultArea" class="result-area"></div>
+
+                <div id="visualizationTable"></div>
               </div>
             </div>
           </div>
 
-          <div class="interface d-centered" id="interface2">
-            <div class="p-20 check-area">
-              <button
-                class="especial-button"
-                onclick="mostrarInterface('interface1')"
-              >
-                Classificação dos alelos
-              </button>
-              <div id="espacoDisplay" class="gap-10">
-                <div class="criador">
-                  <h2 class="title-bar mtb-10">Verificação e finalização</h2>
-
-                  <label for="posicao">Visualização alelo Paterno</label>
-                  <input
-                    placeholder="??"
-                    class="mtb-10"
-                    id="verAleloPai"
-                    size="1"
-                    disabled
-                  />
-                  <label for="posicao">Visualização alelo Materno</label>
-                  <input
-                    class="mtb-10"
-                    placeholder="??"
-                    id="verAleloMae"
-                    size="1"
-                    disabled
-                  />
-                </div>
-
-                <div class="d-centered flex-column">
-                  <div class="table-list">
-                    <ul id="lista"></ul>
-                  </div>
-
-                  <div id="resultArea" class="result-area"></div>
-
-                  <div id="visualizationTable"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gap-10 m-10 d-flex">
-              <button class="especial-button" id="criadorTabela">
-                Gerar resultado
-              </button>
-              <button class="especial-button" id="btnLimpar">Limpar</button>
-            </div>
+          <div class="gap-10 m-10 d-flex">
+            <button class="especial-button" id="criadorTabela">
+              Gerar resultado
+            </button>
+            <button class="especial-button" id="btnLimpar">Limpar</button>
           </div>
-          <script>
-            const text = document.getElementById("text");
+        </div>
 
-            function mostrarInterface(id) {
-              // Esconde todas as interfaces
-              let interfaces = document.querySelectorAll(".interface");
-              for (var i = 0; i < interfaces.length; i++) {
-                interfaces[i].classList.remove("ativa");
-              }
-              // Mostra a interface com o ID especificado
-              let interfaceAtiva = document.getElementById(id);
-              interfaceAtiva.classList.add("ativa");
+        </div>
+
+
+        <script>
+          const text = document.getElementById("text");
+
+          function mostrarInterface(id) {
+            // Esconde todas as interfaces
+            let interfaces = document.querySelectorAll(".interface");
+            for (var i = 0; i < interfaces.length; i++) {
+              interfaces[i].classList.remove("ativa");
+            }
+            // Mostra a interface com o ID especificado
+            let interfaceAtiva = document.getElementById(id);
+            interfaceAtiva.classList.add("ativa");
+
+          }
+
+          function mostrarCaracteristica() {
+            let divsPais = document.querySelectorAll(".pais");
+            let divCaracteristicas = document.querySelector(".caracteristicas");
+
+            
+              for (var i = 0; i < divsPais.length; i++) {
+              divsPais[i].classList.add("d-none");
             }
 
-            function caracteristicas() {
-              let formPai = document.getElementById("formulario");
-              let classificarPai = formPai.classificacao.value;
-              let caracterPai = formPai.caracteristicas.value;
-              let input = document.getElementById("visualizacao");
+            divCaracteristicas.classList.remove("d-none");
+          }
 
-              /* ALTURA */
-              if (
-                classificarPai == "heterozigotico" &&
-                caracterPai == "altura"
-              ) {
-                input.value = "Tt";
-              } else if (
-                classificarPai == "homozigoticoDominante" &&
-                caracterPai == "altura"
-              ) {
-                input.value = "TT";
-              } else if (
-                classificarPai == "homozigoticoRecessivo" &&
-                caracterPai == "altura"
-              ) {
-                input.value = "tt";
-              }
+          function mostrarPais() {
+            let divsPais = document.querySelectorAll(".pais");
+            let divCaracteristicas = document.querySelector(".caracteristicas");
 
-              /* POSIÇÃO DAS FLORES */
-              if (
-                classificarPai == "heterozigotico" &&
-                caracterPai == "posicao"
-              ) {
-                input.value = "Aa";
-              } else if (
-                classificarPai == "homozigoticoDominante" &&
-                caracterPai == "posicao"
-              ) {
-                input.value = "AA";
-              } else if (
-                classificarPai == "homozigoticoRecessivo" &&
-                caracterPai == "posicao"
-              ) {
-                input.value = "aa";
-              }
+            for (var i = 0; i < divsPais.length; i++) {
+              divsPais[i].classList.remove("d-none");
+            }
 
-              /* COR DA FLOR */
-              if (
-                classificarPai == "heterozigotico" &&
-                caracterPai == "corFlor"
-              ) {
-                input.value = "Pp";
-              } else if (
-                classificarPai == "homozigoticoDominante" &&
-                caracterPai == "corFlor"
-              ) {
-                input.value = "PP";
-              } else if (
-                classificarPai == "homozigoticoRecessivo" &&
-                caracterPai == "corFlor"
-              ) {
-                input.value = "pp";
-              }
+            divCaracteristicas.classList.add("d-none");
+          }
 
-              /* COR DA VAGEM */
-              if (
-                classificarPai == "heterozigotico" &&
-                caracterPai == "corVagem"
-              ) {
-                input.value = "Gg";
-              } else if (
-                classificarPai == "homozigoticoDominante" &&
-                caracterPai == "corVagem"
-              ) {
-                input.value = "GG";
-              } else if (
-                classificarPai == "homozigoticoRecessivo" &&
-                caracterPai == "corVagem"
-              ) {
-                input.value = "gg";
-              }
+          function caracteristicas() {
+            let formPai = document.getElementById("formulario");
+            let classificarPai = formPai.classificacao.value;
+            let caracterPai = formPai.caracteristicas.value;
+            let input = document.getElementById("visualizacao");
+            let btnfinalizar = document.getElementById("btnPassar")
 
-              /* FORMA DA VAGEM */
-              if (
-                classificarPai == "heterozigotico" &&
-                caracterPai == "formaVagem"
-              ) {
-                input.value = "Ss";
-              } else if (
-                classificarPai == "homozigoticoDominante" &&
-                caracterPai == "formaVagem"
-              ) {
-                input.value = "SS";
-              } else if (
-                classificarPai == "homozigoticoRecessivo" &&
-                caracterPai == "formaVagem"
-              ) {
-                input.value = "ss";
-              }
+            /* ALTURA */
+            if (
+              classificarPai == "heterozigotico" &&
+              caracterPai == "altura"
+            ) {
+              input.value = "Tt";
+            } else if (
+              classificarPai == "homozigoticoDominante" &&
+              caracterPai == "altura"
+            ) {
+              input.value = "TT";
+            } else if (
+              classificarPai == "homozigoticoRecessivo" &&
+              caracterPai == "altura"
+            ) {
+              input.value = "tt";
+            }
 
-              /* COR DA SEMENTE */
-              if (
-                classificarPai == "heterozigotico" &&
-                caracterPai == "corSemente"
-              ) {
-                input.value = "Yy";
-              } else if (
-                classificarPai == "homozigoticoDominante" &&
-                caracterPai == "corSemente"
-              ) {
-                input.value = "YY";
-              } else if (
-                classificarPai == "homozigoticoRecessivo" &&
-                caracterPai == "corSemente"
-              ) {
-                input.value = "yy";
-              }
+            /* POSIÇÃO DAS FLORES */
+            if (
+              classificarPai == "heterozigotico" &&
+              caracterPai == "posicao"
+            ) {
+              input.value = "Aa";
+            } else if (
+              classificarPai == "homozigoticoDominante" &&
+              caracterPai == "posicao"
+            ) {
+              input.value = "AA";
+            } else if (
+              classificarPai == "homozigoticoRecessivo" &&
+              caracterPai == "posicao"
+            ) {
+              input.value = "aa";
+            }
 
-              /* FORMA DA SEMENTE */
-              if (
-                classificarPai == "heterozigotico" &&
-                caracterPai == "texturaSemente"
-              ) {
-                input.value = "Rr";
-              } else if (
-                classificarPai == "homozigoticoDominante" &&
-                caracterPai == "texturaSemente"
-              ) {
-                input.value = "RR";
-              } else if (
-                classificarPai == "homozigoticoRecessivo" &&
-                caracterPai == "texturaSemente"
-              ) {
-                input.value = "rr";
-              }
+            /* COR DA FLOR */
+            if (
+              classificarPai == "heterozigotico" &&
+              caracterPai == "corFlor"
+            ) {
+              input.value = "Pp";
+            } else if (
+              classificarPai == "homozigoticoDominante" &&
+              caracterPai == "corFlor"
+            ) {
+              input.value = "PP";
+            } else if (
+              classificarPai == "homozigoticoRecessivo" &&
+              caracterPai == "corFlor"
+            ) {
+              input.value = "pp";
+            }
 
-              /*CASO NÃO ESCOLHER NEM UMA OU OUTRA*/
-              if (classificarPai == "" || caracterPai == "") {
-                text.innerHTML =
-                  "Por favor, escolha uma característica e proceda à sua classificação.";
+            /* COR DA VAGEM */
+            if (
+              classificarPai == "heterozigotico" &&
+              caracterPai == "corVagem"
+            ) {
+              input.value = "Gg";
+            } else if (
+              classificarPai == "homozigoticoDominante" &&
+              caracterPai == "corVagem"
+            ) {
+              input.value = "GG";
+            } else if (
+              classificarPai == "homozigoticoRecessivo" &&
+              caracterPai == "corVagem"
+            ) {
+              input.value = "gg";
+            }
+
+            /* FORMA DA VAGEM */
+            if (
+              classificarPai == "heterozigotico" &&
+              caracterPai == "formaVagem"
+            ) {
+              input.value = "Ss";
+            } else if (
+              classificarPai == "homozigoticoDominante" &&
+              caracterPai == "formaVagem"
+            ) {
+              input.value = "SS";
+            } else if (
+              classificarPai == "homozigoticoRecessivo" &&
+              caracterPai == "formaVagem"
+            ) {
+              input.value = "ss";
+            }
+
+            /* COR DA SEMENTE */
+            if (
+              classificarPai == "heterozigotico" &&
+              caracterPai == "corSemente"
+            ) {
+              input.value = "Yy";
+            } else if (
+              classificarPai == "homozigoticoDominante" &&
+              caracterPai == "corSemente"
+            ) {
+              input.value = "YY";
+            } else if (
+              classificarPai == "homozigoticoRecessivo" &&
+              caracterPai == "corSemente"
+            ) {
+              input.value = "yy";
+            }
+
+            /* FORMA DA SEMENTE */
+            if (
+              classificarPai == "heterozigotico" &&
+              caracterPai == "texturaSemente"
+            ) {
+              input.value = "Rr";
+            } else if (
+              classificarPai == "homozigoticoDominante" &&
+              caracterPai == "texturaSemente"
+            ) {
+              input.value = "RR";
+            } else if (
+              classificarPai == "homozigoticoRecessivo" &&
+              caracterPai == "texturaSemente"
+            ) {
+              input.value = "rr";
+            }
+
+            /*CASO NÃO ESCOLHER NEM UMA OU OUTRA*/
+            if (classificarPai == "" || caracterPai == "") {
+              text.innerHTML =
+                "Por favor, escolha uma característica e proceda à sua classificação.";
+              errorSound.play();
+              overlay.style.transform = "scale(1)";
+              return;
+            } else if (classificarPai !== "" || caracterPai !== "") {
+              btnfinalizar.classList.remove("disabled");
+              console.log("caiu aqui");
+            }
+
+            let formMae = document.getElementById("formulario2");
+            let classificarMae = formMae.classificacao.value;
+            let caracterMae = caracterPai;
+            let inputMae = document.getElementById("visualizacao2");
+
+            if (
+              classificarMae == "heterozigotico" &&
+              caracterMae == "altura"
+            ) {
+              inputMae.value = "Tt";
+            } else if (
+              classificarMae == "homozigoticoDominante" &&
+              caracterMae == "altura"
+            ) {
+              inputMae.value = "TT";
+            } else if (
+              classificarMae == "homozigoticoRecessivo" &&
+              caracterMae == "altura"
+            ) {
+              inputMae.value = "tt";
+            }
+
+            /* POSIÇÃO DAS FLORES */
+            if (
+              classificarMae == "heterozigotico" &&
+              caracterMae == "posicao"
+            ) {
+              inputMae.value = "Aa";
+            } else if (
+              classificarMae == "homozigoticoDominante" &&
+              caracterMae == "posicao"
+            ) {
+              inputMae.value = "AA";
+            } else if (
+              classificarMae == "homozigoticoRecessivo" &&
+              caracterMae == "posicao"
+            ) {
+              inputMae.value = "aa";
+            }
+
+            /* COR DA FLOR */
+            if (
+              classificarMae == "heterozigotico" &&
+              caracterMae == "corFlor"
+            ) {
+              inputMae.value = "Pp";
+            } else if (
+              classificarMae == "homozigoticoDominante" &&
+              caracterMae == "corFlor"
+            ) {
+              inputMae.value = "PP";
+            } else if (
+              classificarMae == "homozigoticoRecessivo" &&
+              caracterMae == "corFlor"
+            ) {
+              inputMae.value = "pp";
+            }
+
+            /* COR DA VAGEM */
+            if (
+              classificarMae == "heterozigotico" &&
+              caracterMae == "corVagem"
+            ) {
+              inputMae.value = "Gg";
+            } else if (
+              classificarMae == "homozigoticoDominante" &&
+              caracterMae == "corVagem"
+            ) {
+              inputMae.value = "GG";
+            } else if (
+              classificarMae == "homozigoticoRecessivo" &&
+              caracterMae == "corVagem"
+            ) {
+              inputMae.value = "gg";
+            }
+
+            /* FORMA DA VAGEM */
+            if (
+              classificarMae == "heterozigotico" &&
+              caracterMae == "formaVagem"
+            ) {
+              inputMae.value = "Ss";
+            } else if (
+              classificarMae == "homozigoticoDominante" &&
+              caracterMae == "formaVagem"
+            ) {
+              inputMae.value = "SS";
+            } else if (
+              classificarMae == "homozigoticoRecessivo" &&
+              caracterMae == "formaVagem"
+            ) {
+              inputMae.value = "ss";
+            }
+
+            /* COR DA SEMENTE */
+            if (
+              classificarMae == "heterozigotico" &&
+              caracterMae == "corSemente"
+            ) {
+              inputMae.value = "Yy";
+            } else if (
+              classificarMae == "homozigoticoDominante" &&
+              caracterMae == "corSemente"
+            ) {
+              inputMae.value = "YY";
+            } else if (
+              classificarMae == "homozigoticoRecessivo" &&
+              caracterMae == "corSemente"
+            ) {
+              inputMae.value = "yy";
+            }
+
+            /* FORMA DA SEMENTE */
+            if (
+              classificarMae == "heterozigotico" &&
+              caracterMae == "texturaSemente"
+            ) {
+              inputMae.value = "Rr";
+            } else if (
+              classificarMae == "homozigoticoDominante" &&
+              caracterMae == "texturaSemente"
+            ) {
+              inputMae.value = "RR";
+            } else if (
+              classificarMae == "homozigoticoRecessivo" &&
+              caracterMae == "texturaSemente"
+            ) {
+              inputMae.value = "rr";
+            }
+          }
+
+          function createTable() {
+            let btnGeral = document.getElementById("criadorTabela");
+            let lista = document.getElementById("divlista");
+
+            btnGeral.addEventListener("click", function () {
+              let divpai = document.querySelector(".tudo");
+              const [paternoInput, maternoInput] = document.querySelectorAll(
+                "#visualizacao, #visualizacao2"
+              );
+              const paternoString = paternoInput.value.toString();
+              const maternoString = maternoInput.value.toString();
+              let inputPaiVerificar = document.getElementById("verAleloPai");
+              let inputMaeVerificar = document.getElementById("verAleloMae");
+              inputPaiVerificar.value = paternoString;
+              inputMaeVerificar.value = maternoString;
+
+              if (paternoString == "" || maternoString == "") {
                 errorSound.play();
                 overlay.style.transform = "scale(1)";
+                text.innerHTML =
+                  "Lamento informar que a realização do cruzamento não foi possível. Solicitamos gentilmente que verifique se os alelos foram selecionados de forma adequada e tente novamente.";
                 return;
-              }
 
-              let formMae = document.getElementById("formulario2");
-              let classificarMae = formMae.classificacao.value;
-              let caracterMae = caracterPai;
-              let inputMae = document.getElementById("visualizacao2");
+                btnGeral.removeAttribute("disabled");
+              } else {
+                const table = document.createElement("table");
+                table.setAttribute("id", "tabelaAlelos");
+                const thead = document.createElement("thead");
+                const tbody = document.createElement("tbody");
+                const headerRow = document.createElement("tr");
+                lista.classList.remove("d-none");
 
-              if (
-                classificarMae == "heterozigotico" &&
-                caracterMae == "altura"
-              ) {
-                inputMae.value = "Tt";
-              } else if (
-                classificarMae == "homozigoticoDominante" &&
-                caracterMae == "altura"
-              ) {
-                inputMae.value = "TT";
-              } else if (
-                classificarMae == "homozigoticoRecessivo" &&
-                caracterMae == "altura"
-              ) {
-                inputMae.value = "tt";
-              }
+                const headers = [
+                  "<th class='bg-transparent' ><img src='../Assets/icons/table-icon.png' class='rotate' width='80px'></th>",
+                  `<th>${maternoString[0]}</th>`,
+                  `<th>${maternoString[1]}</th>`,
+                ];
+                headers.map((header) => {
+                  const th = document.createElement("th");
+                  th.innerHTML = header;
+                  headerRow.appendChild(th);
+                });
+                thead.appendChild(headerRow);
 
-              /* POSIÇÃO DAS FLORES */
-              if (
-                classificarMae == "heterozigotico" &&
-                caracterMae == "posicao"
-              ) {
-                inputMae.value = "Aa";
-              } else if (
-                classificarMae == "homozigoticoDominante" &&
-                caracterMae == "posicao"
-              ) {
-                inputMae.value = "AA";
-              } else if (
-                classificarMae == "homozigoticoRecessivo" &&
-                caracterMae == "posicao"
-              ) {
-                inputMae.value = "aa";
-              }
+                const concatenaComMaiuscula = (str1, str2) => {
+                  if (str1[0] < str2[0]) {
+                    return str1[0] + str2[0];
+                  } else if (str1[0] > str2[0]) {
+                    return str2[0] + str1[0];
+                  } else if (str1[0] == str2[0]) {
+                    return str1[0] + str2[0];
+                  } else {
+                    return str2[0] + str1[0];
+                  }
+                };
 
-              /* COR DA FLOR */
-              if (
-                classificarMae == "heterozigotico" &&
-                caracterMae == "corFlor"
-              ) {
-                inputMae.value = "Pp";
-              } else if (
-                classificarMae == "homozigoticoDominante" &&
-                caracterMae == "corFlor"
-              ) {
-                inputMae.value = "PP";
-              } else if (
-                classificarMae == "homozigoticoRecessivo" &&
-                caracterMae == "corFlor"
-              ) {
-                inputMae.value = "pp";
-              }
+                const bodyRows = [
+                  `<tr><th>${paternoString[0]
+                  }</th><td id="celulas">${concatenaComMaiuscula(
+                    paternoString[0],
+                    maternoString[0]
+                  )}</td><td id="celulas">${concatenaComMaiuscula(
+                    paternoString[0],
+                    maternoString[1]
+                  )}</td></tr>`,
+                  `<tr><th>${paternoString[1]
+                  }</th><td id="celulas">${concatenaComMaiuscula(
+                    paternoString[1],
+                    maternoString[0]
+                  )}</td><td id="celulas">${concatenaComMaiuscula(
+                    paternoString[1],
+                    maternoString[1]
+                  )}</td></tr>`,
+                ];
+                bodyRows.map((bodyRow) => {
+                  const tr = document.createElement("tr");
+                  tr.innerHTML = bodyRow;
+                  tbody.appendChild(tr);
+                });
+                tbody.classList.add("tableBody");
 
-              /* COR DA VAGEM */
-              if (
-                classificarMae == "heterozigotico" &&
-                caracterMae == "corVagem"
-              ) {
-                inputMae.value = "Gg";
-              } else if (
-                classificarMae == "homozigoticoDominante" &&
-                caracterMae == "corVagem"
-              ) {
-                inputMae.value = "GG";
-              } else if (
-                classificarMae == "homozigoticoRecessivo" &&
-                caracterMae == "corVagem"
-              ) {
-                inputMae.value = "gg";
-              }
+                const tableFilho =
+                  document.getElementById("visualizationTable");
 
-              /* FORMA DA VAGEM */
-              if (
-                classificarMae == "heterozigotico" &&
-                caracterMae == "formaVagem"
-              ) {
-                inputMae.value = "Ss";
-              } else if (
-                classificarMae == "homozigoticoDominante" &&
-                caracterMae == "formaVagem"
-              ) {
-                inputMae.value = "SS";
-              } else if (
-                classificarMae == "homozigoticoRecessivo" &&
-                caracterMae == "formaVagem"
-              ) {
-                inputMae.value = "ss";
-              }
+                table.appendChild(thead);
+                table.appendChild(tbody);
 
-              /* COR DA SEMENTE */
-              if (
-                classificarMae == "heterozigotico" &&
-                caracterMae == "corSemente"
-              ) {
-                inputMae.value = "Yy";
-              } else if (
-                classificarMae == "homozigoticoDominante" &&
-                caracterMae == "corSemente"
-              ) {
-                inputMae.value = "YY";
-              } else if (
-                classificarMae == "homozigoticoRecessivo" &&
-                caracterMae == "corSemente"
-              ) {
-                inputMae.value = "yy";
-              }
+                const resultArea = document.getElementById("resultArea");
+                resultArea.appendChild(table);
 
-              /* FORMA DA SEMENTE */
-              if (
-                classificarMae == "heterozigotico" &&
-                caracterMae == "texturaSemente"
-              ) {
-                inputMae.value = "Rr";
-              } else if (
-                classificarMae == "homozigoticoDominante" &&
-                caracterMae == "texturaSemente"
-              ) {
-                inputMae.value = "RR";
-              } else if (
-                classificarMae == "homozigoticoRecessivo" &&
-                caracterMae == "texturaSemente"
-              ) {
-                inputMae.value = "rr";
-              }
-            }
+                resultArea.appendChild(table);
 
-            function createTable() {
-              let btnGeral = document.getElementById("criadorTabela");
-              btnGeral.addEventListener("click", function () {
-                let divpai = document.querySelector(".tudo");
-                const [paternoInput, maternoInput] = document.querySelectorAll(
-                  "#visualizacao, #visualizacao2"
-                );
-                const paternoString = paternoInput.value.toString();
-                const maternoString = maternoInput.value.toString();
-                let inputPaiVerificar = document.getElementById("verAleloPai");
-                let inputMaeVerificar = document.getElementById("verAleloMae");
-                inputPaiVerificar.value = paternoString;
-                inputMaeVerificar.value = maternoString;
+                let interface2 = document.getElementById("interface2");
+                interface2.appendChild(table);
+                tableFilho.appendChild(table);
 
-                if (paternoString == "" || maternoString == "") {
-                  errorSound.play();
-                  overlay.style.transform = "scale(1)";
-                  text.innerHTML =
-                    "Lamento informar que a realização do cruzamento não foi possível. Solicitamos gentilmente que verifique se os alelos foram selecionados de forma adequada e tente novamente.";
-                  return;
+                function celulas() {
+                  let celulas = document.querySelectorAll("#celulas");
+                  let resultadosCelulas = [];
 
-                  btnGeral.removeAttribute("disabled");
-                } else {
-                  const table = document.createElement("table");
-                  table.setAttribute("id", "tabelaAlelos");
-                  const thead = document.createElement("thead");
-                  const tbody = document.createElement("tbody");
-                  const headerRow = document.createElement("tr");
+                  for (let i = 0; i < celulas.length; i++) {
+                    resultadosCelulas.push(celulas[i].textContent);
+                  }
 
-                  const headers = [
-                    "<th class='bg-transparent' ><img src='../Assets/icons/table-icon.png' class='rotate' width='80px'></th>",
-                    `<th>${maternoString[0]}</th>`,
-                    `<th>${maternoString[1]}</th>`,
-                  ];
-                  headers.map((header) => {
-                    const th = document.createElement("th");
-                    th.innerHTML = header;
-                    headerRow.appendChild(th);
-                  });
-                  thead.appendChild(headerRow);
+                  //AA Aa aa
+                  //resultadosCelulas[0] == UpperCase {A_}
+                  //resultadosCelulas[0] == LowerCase {aa}
+                  let ValorFinal = [];
 
-                  const concatenaComMaiuscula = (str1, str2) => {
-                    if (str1[0] < str2[0]) {
-                      return str1[0] + str2[0];
-                    } else if (str1[0] > str2[0]) {
-                      return str2[0] + str1[0];
-                    } else if (str1[0] == str2[0]) {
-                      return str1[0] + str2[0];
-                    } else {
-                      return str2[0] + str1[0];
-                    }
-                  };
+                  //AA Aa Aa aa
 
-                  const bodyRows = [
-                    `<tr><th>${
-                      paternoString[0]
-                    }</th><td id="celulas">${concatenaComMaiuscula(
-                      paternoString[0],
-                      maternoString[0]
-                    )}</td><td id="celulas">${concatenaComMaiuscula(
-                      paternoString[0],
-                      maternoString[1]
-                    )}</td></tr>`,
-                    `<tr><th>${
-                      paternoString[1]
-                    }</th><td id="celulas">${concatenaComMaiuscula(
-                      paternoString[1],
-                      maternoString[0]
-                    )}</td><td id="celulas">${concatenaComMaiuscula(
-                      paternoString[1],
-                      maternoString[1]
-                    )}</td></tr>`,
-                  ];
-                  bodyRows.map((bodyRow) => {
-                    const tr = document.createElement("tr");
-                    tr.innerHTML = bodyRow;
-                    tbody.appendChild(tr);
-                  });
-                  tbody.classList.add("tableBody");
-
-                  const tableFilho =
-                    document.getElementById("visualizationTable");
-
-                  table.appendChild(thead);
-                  table.appendChild(tbody);
-
-                  const resultArea = document.getElementById("resultArea");
-                  resultArea.appendChild(table);
-
-                  resultArea.appendChild(table);
-
-                  let interface2 = document.getElementById("interface2");
-                  interface2.appendChild(table);
-                  tableFilho.appendChild(table);
-
-                  function celulas() {
-                    let celulas = document.querySelectorAll("#celulas");
-                    let resultadosCelulas = [];
-
-                    for (let i = 0; i < celulas.length; i++) {
-                      resultadosCelulas.push(celulas[i].textContent);
-                    }
-
-                    //AA Aa aa
-                    //resultadosCelulas[0] == UpperCase {A_}
-                    //resultadosCelulas[0] == LowerCase {aa}
-                    let ValorFinal = [];
-
-                    //AA Aa Aa aa
-
-                    function condicaoAlelos() {
-                      if (
-                        resultadosCelulas[0].charAt(0) ==
-                        resultadosCelulas[0].charAt(0).toUpperCase()
-                      ) {
-                        ValorFinal.push(
-                          `${resultadosCelulas[0].charAt(0).toUpperCase()}_`
-                        );
-                      } else if (
-                        resultadosCelulas[0].charAt(0) ==
-                        resultadosCelulas[0].charAt(0).toLowerCase()
-                      ) {
-                        ValorFinal.push(
-                          `${resultadosCelulas[0]
-                            .charAt(0)
-                            .toLowerCase()}${resultadosCelulas[0]
+                  function condicaoAlelos() {
+                    if (
+                      resultadosCelulas[0].charAt(0) ==
+                      resultadosCelulas[0].charAt(0).toUpperCase()
+                    ) {
+                      ValorFinal.push(
+                        `${resultadosCelulas[0].charAt(0).toUpperCase()}_`
+                      );
+                    } else if (
+                      resultadosCelulas[0].charAt(0) ==
+                      resultadosCelulas[0].charAt(0).toLowerCase()
+                    ) {
+                      ValorFinal.push(
+                        `${resultadosCelulas[0]
+                          .charAt(0)
+                          .toLowerCase()}${resultadosCelulas[0]
                             .charAt(1)
                             .toLowerCase()}`
-                        );
-                      }
-                      if (
-                        resultadosCelulas[1].charAt(0) ==
-                        resultadosCelulas[1].charAt(0).toUpperCase()
-                      ) {
-                        ValorFinal.push(
-                          `${resultadosCelulas[0].charAt(0).toUpperCase()}_`
-                        );
-                      } else if (
-                        resultadosCelulas[1].charAt(0) ==
-                        resultadosCelulas[1].charAt(0).toLowerCase()
-                      ) {
-                        ValorFinal.push(
-                          `${resultadosCelulas[0]
-                            .charAt(0)
-                            .toLowerCase()}${resultadosCelulas[0]
-                            .charAt(1)
-                            .toLowerCase()}`
-                        );
-                      }
-                      if (
-                        resultadosCelulas[2].charAt(0) ==
-                        resultadosCelulas[2].charAt(0).toUpperCase()
-                      ) {
-                        ValorFinal.push(
-                          `${resultadosCelulas[0].charAt(0).toUpperCase()}_`
-                        );
-                      } else if (
-                        resultadosCelulas[2].charAt(0) ==
-                        resultadosCelulas[2].charAt(0).toLowerCase()
-                      ) {
-                        ValorFinal.push(
-                          `${resultadosCelulas[0]
-                            .charAt(0)
-                            .toLowerCase()}${resultadosCelulas[0]
-                            .charAt(1)
-                            .toLowerCase()}`
-                        );
-                      }
-                      if (
-                        resultadosCelulas[3].charAt(0) ==
-                        resultadosCelulas[3].charAt(0).toUpperCase()
-                      ) {
-                        ValorFinal.push(
-                          `${resultadosCelulas[0].charAt(0).toUpperCase()}_`
-                        );
-                      } else if (
-                        resultadosCelulas[3].charAt(0) ==
-                        resultadosCelulas[3].charAt(0).toLowerCase()
-                      ) {
-                        ValorFinal.push(
-                          `${resultadosCelulas[0]
-                            .charAt(0)
-                            .toLowerCase()}${resultadosCelulas[0]
-                            .charAt(1)
-                            .toLowerCase()}`
-                        );
-                      }
-                    }
-                    condicaoAlelos();
-                    console.log(ValorFinal);
-
-                    let contagemAlelos = ValorFinal.reduce(
-                      (contagem, alelo) => {
-                        contagem[alelo] = (contagem[alelo] || 0) + 1;
-                        return contagem;
-                      },
-                      {}
-                    );
-
-                    let outputArray = [];
-
-                    for (let alelo in contagemAlelos) {
-                      let proporcao =
-                        contagemAlelos[alelo] / resultadosCelulas.length;
-                      let fracao = new Fraction(proporcao).toFraction();
-                      outputArray.push(
-                        `${alelo} : ${proporcao} | ${
-                          proporcao * 100
-                        }% ou ${fracao}`
                       );
                     }
-
-                    const lista = document.getElementById("lista");
-
-                    outputArray.forEach(function (elemento) {
-                      const item = document.createElement("li");
-                      item.setAttribute("class", "listaProporcao");
-                      item.innerText = elemento;
-                      lista.appendChild(item);
-                    });
+                    if (
+                      resultadosCelulas[1].charAt(0) ==
+                      resultadosCelulas[1].charAt(0).toUpperCase()
+                    ) {
+                      ValorFinal.push(
+                        `${resultadosCelulas[0].charAt(0).toUpperCase()}_`
+                      );
+                    } else if (
+                      resultadosCelulas[1].charAt(0) ==
+                      resultadosCelulas[1].charAt(0).toLowerCase()
+                    ) {
+                      ValorFinal.push(
+                        `${resultadosCelulas[0]
+                          .charAt(0)
+                          .toLowerCase()}${resultadosCelulas[0]
+                            .charAt(1)
+                            .toLowerCase()}`
+                      );
+                    }
+                    if (
+                      resultadosCelulas[2].charAt(0) ==
+                      resultadosCelulas[2].charAt(0).toUpperCase()
+                    ) {
+                      ValorFinal.push(
+                        `${resultadosCelulas[0].charAt(0).toUpperCase()}_`
+                      );
+                    } else if (
+                      resultadosCelulas[2].charAt(0) ==
+                      resultadosCelulas[2].charAt(0).toLowerCase()
+                    ) {
+                      ValorFinal.push(
+                        `${resultadosCelulas[0]
+                          .charAt(0)
+                          .toLowerCase()}${resultadosCelulas[0]
+                            .charAt(1)
+                            .toLowerCase()}`
+                      );
+                    }
+                    if (
+                      resultadosCelulas[3].charAt(0) ==
+                      resultadosCelulas[3].charAt(0).toUpperCase()
+                    ) {
+                      ValorFinal.push(
+                        `${resultadosCelulas[0].charAt(0).toUpperCase()}_`
+                      );
+                    } else if (
+                      resultadosCelulas[3].charAt(0) ==
+                      resultadosCelulas[3].charAt(0).toLowerCase()
+                    ) {
+                      ValorFinal.push(
+                        `${resultadosCelulas[0]
+                          .charAt(0)
+                          .toLowerCase()}${resultadosCelulas[0]
+                            .charAt(1)
+                            .toLowerCase()}`
+                      );
+                    }
                   }
-                  celulas();
+                  condicaoAlelos();
+                  console.log(ValorFinal);
+
+                  let contagemAlelos = ValorFinal.reduce(
+                    (contagem, alelo) => {
+                      contagem[alelo] = (contagem[alelo] || 0) + 1;
+                      return contagem;
+                    },
+                    {}
+                  );
+
+                  let outputArray = [];
+
+                  for (let alelo in contagemAlelos) {
+                    let proporcao =
+                      contagemAlelos[alelo] / resultadosCelulas.length;
+                    let fracao = new Fraction(proporcao).toFraction();
+                    outputArray.push(
+                      `${alelo} : ${proporcao} | ${proporcao * 100
+                      }% ou ${fracao}`
+                    );
+                  }
+
+                  const lista = document.getElementById("lista");
+
+                  outputArray.forEach(function (elemento) {
+                    const item = document.createElement("li");
+                    item.setAttribute("class", "listaProporcao");
+                    item.innerText = elemento;
+                    lista.appendChild(item);
+                  });
                 }
-              });
-            }
+                celulas();
+              }
+            });
 
-            function disabledBtn() {
-              let btnTabela = document.getElementById("criadorTabela");
-              let btnVoltarDisable = document.getElementById("btnLimpar");
+          }
 
-              btnTabela.addEventListener("click", function () {
-                let aleloPae = document.getElementById("verAleloPai").value;
-                let aleloMae = document.getElementById("verAleloMae").value;
+          function disabledBtn() {
+            let btnTabela = document.getElementById("criadorTabela");
+            let btnVoltarDisable = document.getElementById("btnLimpar");
+            let divlista = document.getElementById("divlista")
 
-                if (aleloPae.value == "" || aleloMae.value == "") {
-                  console.log("caiu no if");
-                } else if (aleloPae.value != "" || aleloMae.value != "") {
-                  btnTabela.setAttribute("disabled", true);
-                }
-              });
+            btnTabela.addEventListener("click", function () {
+              let aleloPae = document.getElementById("verAleloPai").value;
+              let aleloMae = document.getElementById("verAleloMae").value;
 
-              let aleloPae2 = document.getElementById("verAleloPai").value;
-              let aleloMae2 = document.getElementById("verAleloMae").value;
-              btnVoltarDisable.addEventListener("click", function () {
-                const minhaTabela = document.getElementById("tabelaAlelos");
-                const lista = document.querySelectorAll("ul#lista *");
+              if (aleloPae.value == "" || aleloMae.value == "") {
+                console.log("caiu no if");
+              } else if (aleloPae.value != "" || aleloMae.value != "") {
+                btnTabela.setAttribute("disabled", true);
+              }
+            });
 
-                minhaTabela.remove();
-                btnTabela.removeAttribute("disabled");
+            let aleloPae2 = document.getElementById("verAleloPai").value;
+            let aleloMae2 = document.getElementById("verAleloMae").value;
+            btnVoltarDisable.addEventListener("click", function () {
+              const minhaTabela = document.getElementById("tabelaAlelos");
+              const lista = document.querySelectorAll("ul#lista *");
 
-                let inputPaiVerificar = document.getElementById("verAleloPai");
-                let inputMaeVerificar = document.getElementById("verAleloMae");
+              minhaTabela.remove();
+              btnTabela.removeAttribute("disabled");
+              divlista.classList.add("d-none");
 
-                inputMaeVerificar.value = "";
-                inputPaiVerificar.value = "";
+              let inputPaiVerificar = document.getElementById("verAleloPai");
+              let inputMaeVerificar = document.getElementById("verAleloMae");
 
-                for (let i = 0; i < lista.length; i++) {
-                  lista[i].remove();
-                }
-              });
-            }
-            disabledBtn();
-            createTable();
-          </script>
-        </div>
+              inputMaeVerificar.value = "";
+              inputPaiVerificar.value = "";
+
+              for (let i = 0; i < lista.length; i++) {
+                lista[i].remove();
+              }
+            });
+          }
+          disabledBtn();
+          createTable();
+        </script>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <script async src="../Assets/js/fraction.js"></script>
-    <script async src="../Assets/js/script.js"></script>
-    <script async src="../Assets/js/actions.js"></script>
-    <script async src="../Assets/js/menu.js"></script>
-    <script async src="../Assets/js/sounds.js"></script>
-  </body>
+  <script async src="../Assets/js/fraction.js"></script>
+  <script async src="../Assets/js/actions.js"></script>
+  <script async src="../Assets/js/menu.js"></script>
+  <script async src="../Assets/js/sounds.js"></script>
+</body>
+
 </html>
 
 <!--

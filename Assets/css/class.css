@@ -294,8 +294,8 @@ svg {
     color: #DC3545;
 }
 
-.text-center {
-    text-align: center;
+.text-start {
+    text-align: start;
 }
 
 .text-important {
