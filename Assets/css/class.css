@@ -28,6 +28,10 @@
     flex-direction: column;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .align-center {
     align-items: center;
     display: flex;
@@ -55,6 +59,8 @@
 .img-fluid {
     max-width: 100%;
     height: auto;
+    display: flex;
+    align-items: center;
 }
 
 .flex-row-reverse {
@@ -172,6 +178,7 @@ svg {
 
 .btn {
     outline: 2px;
+    border-radius: 10px;
     transition: 0.4s;
     cursor: pointer;
     width: 120px;
@@ -385,7 +392,8 @@ svg {
 
 .disabled {
     filter:grayscale(1);
-    opacity: 0.2;
+    opacity: 0.6;
+    pointer-events: none;
 }
 
 .cc-default {

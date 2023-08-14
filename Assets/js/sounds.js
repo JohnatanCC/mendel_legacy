@@ -8,6 +8,8 @@ specificInputs.forEach((input) => {
   });
 });
 
+
+
 //Music
 
 const audioElement = document.getElementById('audioElement');
@@ -38,6 +40,8 @@ document.addEventListener('keydown', (event) => {
     }, 1000);
   }
 });
+
+
 
 //Mobile
 const playMusic = document.getElementById('playMusic');
