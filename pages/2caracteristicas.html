@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mendel | Duas características</title>
-    <link rel="shortcut icon" href="../Assets/icons/system-icon(old).png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../Assets/icons/system-icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../Assets/css/anim.css" />
     <link rel="stylesheet" href="../Assets/css/class.css" />
     <link rel="stylesheet" href="../Assets/css/style.css" />
@@ -18,13 +18,13 @@
 <body class=" bg-practice ml-default">
     <div class="play-buttom">
         <img src="../Assets/icons/play-icon.png" id="playMusic" alt="">
-      </div>
+    </div>
     <div id="volumeDisplay" class="volume-display">Volume: 100%</div>
 
     <div class="menu-expand">
         <img id="expand-icon" src="../Assets/icons/expand-menu-icon.png" alt="Menu expand">
         Menu
-      </div>
+    </div>
 
     <div class="navigation">
 
@@ -51,10 +51,10 @@
                     <span class="title">Teoria</span>
                 </a>
             </li>
-            <li class="list">
-                <a href="#">
+            <li class="list ">
+                <a href="../lab.html">
                     <span class="icon"><img src="../Assets/icons/lab-icon-navbar.png" /></span>
-                    <span class="title">Lab (Beta)</span>
+                    <span class="title">Lab (Demo)</span>
                 </a>
             </li>
             <li class="list ">
@@ -69,7 +69,7 @@
     <!-- Sounds -->
     <audio id="audioElement">
         <source src="../Assets/sounds/music.mp3" type="audio/mpeg" />
-      </audio>
+    </audio>
     <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
     <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
 
@@ -98,7 +98,8 @@
                 <div class="gap-10 m-10 d-flex ">
                     <button class="especial-button" onclick="mostrarInterface('interface1')">Primeiro gene paterno e
                         materna</button>
-                    <button class="especial-button" onclick="mostrarInterface('interface2')">Segundo gene paterno e
+                    <button class="especial-button disabled" id="segundoGene"
+                        onclick="mostrarInterface('interface2')">Segundo gene paterno e
                         materna</button>
 
 
@@ -106,32 +107,33 @@
                 <div class="interface ativa" id="interface1">
                     <div class="row p-20  flex-row">
 
-
-
+            
 
                         <div class="col-6  p-20">
-                            <h2 class="title-bar">Primeira característica paterna</h2>
-                            <form id="formPai1">
-                                <div class="custom-radio">
 
-                                    <p class="text-center">Classifique o gene:</p>
-                                    <input type="radio" class="playable-sound" id="heterozigoticoP1"
-                                        name="classificacao" value="heterozigotico">
-                                    <label for="heterozigoticoP1">Heterozigótico</label><br>
-                                    <input type="radio" class="playable-sound" id="homozigoticoDominanteP1"
-                                        name="classificacao" value="homozigoticoDominante">
-                                    <label for="homozigoticoDominanteP1">Homozigótico dominante</label><br>
-                                    <input type="radio" class="playable-sound" id="homozigoticoRecessivoP1"
-                                        name="classificacao" value="homozigoticoRecessivo">
-                                    <label for="homozigoticoRecessivoP1">Homozigótico recessivo</label><br>
 
-                                    <div class="d-centered ">
-                                        <div class="flex-column d-centered">
-                                            <h2 for="posicao">Visualização</h2>
-                                            <input class="vizu2 " placeholder="??" id="visualizacaoPai1"
-                                                name="visualizacaoPai1" value="" size="1" disabled>
+                                <h2 class="title-bar">Primeira característica paterna</h2>
+                                <form id="formPai1">
+                                    <div class="custom-radio">
+                                        <p class="text-center">Classifique o gene:</p>
+                                        <input type="radio" class="playable-sound" id="heterozigoticoP1"
+                                            name="classificacao" value="heterozigotico">
+                                        <label for="heterozigoticoP1">Heterozigótico</label><br>
+                                        <input type="radio" class="playable-sound" id="homozigoticoDominanteP1"
+                                            name="classificacao" value="homozigoticoDominante">
+                                        <label for="homozigoticoDominanteP1">Homozigótico dominante</label><br>
+                                        <input type="radio" class="playable-sound" id="homozigoticoRecessivoP1"
+                                            name="classificacao" value="homozigoticoRecessivo">
+                                        <label for="homozigoticoRecessivoP1">Homozigótico recessivo</label><br>
+                                        <div class="d-centered ">
+                                            <div class="flex-column d-centered">
+                                                <h2 for="posicao">Visualização</h2>
+                                                <input class="vizu2 " placeholder="??" id="visualizacaoPai1"
+                                                    name="visualizacaoPai1" value="" size="1" disabled>
+                                            </div>
                                         </div>
-                                    </div>
+
+
 
                                     <h2 class="title-bar">Escolha uma característica:</h2>
                                     <input type="radio" class="playable-sound" id="altura" name="caracteristicasPaeMae1"
@@ -158,14 +160,12 @@
                                     <label for="texturaSemente">Forma da semente (RR)</label><br>
 
                                 </div>
-
-
-
                             </form>
+
+                            
                         </div>
 
-
-                        <div class="col-6  p-20">
+                        <div class="col-6 p-20">
 
                             <h2 class="title-bar">Primeira característica materna</h2>
                             <form id="formMae1">
@@ -183,10 +183,6 @@
                                     <label for="homozigoticoRecessivoM1">Homozigótico recessivo</label><br>
                                 </div>
 
-
-
-
-
                                 <div class="d-centered">
                                     <div class="flex-column d-centered">
                                         <h2 for="posicao">Visualização</h2>
@@ -198,12 +194,10 @@
                             </form>
                         </div>
 
-
                     </div>
                     <div class="gap-10 m-10 d-flex ">
                         <button class="especial-button" type="button" id="btncalcular1"
-                            onclick="caracteristicasPM1()">Visualizar alelos</button>
-                        <button class="especial-button" onclick="mostrarInterface('interface3')">Concluído</button>
+                            onclick="caracteristicasPM1(); passagemGene2()">Finalizar seleção</button>
                     </div>
                 </div>
 
@@ -211,72 +205,84 @@
                 <div class="interface" id="interface2">
                     <div class="row p-20 flex-row">
 
+                        <button class="especial-button mb-10" onclick="mostrarCaracteristica2()">
+                            Selecionar característica
+                        </button>
+                        <button class="especial-button" onclick="mostrarPais2()">
+                            Classificação dos pais
+                        </button>
+
                         <div class="col-6 p-20">
-                            <h2 class="title-bar">Segunda característica paterna</h2>
-                            <form id="formPai2">
-                                <div class="custom-radio">
-
-                                    <p class="text-center">Classifique o gene:</p>
-                                    <input type="radio"  class="playable-sound" id="heterozigoticoP2" name="classificacao"
-                                        value="heterozigotico">
-                                    <label for="heterozigoticoP2">Heterozigótico</label><br>
-                                    <input type="radio"  class="playable-sound" id="homozigoticoDominanteP2" name="classificacao"
-                                        value="homozigoticoDominante">
-                                    <label for="homozigoticoDominanteP2">Homozigótico dominante</label><br>
-                                    <input type="radio"  class="playable-sound" id="homozigoticoRecessivoP2" name="classificacao"
-                                        value="homozigoticoRecessivo">
-                                    <label for="homozigoticoRecessivoP2">Homozigótico recessivo</label><br>
-                                </div>
-
-                                <div class="d-centered">
-                                    <div class="flex-column d-centered">
-                                        <h2 for="posicao">Visualização</h2>
-                                        <input class="vizu2" id="visualizacaoPai2" name="visualizacaoPai2" value=""
-                                            size="1" disabled placeholder="??">
+                            <div class="pais d-none">
+                                <h2 class="title-bar">Segunda característica paterna</h2>
+                                <form id="formPai2">
+                                    <div class="custom-radio">
+                                        <p class="text-center">Classifique o gene:</p>
+                                        <input type="radio" class="playable-sound" id="heterozigoticoP2"
+                                            name="classificacao" value="heterozigotico">
+                                        <label for="heterozigoticoP2">Heterozigótico</label><br>
+                                        <input type="radio" class="playable-sound" id="homozigoticoDominanteP2"
+                                            name="classificacao" value="homozigoticoDominante">
+                                        <label for="homozigoticoDominanteP2">Homozigótico dominante</label><br>
+                                        <input type="radio" class="playable-sound" id="homozigoticoRecessivoP2"
+                                            name="classificacao" value="homozigoticoRecessivo">
+                                        <label for="homozigoticoRecessivoP2">Homozigótico recessivo</label><br>
                                     </div>
-                                </div>
+                                    <div class="d-centered">
+                                        <div class="flex-column d-centered">
+                                            <h2 for="posicao">Visualização</h2>
+                                            <input class="vizu2" id="visualizacaoPai2" name="visualizacaoPai2" value=""
+                                                size="1" disabled placeholder="??">
+                                        </div>
+                                    </div>
+                            </div>
 
+
+                            <div class="caracteristicas">
                                 <h2 class="title-bar">Escolha uma característica:</h2>
                                 <div class="custom-radio">
-                                    <input type="radio" class="playable-sound" id="alturaP2" name="caracteristicasPaeMae2" value="altura">
+                                    <input type="radio" class="playable-sound" id="alturaP2"
+                                        name="caracteristicasPaeMae2" value="altura">
                                     <label for="alturaP2">Altura das flores <abbr
                                             title="Planta alta (TT) dominante sobre planta baixa (tt)">(TT)</abbr></label><br>
-                                    <input type="radio" class="playable-sound" id="posicaoP2" name="caracteristicasPaeMae2" value="posicao">
+                                    <input type="radio" class="playable-sound" id="posicaoP2"
+                                        name="caracteristicasPaeMae2" value="posicao">
                                     <label for="posicaoP2">Posição das flores (AA)</label><br>
-                                    <input type="radio" class="playable-sound" id="corFlorP2" name="caracteristicasPaeMae2" value="corFlor">
+                                    <input type="radio" class="playable-sound" id="corFlorP2"
+                                        name="caracteristicasPaeMae2" value="corFlor">
                                     <label for="corFlorP2">Cor da flor (PP)</label><br>
-                                    <input type="radio" class="playable-sound" id="corVagemP2" name="caracteristicasPaeMae2" value="corVagem">
+                                    <input type="radio" class="playable-sound" id="corVagemP2"
+                                        name="caracteristicasPaeMae2" value="corVagem">
                                     <label for="corVagemP2">Cor da vagem (GG)</label><br>
-                                    <input type="radio" class="playable-sound" id="formaVagemP2" name="caracteristicasPaeMae2"
-                                        value="formaVagem">
+                                    <input type="radio" class="playable-sound" id="formaVagemP2"
+                                        name="caracteristicasPaeMae2" value="formaVagem">
                                     <label for="formaVagemP2">Forma da vagem (SS)</label><br>
-                                    <input type="radio" class="playable-sound" id="corSementeP2" name="caracteristicasPaeMae2"
-                                        value="corSemente">
+                                    <input type="radio" class="playable-sound" id="corSementeP2"
+                                        name="caracteristicasPaeMae2" value="corSemente">
                                     <label for="corSementeP2">Cor da Semente (YY)</label><br>
-                                    <input type="radio" class="playable-sound" id="texturaSementeP2" name="caracteristicasPaeMae2"
-                                        value="texturaSemente">
+                                    <input type="radio" class="playable-sound" id="texturaSementeP2"
+                                        name="caracteristicasPaeMae2" value="texturaSemente">
                                     <label for="texturaSementeP2">Forma da semente (RR)</label><br>
                                 </div>
+                                </form>
+                            </div>
 
 
-
-
-                            </form>
                         </div>
-                        <div class="col-6 p-20">
+                        <div class="col-6 p-20 pais d-none">
                             <h2 class="title-bar">Segunda característica materna</h2>
                             <form id="formMae2">
                                 <div class="custom-radio">
 
                                     <p class="text-center">Classifique o gene:</p>
-                                    <input type="radio" class="playable-sound" id="heterozigoticoM2" name="classificacao"
-                                        value="heterozigotico">
+                                    <input type="radio" class="playable-sound" id="heterozigoticoM2"
+                                        name="classificacao" value="heterozigotico">
                                     <label for="heterozigoticoM2">Heterozigótico</label><br>
-                                    <input type="radio" class="playable-sound" id="homozigoticoDominanteM2" name="classificacao"
-                                        value="homozigoticoDominante">
+                                    <input type="radio" class="playable-sound" id="homozigoticoDominanteM2"
+                                        name="classificacao" value="homozigoticoDominante">
                                     <label for="homozigoticoDominanteM2">Homozigótico dominante</label><br>
-                                    <input type="radio" class="playable-sound" id="homozigoticoRecessivoM2" name="classificacao"
-                                        value="homozigoticoRecessivo">
+                                    <input type="radio" class="playable-sound" id="homozigoticoRecessivoM2"
+                                        name="classificacao" value="homozigoticoRecessivo">
                                     <label for="homozigoticoRecessivoM2">Homozigótico recessivo</label><br>
                                 </div>
 
@@ -287,18 +293,17 @@
                                             size="1" disabled placeholder="??">
                                     </div>
                                 </div>
-
                             </form>
                         </div>
                     </div>
                     <div class="gap-10 m-10 d-flex ">
-                        <button type="button" class="especial-button" id="btncalcular2"
-                            onclick="caracteristicasPM2()">Visualizar alelos</button>
-                        <button class="especial-button" onclick="mostrarInterface('interface3')">Concluído</button>
+                        <button type="button" class="especial-button d-none pais" id="btncalcular2"
+                            onclick="caracteristicasPM2()">Finalizar seleção
+                        </button>
+                        <button class="especial-button d-none pais disabled concluido" id="btnPassar2"
+                            onclick="mostrarInterface('interface3')">Concluído</button>
                     </div>
                 </div>
-
-
 
 
                 <!-- TELA 3 -->
@@ -309,16 +314,16 @@
                                 <h2 class="title-bar">Verificação e finalização</h2>
 
                                 <label for="posicao">Visualização alelo Paterno</label>
-                                <input class="mtb-10" placeholder="????"  type="" id="verAleloPai1" name="" size="1" disabled>
+                                <input class="mtb-10" placeholder="????" type="" id="verAleloPai1" name="" size="1"
+                                    disabled>
 
 
                                 <label for="posicao">Visualização alelo Materno</label>
-                                <input class="mtb-10" placeholder="????" type="" id="verAleloMae1" name="" size="1" disabled>
-
-
+                                <input class="mtb-10" placeholder="????" type="" id="verAleloMae1" name="" size="1"
+                                    disabled>
 
                             </div>
-                            <div class="d-centered flex-column">
+                            <div class="d-centered flex-column d-none" id="divlista">
 
                                 <div class="table-list">
                                     <ul id="lista"></ul>
@@ -330,13 +335,9 @@
                                     </div>
                                 </div>
 
-
-
                             </div>
 
                         </div>
-
-
 
                         <div class="gap-10 m-10 d-flex">
                             <button class="especial-button" type="button" id="criadorTabela">Gerar resultado</button>
@@ -348,7 +349,7 @@
                     <script src="../Assets/js/fraction2.js"></script>
                     <script>
                         const text = document.getElementById('text');
-      
+
                         function mostrarInterface(id) {
                             // Esconde todas as interfaces
                             var interfaces = document.querySelectorAll('.interface');
@@ -358,6 +359,62 @@
                             // Mostra a interface com o ID especificado
                             var interfaceAtiva = document.getElementById(id);
                             interfaceAtiva.classList.add('ativa');
+                        }
+
+                        function mostrarCaracteristica() {
+                            let divsPais = document.querySelectorAll(".pais2");
+                            let divCaracteristicas = document.querySelector(".caracteristicas2");
+
+                            for (var i = 0; i < divsPais.length; i++) {
+                            divsPais[i].classList.add("d-none");
+                            }
+
+                            divCaracteristicas.classList.remove("d-none");
+                        }
+
+                        function mostrarPais() {
+                            let divsPais = document.querySelectorAll(".pais");
+                            let divCaracteristicas = document.querySelector(".caracteristicas");
+
+                            for (var i = 0; i < divsPais.length; i++) {
+                            divsPais[i].classList.remove("d-none");
+                            }
+
+                            divCaracteristicas.classList.add("d-none");
+                        }
+
+
+
+                        function mostrarCaracteristica2() {
+                            let divPais = document.querySelectorAll(".pais");
+                            let divCaracteristicas = document.querySelector(".caracteristicas")
+
+                            for (var i = 0; i < divPais.length; i++) {
+                                divPais[i].classList.add("d-none");
+                            }
+
+                            divCaracteristicas.classList.remove("d-none");
+                        }
+
+                        function mostrarPais2() {
+                            let divPais = document.querySelectorAll(".pais");
+                            let divCaracteristicas = document.querySelector(".caracteristicas")
+
+                            for (var i = 0; i < divPais.length; i++) {
+                                divPais[i].classList.remove("d-none");
+                            }
+
+                            divCaracteristicas.classList.add("d-none");
+                        }
+
+                        function passagemGene2() {
+                            let btnGene2 = document.getElementById("segundoGene");
+                            let classificarPai1 = formPai1.classificacao.value;
+                            let caracterPai1 = formPai1.caracteristicasPaeMae1.value;
+
+                            if (caracterPai1 !== "" || classificarPai1 !== "") {
+                                btnGene2.classList.remove("disabled");
+                            }
                         }
 
                         function caracteristicasPM1() {
@@ -603,6 +660,7 @@
                             let classificarPai2 = formPai2.classificacao.value;
                             let caracterPai2 = formPai2.caracteristicasPaeMae2.value;
                             let inputPai2 = document.getElementById("visualizacaoPai2");
+                            let btnfinalizar = document.getElementById("btnPassar2")
 
                             /* ALTURA */
                             if (classificarPai2 == 'heterozigotico' && caracterPai2 == 'altura') {
@@ -831,14 +889,17 @@
                                 text.innerHTML = 'Selecione a segunda caracteristica e/ou segunda classificação dos alelos paterno e materno.'
                                 overlay.style.transform = 'scale(1)';
                                 return;
+                            } else if (classificarPai2 !== "" || caracterPai2 !== "") {
+                                btnfinalizar.classList.remove("disabled");
                             }
                         }
 
                         function createTable() {
 
                             let btnGeral = document.getElementById('criadorTabela');
-                            btnGeral.addEventListener("click", function () {
+                            let lista = document.getElementById("divlista");
 
+                            btnGeral.addEventListener("click", function () {
                                 let divpai = document.querySelector('.tudo');
                                 const paternoInput1 = document.querySelector("#visualizacaoPai1");
                                 const paternoInput2 = document.querySelector("#visualizacaoPai2");
@@ -871,6 +932,8 @@
                                     table.setAttribute("id", "tabelaAlelos");
                                     let thead = document.createElement("thead");
                                     let tbody = document.createElement("tbody");
+
+                                    lista.classList.remove("d-none");
 
                                     let interface3 = document.getElementById("interface3");
 
@@ -1383,6 +1446,7 @@
                         function disabledBtn() {
                             let btnTabela = document.getElementById('criadorTabela');
                             let btnVoltarDisable = document.getElementById('btnLimpar');
+                            let divlista = document.getElementById("divlista");
 
                             btnTabela.addEventListener("click", function () {
                                 let aleloPae = document.getElementById('verAleloPai1').value;
@@ -1406,6 +1470,7 @@
 
                                 minhaTabela.remove();
                                 btnTabela.removeAttribute('disabled');
+                                divlista.classList.add("d-none");
 
                                 let inputPaiVerificar1 = document.getElementById('verAleloPai1');
                                 let inputMaeVerificar1 = document.getElementById('verAleloMae1');
@@ -1430,4 +1495,5 @@
 <script async src="../Assets/js/actions.js"></script>
 <script async src="../Assets/js/menu.js"></script>
 <script async src="../Assets/js/sounds.js"></script>
+
 </html>

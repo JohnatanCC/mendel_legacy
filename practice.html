@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mendel's Legancy | Prática </title>
-    <!-- Outros Links -->
+  <!-- Outros Links -->
   <link rel="shortcut icon" href="Assets/icons/system-icon(old).png" type="image/x-icon" />
   <link rel="stylesheet" href="Assets/css/anim.css" />
   <link rel="stylesheet" href="Assets/css/class.css" />
@@ -37,31 +37,31 @@
     <ul>
       <li class="list">
         <a href="index.html">
-          <span class="icon"><img src="Assets/icons/home-icon-navbar.png"/></span>
+          <span class="icon"><img src="Assets/icons/home-icon-navbar.png" /></span>
           <span class="title">Home</span>
         </a>
       </li>
       <li class="list active">
         <a class="active-link" href="#">
-          <span class="icon"><img src="Assets/icons/practice-icon-navbar.png"/></span>
+          <span class="icon"><img src="Assets/icons/practice-icon-navbar.png" /></span>
           <span class="title">Prática</span>
         </a>
       </li>
       <li class="list ">
-        <a  href="theory.html">
-          <span class="icon"><img src="Assets/icons/theory-icon-navbar.png"/></span>
+        <a href="theory.html">
+          <span class="icon"><img src="Assets/icons/theory-icon-navbar.png" /></span>
           <span class="title">Teoria</span>
         </a>
       </li>
       <li class="list">
-        <a href="#">
-          <span class="icon"><img src="Assets/icons/lab-icon-navbar.png"/></span>
-          <span class="title">Lab (Beta)</span>
+        <a href="lab.html">
+          <span class="icon"><img src="Assets/icons/lab-icon-navbar.png" /></span>
+          <span class="title">Lab (demo)</span>
         </a>
       </li>
       <li class="list">
         <a href="questions.html">
-          <span class="icon"><img src="Assets/icons/questions-icon-navbar.png"/></span>
+          <span class="icon"><img src="Assets/icons/questions-icon-navbar.png" /></span>
           <span class="title">Questões</span>
         </a>
       </li>
@@ -78,6 +78,10 @@
     </div>
   </div>
 
+  <div class="message" id="message">
+    Recomendamos que você comece com apenas uma caracteristica!
+  </div>
+
   <!-- Sounds -->
 
   <audio id="audioElement">
@@ -87,13 +91,13 @@
   <audio id="error-sound" src="Assets/sounds/error-sound.wav"></audio>
 
   <main class="anim-long-entrance  d-centered ">
-  
+
     <div id="volumeDisplay" class="volume-display">Volume: 100%</div>
 
     <div class="d-centered">
       <div class="selection">
         <h1>Seleção inicial</h1>
-   
+
         <div class="selection-area">
           <h2 class="text-center">Organismo</h2>
           <form id="formularioOrganismo" method="post">
@@ -109,9 +113,10 @@
                       <h2 style="color: #6DB47C;">Plantas</h2>
                     </div>
                     <div class="d-flex flex-column">
-                    <input class="playable-sound" type="radio" id="organismo" name="organismo" value="ervilha" required>
-                    <label for="organismo">Ervilha</label>
-                  </div>
+                      <input class="playable-sound" type="radio" id="organismo" name="organismo" value="ervilha"
+                        required>
+                      <label for="organismo">Ervilha</label>
+                    </div>
 
                   </div>
                 </div>
@@ -126,17 +131,21 @@
         </div>
       </div>
 
-      
-        <button type="button" onclick="qualOrganismo()">
-          Prosseguir
-        </button>
- 
 
-    
+      <button type="button" onclick="qualOrganismo()">
+        Prosseguir
+      </button>
+
+
+
       <script>
+        const messageDiv = document.getElementById("message");
+        setTimeout(() => {
+          messageDiv.style.display = "none";
+        }, 4000);
         function qualOrganismo() {
-         
-        
+
+
           var organismo = document.querySelector('input[name="organismo"]:checked');
           var qtdcaracter = document.querySelector('input[name="qtdcaracter"]:checked');
 

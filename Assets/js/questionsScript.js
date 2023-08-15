@@ -21,7 +21,7 @@ const back = document.getElementById('back');
 const selectStyled = document.querySelector('.select-styled');
 const selectOptions = document.querySelectorAll('.select-option');
 
-back.addEventListener('click', ()=> {
+back.addEventListener('click', () => {
     customSelect.style.display = 'inline-block';
     questionArea.style.display = 'none';
     scoreArea.style.display = 'none'
@@ -33,7 +33,7 @@ back.addEventListener('click', ()=> {
 function showQuestion() {
     const q = selectedQuestions[currentQuestion];
     if (currentQuestion < selectedQuestions.length) {
-       
+
         let pct = Math.floor((currentQuestion / selectedQuestions.length) * 100);
 
         document.querySelector(".progress--bar").style.width = `${pct}%`;
@@ -50,10 +50,10 @@ function showQuestion() {
         }
 
         document.querySelector(".options").innerHTML = optionsHtml;
-        
+
         // Atualizar a pergunta exibida
         document.querySelector(".question").innerHTML = q.question;
-        
+
         // Remover ouvintes de eventos anteriores para evitar duplicações
         document.querySelectorAll(".options .option").forEach((item) => {
             item.removeEventListener("click", optionClickEvent);
@@ -70,12 +70,12 @@ function showQuestion() {
 
 
 
-selectStyled.addEventListener('click', function() {
+selectStyled.addEventListener('click', function () {
     this.parentNode.classList.toggle('open');
-  });
+});
 
-  selectOptions.forEach(option => {
-    option.addEventListener('click', function() {
+selectOptions.forEach(option => {
+    option.addEventListener('click', function () {
         selectedDifficulty = this.getAttribute('value');
         selectStyled.textContent = this.textContent;
         selectStyled.parentNode.classList.remove('open');
@@ -89,16 +89,16 @@ selectStyled.addEventListener('click', function() {
     });
 });
 
-   
 
-    document.addEventListener('click', function(e) {
-        if (!selectStyled.parentNode.contains(e.target)) {
-          selectStyled.parentNode.classList.remove('open');
-        }
-      });
-      
+
+document.addEventListener('click', function (e) {
+    if (!selectStyled.parentNode.contains(e.target)) {
+        selectStyled.parentNode.classList.remove('open');
+    }
+});
+
 startButton.addEventListener('click', () => {
-    
+
     selectedQuestions = questions.filter(q => q.difficulty === selectedDifficulty);
 
 
@@ -164,7 +164,7 @@ function resetEvent() {
 
 
 selectOptions.forEach(option => {
-    option.addEventListener('click', function() {
+    option.addEventListener('click', function () {
         selectedDifficulty = this.getAttribute('value');
         selectStyled.textContent = this.textContent;
         selectStyled.parentNode.classList.remove('open');
@@ -175,6 +175,64 @@ selectOptions.forEach(option => {
         }
     });
 });
+
+const openModalBtn = document.getElementById("openModalBtn");
+const closeModalBtn = document.getElementById("closeModalBtn");
+const modal = document.getElementById("modal");
+const easyBtn = document.getElementById("easyBtn");
+const mediumBtn = document.getElementById("mediumBtn");
+const hardBtn = document.getElementById("hardBtn");
+const questionList = document.getElementById("questionList");
+
+openModalBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+});
+
+closeModalBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+
+easyBtn.addEventListener("click", () => {
+    loadQuestions("easy");
+});
+
+mediumBtn.addEventListener("click", () => {
+    loadQuestions("medium");
+});
+
+hardBtn.addEventListener("click", () => {
+    loadQuestions("hard");
+});
+
+closeModalBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    questionList.innerHTML = ""; // Limpar a lista de questões ao fechar o modal
+});
+
+function loadQuestions(level) {
+    const questions = getQuestionsByLevel(level); // Função para obter questões por nível
+    questionList.innerHTML = "";
+
+    questions.forEach(question => {
+        const li = document.createElement("li");
+        li.textContent = question.text;
+        questionList.appendChild(li);
+    });
+
+    modal.style.display = "flex";
+}
+
+// Função de exemplo para obter questões por nível (deve ser substituída por sua lógica real)
+function getQuestionsByLevel(level) {
+    // Exemplo de dados
+    const questions = [
+        { text: "Não terminado :c" },
+        // ... mais questões
+    ];
+
+    return questions;
+}
 
 /*
 Dados Iniciais:

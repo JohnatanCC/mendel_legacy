@@ -59,9 +59,9 @@
         </a>
       </li>
       <li class="list ">
-        <a href="#">
+        <a href="lab.html">
           <span class="icon"><img src="Assets/icons/lab-icon-navbar.png" /></span>
-          <span class="title">Lab (Beta)</span>
+          <span class="title">Lab (Demo)</span>
         </a>
       </li>
       <li class="list active">
@@ -105,9 +105,11 @@
             <li class="select-option yellow" value="medium">questões de nível médio</li>
             <li class="select-option danger" value="hard">questões de nível dificíl</li>
           </ul>
-          <button id="startQuizButton" class="especial-button mtb-10 disabled">Iniciar Quiz</button>
+          <div class="gap-10 m-10 d-centered ">
+            <button id="startQuizButton" class="especial-button mtb-10 disabled">Iniciar Quiz</button>
+            <button class="especial-button" id="openModalBtn">Ver respostas</button>
+          </div>
         </div>
-
         <div class="questionArea">
           <div class="question">...</div>
           <div class="options playable-sound">
@@ -124,6 +126,25 @@
 
 
     </div>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <h2 class="text-center">Questões</h2>
+        <div class="d-centered gap-10 mb-10">
+          <button class="level-btn easy-btn" id="easyBtn">Nível Fácil</button>
+          <button class="level-btn medium-btn" id="mediumBtn">Nível Médio</button>
+          <button class="level-btn hard-btn" id="hardBtn">Nível Difícil</button>
+        </div>
+      
+        <ul class="question-list" id="questionList">
+          <!-- Questões serão carregadas aqui -->
+        </ul>
+        <div class="d-centered w-100">
+        <button class="level-btn" id="closeModalBtn">Fechar</button>
+      </div>
+      </div>
+    </div>
+
   </main>
 
   <!-- Sounds -->
