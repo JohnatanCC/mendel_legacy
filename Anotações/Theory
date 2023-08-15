@@ -1,0 +1,22 @@
+Variáveis e Seletores:
+
+bodyEl: Armazena uma referência ao elemento body do documento.
+c: Uma função auxiliar para selecionar elementos do DOM usando o seletor CSS.
+Dados dos Slides:
+
+sliders: Uma matriz de objetos, cada um representando um slide com um título, conteúdo, e caminho para uma imagem relacionada.
+Eventos e Atualização dos Slides:
+
+nextBtn e prevBtn: Botões para avançar e voltar nos slides.
+currentSlideIndex: Mantém o índice do slide atual.
+updateSlideDisplay(): Função para atualizar a exibição do slide com base no currentSlideIndex.
+Manipulação dos Slides:
+
+Quando os botões next e prev são clicados, o currentSlideIndex é atualizado de acordo, permitindo navegar pelos slides.
+A função updateSlideDisplay() é chamada sempre que a página é carregada ou os botões são clicados. Ela atualiza o título, conteúdo e imagem do slide exibido.
+Inicialização:
+
+A função window.onload é usada para chamar updateSlideDisplay() quando a página é carregada inicialmente.
+O código cria uma interface que permite navegar pelos slides, exibindo tópicos relacionados à genética, como "Genética", "Mendel", "Metodologia de Mendel", "Cruzamento Teste", "Tipos de Alelos", "Meiose", "Glossário" e assim por diante. Para cada tópico, há um título, conteúdo associado e uma imagem.
+
+A funcionalidade geral do código é criar uma apresentação de slides onde os usuários podem aprender sobre os diferentes conceitos da genética e seus detalhes. Certamente, a exibição de slides pode ser adaptada para diferentes tipos de conteúdo educacional.

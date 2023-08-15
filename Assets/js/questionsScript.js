@@ -25,6 +25,8 @@ back.addEventListener('click', ()=> {
     customSelect.style.display = 'inline-block';
     questionArea.style.display = 'none';
     scoreArea.style.display = 'none'
+    correctAnswers = 0;
+    currentQuestion = 0;
 })
 
 
@@ -32,7 +34,7 @@ function showQuestion() {
     const q = selectedQuestions[currentQuestion];
     if (currentQuestion < selectedQuestions.length) {
        
-        let pct = Math.floor((currentQuestion / questions.length) * 100);
+        let pct = Math.floor((currentQuestion / selectedQuestions.length) * 100);
 
         document.querySelector(".progress--bar").style.width = `${pct}%`;
         document.querySelector(".progress--bar").innerHTML = `${pct}%`;
@@ -48,7 +50,16 @@ function showQuestion() {
         }
 
         document.querySelector(".options").innerHTML = optionsHtml;
+        
+        // Atualizar a pergunta exibida
         document.querySelector(".question").innerHTML = q.question;
+        
+        // Remover ouvintes de eventos anteriores para evitar duplicações
+        document.querySelectorAll(".options .option").forEach((item) => {
+            item.removeEventListener("click", optionClickEvent);
+        });
+
+        // Adicionar novos ouvintes de eventos
         document.querySelectorAll(".options .option").forEach((item) => {
             item.addEventListener("click", optionClickEvent);
         });
@@ -106,31 +117,33 @@ startButton.addEventListener('click', () => {
 
 
 function finishQuiz() {
-    let points = Math.floor((correctAnswers / questions.length) * 100);
+    let totalQuestionsForDifficulty = selectedQuestions.length;
+    let points = Math.floor((correctAnswers / totalQuestionsForDifficulty) * 100);
 
     if (points < 50) {
         document.querySelector(".scoreText1").innerHTML = "Vish tente denovo!";
-        document.querySelector(".scorePct").style.color = "#FF0000";
+        document.querySelector(".scorePct").style.color = "#DC3545";
     } else if (points >= 50 && points < 70) {
         document.querySelector(".scoreText1").innerHTML =
             "Bom mas pode ser melhor!";
-        document.querySelector(".scorePct").style.color = "#FF0";
+        document.querySelector(".scorePct").style.color = "#FFC107";
     } else if (points >= 70) {
         document.querySelector(".scoreText1").innerHTML =
-            "Parabéns vc tem potencial!";
-        document.querySelector(".scorePct").style.color = "#0D630D";
+            "Parabéns, você tem potencial!";
+        document.querySelector(".scorePct").style.color = "#198754";
     }
 
     document.querySelector(".scorePct").innerHTML = `Acertou ${points}%`;
     document.querySelector(
         ".scoreText2"
-    ).innerHTML = `Você respondeu ${questions.length} questões e acertou ${correctAnswers}`;
+    ).innerHTML = `Você respondeu ${totalQuestionsForDifficulty} questões e acertou ${correctAnswers}`;
 
     document.querySelector(".scoreArea").style.display = "block";
     document.querySelector(".questionArea").style.display = "none";
     document.querySelector(".progress--bar").style.width = "100%";
     document.querySelector(".progress--bar").innerHTML = "100%";
 }
+
 
 function optionClickEvent(e) {
     let clickedOption = parseInt(e.target.getAttribute("data-op"));
@@ -150,6 +163,18 @@ function resetEvent() {
 }
 
 
+selectOptions.forEach(option => {
+    option.addEventListener('click', function() {
+        selectedDifficulty = this.getAttribute('value');
+        selectStyled.textContent = this.textContent;
+        selectStyled.parentNode.classList.remove('open');
+
+        // Remover a classe 'disabled' do botão de iniciar quando uma dificuldade é selecionada
+        if (selectedDifficulty) {
+            startButton.classList.remove('disabled');
+        }
+    });
+});
 
 /*
 Dados Iniciais:

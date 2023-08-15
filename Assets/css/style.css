@@ -1600,12 +1600,16 @@ footer .placeholder {
     font-size: 18px;
     margin: 20px 0;
     padding: 10px;
-    background: linear-gradient(90deg,transparent,#d6d6d6,transparent);
+    background: linear-gradient(90deg,transparent,#ffffff,transparent);
+    border:8px double;
+    border-color: var(--dark-green) transparent var(--dark-green) transparent ;
+    font-weight: bold;
+    text-align: justify;
 }
 .option {
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 50px;
     background-color: var(--light);
     border-radius: 10px;
     margin-bottom: 10px;
@@ -1793,6 +1797,7 @@ footer .placeholder {
     position: relative;
     padding-right: 20px; 
     text-transform: uppercase;
+    font-weight: bold;
   }
 
   .select-styled::before {

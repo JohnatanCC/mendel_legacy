@@ -1,0 +1,42 @@
+HTML e Estrutura da Página:
+
+A estrutura da página foi definida usando HTML.
+Foram criadas seções para a área de seleção de características genéticas, a área de exibição das informações e a área de pontuação.
+Botões e seletores foram adicionados para interações do usuário.
+CSS para Estilização:
+
+O CSS foi usado para estilizar a página e torná-la visualmente agradável.
+Classes e estilos foram definidos para cada elemento, incluindo botões, seletores e áreas de exibição.
+Animações e transições foram aplicadas para dar feedback visual às interações do usuário.
+JavaScript para Interação:
+
+A interação do usuário foi implementada usando JavaScript.
+Event listeners foram adicionados a botões, seletores e outros elementos interativos.
+Ao clicar em determinados elementos, as ações correspondentes eram acionadas.
+Geração de Perguntas e Conteúdo:
+
+As perguntas e o conteúdo relacionado à genética foram definidos em um array de objetos.
+Cada objeto continha informações sobre o título, o conteúdo do texto e a imagem associada.
+Exibição de Perguntas e Conteúdo:
+
+Uma função foi criada para exibir o conteúdo atual (pergunta, texto e imagem) com base no índice atual da pergunta.
+Essa função atualizava dinamicamente a exibição com os detalhes da pergunta selecionada.
+Navegação entre os Slides:
+
+Botões de próxima e anterior foram implementados para permitir a navegação entre as perguntas.
+Event listeners foram adicionados a esses botões para atualizar o índice da pergunta e reexibir o conteúdo correspondente.
+Atualização da Exibição:
+
+Sempre que uma ação era executada (clicar em um botão de próxima/anterior), a função de atualização era chamada.
+Essa função substituía o conteúdo exibido com base no novo índice da pergunta.
+Carregamento Inicial:
+
+O código para exibição inicial foi definido para o momento em que a página é carregada.
+Isso garante que o conteúdo da primeira pergunta seja exibido quando a página é aberta.
+Feedback de Pontuação:
+
+Ao final das perguntas, um cálculo de pontuação foi realizado com base nas respostas corretas.
+O resultado da pontuação foi exibido ao usuário com uma mensagem correspondente.
+Feedback Visual:
+
+Feedback visual foi fornecido por meio de animações, mudanças de cor e outros efeitos para melhorar a experiência do usuário.

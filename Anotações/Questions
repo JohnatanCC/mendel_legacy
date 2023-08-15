@@ -1,0 +1,28 @@
+Estrutura do Código:
+O código começa declarando algumas variáveis iniciais: selectedQuestions (perguntas selecionadas), currentQuestion (índice da pergunta atual) e correctAnswers (número de respostas corretas).
+
+Um ouvinte de evento é anexado a um botão no DOM com a classe .scoreArea button. Esse botão serve para acionar o evento de reinicialização do quiz quando clicado.
+
+Várias variáveis são declaradas para selecionar elementos HTML relevantes, como botões, áreas de perguntas e áreas de pontuação.
+
+Há também ouvintes de eventos para lidar com cliques em elementos personalizados, como seleção de dificuldade e opções de resposta.
+
+Funções Principais:
+showQuestion(): Essa função é responsável por exibir a pergunta atual na página. Ela atualiza a barra de progresso, exibe a pergunta e suas opções e adiciona ouvintes de eventos para as opções.
+
+finishQuiz(): Essa função é chamada quando todas as perguntas foram respondidas. Ela calcula a pontuação do usuário e exibe mensagens e cores diferentes com base na pontuação obtida.
+
+optionClickEvent(e): Esta função é acionada quando o usuário clica em uma opção. Ela verifica se a opção clicada é a resposta correta para a pergunta atual, atualiza o contador correctAnswers e avança para a próxima pergunta chamando showQuestion().
+
+resetEvent(): Essa função está associada ao botão de reinício. Ela redefine tanto correctAnswers quanto currentQuestion para zero, reiniciando o quiz.
+
+Lógica do Código:
+O código utiliza declarações condicionais para determinar o desempenho do usuário e ajusta o texto exibido e as cores de acordo.
+
+Manipulação do HTML:
+O código interage com a estrutura HTML selecionando vários elementos usando document.querySelector() e manipulando suas propriedades de conteúdo e estilo.
+
+Feedback e Pontuação:
+A pontuação do usuário é calculada dividindo o número de respostas corretas pelo número total de perguntas e convertendo para uma porcentagem. As mensagens de feedback e as cores dependem da porcentagem de pontuação do usuário.
+
+Em resumo, o código cria um ambiente de quiz interativo no qual os usuários podem responder a perguntas, receber feedback e monitorar seu progresso por meio de uma barra de progresso. Para um funcionamento correto, presume-se que a estrutura HTML contenha elementos específicos com classes correspondentes.

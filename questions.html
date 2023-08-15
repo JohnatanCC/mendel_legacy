@@ -9,7 +9,7 @@
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Quicksand:wght@500&display=swap");
   </style>
-  <link rel="shortcut icon" href="Assets/icons/system-icon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="Assets/icons/system-icon(old).png" type="image/x-icon" />
   <link rel="stylesheet" href="Assets/css/anim.css" />
   <link rel="stylesheet" href="Assets/css/class.css" />
   <link rel="stylesheet" href="Assets/css/style.css" />
@@ -23,10 +23,10 @@
 
 <body>
 
-    <div id="volumeDisplay" class="volume-display">Volume: 100%</div>
-    <div class="play-buttom">
-        <img src="Assets/icons/play-icon.png" id="playMusic" alt="Music play">
-      </div>
+  <div id="volumeDisplay" class="volume-display">Volume: 100%</div>
+  <div class="play-buttom">
+    <img src="Assets/icons/play-icon.png" id="playMusic" alt="Music play">
+  </div>
   <!-- <div class="preload-practice flex-column anim-preload">
 
     <img src="Assets/imgs/sticker-theory.png" alt="Logo">
@@ -42,31 +42,31 @@
     <ul>
       <li class="list">
         <a href="index.html">
-          <span class="icon"><img src="Assets/icons/home-icon-navbar.png"/></span>
+          <span class="icon"><img src="Assets/icons/home-icon-navbar.png" /></span>
           <span class="title">Home</span>
         </a>
       </li>
       <li class="list">
         <a href="practice.html">
-          <span class="icon"><img src="Assets/icons/practice-icon-navbar.png"/></span>
+          <span class="icon"><img src="Assets/icons/practice-icon-navbar.png" /></span>
           <span class="title">Prática</span>
         </a>
       </li>
       <li class="list">
-        <a  href="theory.html">
-          <span class="icon"><img src="Assets/icons/theory-icon-navbar.png"/></span>
+        <a href="theory.html">
+          <span class="icon"><img src="Assets/icons/theory-icon-navbar.png" /></span>
           <span class="title">Teoria</span>
         </a>
       </li>
-      <li class="list disabled">
+      <li class="list ">
         <a href="#">
-          <span class="icon"><img src="Assets/icons/lab-icon-navbar.png"/></span>
-          <span class="title">Em breve...</span>
+          <span class="icon"><img src="Assets/icons/lab-icon-navbar.png" /></span>
+          <span class="title">Lab (Beta)</span>
         </a>
       </li>
       <li class="list active">
         <a class="active-link" href="#">
-          <span class="icon"><img src="Assets/icons/questions-icon-navbar.png"/></span>
+          <span class="icon"><img src="Assets/icons/questions-icon-navbar.png" /></span>
           <span class="title">Questões</span>
         </a>
       </li>
@@ -78,58 +78,52 @@
 
   <main class="anim-long-entrance ml-default d-centered ">
     <div class="content">
-    
-    
 
 
-    <div class="flex-column d-flex">
-    <h1 class="d-centered title-bar" >Quiz</h1>
-
-    <!-- <div class="levelSelection">
-      <label for="difficulty">Escolha o nível de difuldade:</label>
-      <select id="difficulty">
-          <option class="success" value="easy">questões de nível fácil</option>
-          <option class="yellow" value="medium">questões de nível médio</option>
-          <option class="danger" value="hard">questões de nível dificíl</option>
-      </select>
 
 
-  </div> -->
+      <div class="flex-column d-flex">
+        <h1 class="d-centered title-bar">Quiz</h1>
 
-  <div class="custom-select">
-    <div class="select-styled">Escolha um nível de dificuldade</div>
-    <ul class="select-options" id="difficulty">
-      <li class="select-option success" value="easy">questões de nível fácil</li>
-      <li class="select-option yellow" value="medium">questões de nível médio</li>
-      <li class="select-option danger" value="hard">questões de nível dificíl</li>
-    </ul>
-    <button id="startQuizButton" class="especial-button mtb-10">Iniciar Quiz</button>
-  </div>
+        <div class="scoreArea">
+          <img src="Assets/icons/prize-icon.png" class="prizeImage" />
+          <div class="scoreText1">Parabéns!</div>
+          <div class="scorePct">Acertou x%</div>
+          <div class="scoreText2">Carregando...</div>
+          <div class="wrapper">
+            <button class="especial-button mb-10">Fazer novamente</button>
+          </div>
 
-    <div class="questionArea">
-        <div class="question">...</div>
-        <div class="options playable-sound">
+          <a href="#" id="back">Voltar</a>
 
         </div>
-    </div>
-    <div class="progress">
-        <div  class="progress--bar anim-pbc">0%</div>
-    </div>
-</div>
 
-    <div class="scoreArea">
-        <img src="Assets/icons/prize-icon.png" class="prizeImage" />
-        <div class="scoreText1">Parabéns!</div>
-        <div class="scorePct">Acertou x%</div>
-        <div class="scoreText2">Carregando...</div>
-        <div class="wrapper">
-        <button class="especial-button mb-10">Fazer novamente</button>
-    </div>
+        <div class="custom-select">
+          <div class="select-styled">Escolha um nível de dificuldade</div>
+          <ul class="select-options" id="difficulty">
+            <li class="select-option success" value="easy">questões de nível fácil</li>
+            <li class="select-option yellow" value="medium">questões de nível médio</li>
+            <li class="select-option danger" value="hard">questões de nível dificíl</li>
+          </ul>
+          <button id="startQuizButton" class="especial-button mtb-10 disabled">Iniciar Quiz</button>
+        </div>
 
-    <a href="#" id="back">Voltar</a>
+        <div class="questionArea">
+          <div class="question">...</div>
+          <div class="options playable-sound">
+
+          </div>
+        </div>
+        <h3 class="text-center">Conclusão:</h3>
+        <div class="progress">
+
+          <div class="progress--bar anim-pbc">0%</div>
+
+        </div>
+      </div>
+
 
     </div>
-</div>
   </main>
 
   <!-- Sounds -->
