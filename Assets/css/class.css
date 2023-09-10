@@ -128,7 +128,6 @@
 }
 
 .col-12 {
-    flex: 0 0 auto;
     width: 100%;
 }
 
@@ -147,7 +146,7 @@ svg {
     border-radius: var(--rounded-lg);
     border: var(--dark-green) 4px solid;
     padding: 5px;
- 
+
     background-color: var(--light);
 
     max-width: 100%;
@@ -172,9 +171,13 @@ svg {
     align-items: center;
     margin: 20px auto;
     max-width: 230px;
-    
+
 }
 
+.border-b-double-8 {
+    border: double 8px;
+    border-color: transparent transparent var(--green) transparent;
+}
 
 .btn {
     outline: 2px;
@@ -182,6 +185,15 @@ svg {
     transition: 0.4s;
     cursor: pointer;
     width: 120px;
+    font-family: var(--title);
+}
+
+.title {
+    font-family: var(--title);
+}
+
+.m-2 {
+    margin: 2px;
 }
 
 .mt-4 {
@@ -208,6 +220,10 @@ svg {
     padding: 20px;
 }
 
+.p-2{
+    padding: 4px;
+}
+
 .m-10 {
     margin: 10px;
 }
@@ -224,6 +240,10 @@ svg {
 
 .h-100vh {
     height: 100vh;
+}
+
+.text-bold {
+    font-weight: bold;
 }
 
 .container-fluid {
@@ -359,14 +379,14 @@ svg {
     border: #EEE 4px solid;
     cursor: pointer;
     box-shadow: 0 0 0 5px var(--dark-green);
- 
+
 
 
 }
 
 .navbar-toggler-m img:hover {
-  transform: rotate(360deg);
-  transition: all ease 1s;
+    transform: rotate(360deg);
+    transition: all ease 1s;
 
 }
 
@@ -391,7 +411,7 @@ svg {
 }
 
 .disabled {
-    filter:grayscale(1);
+    filter: grayscale(1);
     opacity: 0.6;
     pointer-events: none;
 }
@@ -408,8 +428,8 @@ svg {
     --dark-green: #3fa77a;
     --light-green: #7be495;
     --light: #FFF;
-    --background-light:  #f4f5f4;
-    --title: 'Merriweather', serif;
+    --background-light: #f4f5f4;
+    --title:'Exo 2', sans-serif;
     --rounded-sm: 10px;
     --rounded-lg: 50px;
     --rounded-xl: 100%;

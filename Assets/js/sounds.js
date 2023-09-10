@@ -2,9 +2,14 @@ const clickSound = document.getElementById("click-sound");
 const errorSound = document.getElementById('error-sound');
 const specificInputs = document.querySelectorAll(".playable-sound"); // Substitua pela classe correta dos inputs desejados
 
+let volume = 0.5; // Valor inicial do volume
+
 specificInputs.forEach((input) => {
+  
   input.addEventListener("click", () => {
+    clickSound.volume = volume 
     clickSound.play();
+
   });
 });
 
@@ -13,7 +18,7 @@ specificInputs.forEach((input) => {
 //Music
 
 const audioElement = document.getElementById('audioElement');
-let volume = 1.0; // Valor inicial do volume
+
 const volumeDisplay = document.getElementById('volumeDisplay');
 
 document.addEventListener('keydown', (event) => {
@@ -25,6 +30,7 @@ document.addEventListener('keydown', (event) => {
   } else if (event.key === '+' || event.key === 'Add') {
     volume = Math.min(volume + 0.1, 1.0);
     audioElement.volume = volume;
+    
     volumeDisplay.textContent = `Volume: ${Math.round(volume * 100)}%`;
     volumeDisplay.style.opacity = 1;
     setTimeout(() => {

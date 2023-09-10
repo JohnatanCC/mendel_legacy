@@ -5,23 +5,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mendel's Legancy | Prática </title>
+  <title>Prática </title>
   <!-- Outros Links -->
   <link rel="shortcut icon" href="Assets/icons/system-icon(old).png" type="image/x-icon" />
   <link rel="stylesheet" href="Assets/css/anim.css" />
   <link rel="stylesheet" href="Assets/css/class.css" />
   <link rel="stylesheet" href="Assets/css/style.css" />
   <!-- Estilos de fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&family=Tauri&display=swap" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;800&family=Rubik&display=swap');
+  </style>
 </head>
 
 <body class="bg-practice">
-
-  <!-- <div class="preload-practice flex-column anim-preload">
-
-    <img src="Assets/imgs/sticker-practice.png" alt="Logo">
-
-  </div> -->
 
   <div class="play-buttom">
     <img src="Assets/icons/play-icon.png" id="playMusic" alt="">
@@ -65,7 +61,7 @@
           <span class="title">Questões</span>
         </a>
       </li>
-
+   
     </ul>
   </div>
 
@@ -78,9 +74,6 @@
     </div>
   </div>
 
-  <div class="message" id="message">
-    Recomendamos que você comece com apenas uma caracteristica!
-  </div>
 
   <!-- Sounds -->
 
@@ -139,10 +132,6 @@
 
 
       <script>
-        const messageDiv = document.getElementById("message");
-        setTimeout(() => {
-          messageDiv.style.display = "none";
-        }, 4000);
         function qualOrganismo() {
 
 
@@ -168,7 +157,7 @@
             if (qtdcaracter.value === "uma") {
               window.location.href = "pages/1caracteristica.html";
             } else if (qtdcaracter.value === "duas") {
-              window.location.href = "pages/2caracteristicas.html";
+              window.location.href = "pages/2caracteristica.html";
             }
           }
         }

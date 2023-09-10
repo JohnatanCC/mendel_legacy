@@ -7,7 +7,7 @@
       display: flex;
       padding: 10px 45px;
       text-decoration: none;
-      font-family: 'Poppins', sans-serif;
+      font-family: var(--title);
       font-size: 20px;
       color: white;
       background: #56c596;
@@ -20,7 +20,9 @@
       text-align: center;
       justify-content: center;
       cursor: pointer;
-   
+      text-transform: uppercase;
+      max-width: 250px;
+      width: 250px;
   }
   
   .row  {
