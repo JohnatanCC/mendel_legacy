@@ -22,6 +22,117 @@
   <title>Quiz</title>
 </head>
 
+
+<style>
+  .header {
+    background-color: var(--green) !important;
+    color: #FFF !important;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+  .table2 {
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    grid-gap: 0px;
+    margin-top: 30px;
+    gap: 2px;
+  }
+
+  .table {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-gap: 0px;
+    margin-top: 30px;
+    gap: 2px;
+  }
+
+  .table2 {
+    display: none;
+  }
+
+  .table div:hover,
+  .table2 div:hover {
+    transform: scale(1.05);
+  }
+
+  .table div:active,
+  .table2 div:active {
+    transform: scale(0.95);
+  }
+
+
+  .table .div,
+  .table2 .div {
+    background-color: #eef2ee;
+  }
+
+  .table div,
+  .table2 div {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+
+  }
+
+
+
+  div .table input,
+  div .table2 input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header input {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF !important;
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+
+
+  .empty {
+    border: none !important;
+    cursor: pointer;
+  }
+
+  textarea {
+    height: 200px;
+    outline: none;
+    resize: none;
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #eef2ee;
+    border: 2px solid var(--dark-green);
+  }
+</style>
+
 <body>
 
   <div id="volumeDisplay" class="volume-display">Volume: 100%</div>
@@ -124,6 +235,55 @@
           <div class="progress--bar anim-pbc">0%</div>
 
         </div>
+
+        <div class="box d-centered flex-column">
+          <h2 class="title-bar">Use a tabela para calcular</h2>
+          <p class="text-center">Digite nos quadrados da tabela,se desejar mude o formato(T-1:uma caracteristica,T-2:duas caracteristica).</p>
+          <div class="table">
+            <div onclick="Table2()" class="empty">T-1</div>
+            <div class="header"><input type="text" maxlength="1"></div>
+            <div class="header"><input type="text" maxlength="1"></div>
+            <div class="header"><input type="text" maxlength="1"></div>
+            <div class="div"><input type="text" maxlength="2"></div>
+            <div class="div"><input type="text" maxlength="2"></div>
+            <div class="header"><input type="text" maxlength="1"></div>
+            <div class="div"><input type="text" maxlength="2"></div>
+            <div class="div"><input type="text" maxlength="2"></div>
+          </div>
+
+          <div class="table2">
+            <div  onclick="Table1()" class="empty">T-2</div>
+            <div class="header"><input type="text" maxlength="2"></div>
+            <div class="header"><input type="text" maxlength="2"></div>
+            <div class="header"><input type="text" maxlength="2"></div>
+            <div class="header"><input type="text" maxlength="2"></div>
+            <div class="header"><input type="text" maxlength="2"></div>
+            <div class="div"><input type="text" maxlength="2"></div>
+            <div class="div"><input type="text" maxlength="4"></div>
+            <div class="div"><input type="text" maxlength="4"></div>
+            <div class="div"><input type="text" maxlength="4"></div>
+            <div class="header"><input type="text" maxlength="2"></div>
+            <div class="div"><input type="text" maxlength="4"></div>
+            <div class="div"><input type="text" maxlength="4"></div>
+            <div class="div"><input type="text" maxlength="4"></div>
+            <div class="div"><input type="text" maxlength="4"></div>
+            <div class="header"><input type="text" maxlength="2"></div>
+            <div class="div"><input type="text" maxlength="4"></div>
+            <div class="div"><input type="text" maxlength="4"></div>
+            <div class="div"><input type="text" maxlength="4"></div>
+            <div class="div"><input type="text" maxlength="4"></div>
+            <div class="header"><input type="text" maxlength="2"></div>
+            <div class="div"><input type="text" maxlength="4"></div>
+            <div class="div"><input type="text" maxlength="4"></div>
+            <div class="div"><input type="text" maxlength="4"></div>
+            <div class="div"><input type="text" maxlength="4"></div>
+          </div>
+
+          <button class="especial-button mtb-10" onclick="limparTabelas()">Limpar Tabelas</button>
+
+          <textarea class="w-100" cols="30" rows="10"></textarea>
+
+        </div>
       </div>
 
 
@@ -137,15 +297,17 @@
           <button class="level-btn medium-btn" id="mediumBtn">Nível Médio</button>
           <button class="level-btn hard-btn" id="hardBtn">Nível Difícil</button>
         </div>
-      
+
         <ul class="question-list" id="questionList">
           <!-- Questões serão carregadas aqui -->
         </ul>
         <div class="d-centered w-100">
-        <button class="level-btn" id="closeModalBtn">Fechar</button>
-      </div>
+          <button class="level-btn" id="closeModalBtn">Fechar</button>
+        </div>
       </div>
     </div>
+
+
 
   </main>
 

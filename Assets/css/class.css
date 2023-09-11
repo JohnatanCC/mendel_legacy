@@ -235,7 +235,7 @@ svg {
 }
 
 .d-none {
-    display: none;
+    display: none !important;
 }
 
 .h-100vh {
@@ -253,6 +253,20 @@ svg {
     justify-content: space-between;
 }
 
+.btn-submit {
+    background-color: var(--green);
+    color: var(--light);
+    padding: 8px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: all ease 0.4;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-submit:hover {
+    background-color: var(--dark-green);
+}
 
 
 .gap-10 {

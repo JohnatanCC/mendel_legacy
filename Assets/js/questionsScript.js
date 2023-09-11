@@ -234,6 +234,30 @@ function getQuestionsByLevel(level) {
     return questions;
 }
 
+const table1 = document.querySelector('.table');
+const table2 = document.querySelector('.table2');
+
+function Table1() {
+    table2.style.display = "none";
+    table1.style.display = "grid";
+
+}
+function Table2() {
+    table2.style.display = "grid";
+    table1.style.display = "none";
+
+}
+
+function limparTabelas() {
+    // Seleciona todos os inputs nas tabelas
+    const inputs = document.querySelectorAll('.table input, .table2 input');
+
+    // Define o valor de todos os inputs como vazio
+    inputs.forEach(input => {
+        input.value = '';
+    });
+}
+
 /*
 Dados Iniciais:
 currentQuestion mantém o índice da pergunta atual sendo exibida.
