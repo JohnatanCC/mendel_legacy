@@ -1,0 +1,46 @@
+/* styles-light.css */
+.light-mode .navigation {
+    background-color: var(--green);
+    color: var(--light);
+}
+.light-mode .content {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.light-mode .content h2 {
+    color: var(--dark-green);
+}
+.light-mode .content p {
+    color: var(--dark);
+}
+.light-mode .footer {
+    background-color: var(--green);
+    color: var(--light);
+}
+
+.light-mode div .table input,.light-mode div .table2 input {
+    color: var(--dark);
+}
+
+.team-section {
+    background-color: var(--background-light);
+}
+
+.light-mode .table .div,.light-mode .table2 .div {
+    background-color: var(--light);
+}
+
+.light-mode .table div, .table2 div {
+    border-color: var(--background-light);
+}
+
+.light-mode textarea {
+    background-color: var(--light);
+}
+
+
+/* styles-light.css */
+.light-mode {
+    --background-color: var(--background-light); /* Cor de fundo no modo claro */
+}

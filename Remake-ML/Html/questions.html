@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mendel's Legacy</title>
+    <link rel="stylesheet" href="../Assets/css/anim.css">
+    <link rel="stylesheet" href="../Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Assets/css/style.css">
+    <link rel="stylesheet" href="../Assets/css/class.css">
+    <link rel="stylesheet" href="../Assets/css/styles-dark.css">
+    <link rel="stylesheet" href="../Assets/css/extraButtons.css">
+    <!-- O ID deve coincidir com o elemento no JavaScript -->
+    <link rel="stylesheet" href="../Assets/css/styles-light.css">
+    <!-- Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;800&family=Rubik&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="../Assets/icons/system-icon.png" type="image/x-icon" />
+    <title>Mendel's Legacy</title>
+</head>
+
+<body class="light-mode ">
+
+    <!-- Menu lateral -->
+    <div class="navigation">
+        <ul>
+            <li class="list">
+                <a href="index.html">
+                    <span class="icon"><img src="../Assets/icons/Sidebar Icons/home-icon-sidebar.png" /></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="practice.html">
+                    <span class="icon"><img src="../Assets/icons/Sidebar Icons/practice-icon-sidebar.png" /></span>
+                    <span class="title">Prática</span>
+                </a>
+            </li>
+            <li class="list ">
+                <a href="theory.html">
+                    <span class="icon"><img src="../Assets/icons/Sidebar Icons/theory-icon-sidebar.png" /></span>
+                    <span class="title">Teoria</span>
+                </a>
+            </li>
+            <li>
+                <a href="lab.html">
+                    <span class="icon"><img src="../Assets/icons/Sidebar Icons/lab-icon-sidebar.png" /></span>
+                    <span class="title">Laboratório</span>
+                </a>
+            </li>
+            <li class="list active">
+                <a href="questions.html">
+                    <span class="icon  icon-active"><img
+                            src="../Assets/icons/Sidebar Icons/quiz-icon-Sidebar.png" /></span>
+                    <span class="title active">Questões</span>
+                </a>
+            </li>
+            <li class="list">
+                <a class=" d-flex align-items-center">
+                    <span class="icon"><img src="../Assets/icons/Sidebar Icons/darkmode-icon-sidebar.png" /></span>
+                    <div class="title">
+                        <input type="checkbox" class="checkbox" id="chk" />
+                        <label id="dark-mode-toggle" class="label" for="chk">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </a>
+            </li>
+
+            <li class="list">
+                <a class=" d-flex align-items-center">
+                    <span class="icon"><img src="../Assets/icons/Sidebar Icons/sound-icon-sidebar.png" /></span>
+                    <div class="title">
+                        <div class="checkbox-wrapper-10">
+                            <input class="tgl tgl-flip" id="cb5" type="checkbox" checked />
+                            <label class="tgl-btn" data-tg-on="Play" data-tg-off="Stop" for="cb5"></label>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+
+
+    <main class="d-flex margin-default flex-column">
+
+        <header class="w-100  logo">
+            <img id="logo-img" src="../Assets/imgs/Mendel_legancy_logo.png" alt="Mendel's Legacy">
+        </header>
+
+
+        <div class="flex-column ">
+
+
+
+            <!-- Conteúdo principal -->
+            <div class="content">
+                <header>
+                    <h2 class="title-bar">Questionario de Mendel</h2>
+                    <p>
+                        Explore questionários sobre a Lei de Mendel e as combinações
+                        genéticas para avaliar seu conhecimento, abrangendo níveis de
+                        dificuldade que vão do simples ao desafiador.
+                    </p>
+                </header>
+
+                <section>
+
+                    <div class="flex-column d-flex">
+                        <h1 class="text-center">Quiz</h1>
+
+                        <div class="scoreArea">
+                            <img src="../Assets/icons/prize-img.png" class="prizeImage" />
+                            <div class="scoreText1">Parabéns!</div>
+                            <div class="scorePct">Acertou x%</div>
+                            <div class="scoreText2">Carregando...</div>
+                            <div class="wrapper">
+                                <button class="especial-button mb-10">Fazer novamente</button>
+                            </div>
+
+                            <a href="#" id="back">Voltar</a>
+
+                        </div>
+
+                        <div class="custom-select">
+                            <div class="select-styled">Escolha um nível de dificuldade</div>
+                            <ul class="select-options" id="difficulty">
+                                <li class="select-option success" value="easy">questões de nível fácil</li>
+                                <li class="select-option yellow" value="medium">questões de nível médio</li>
+                                <li class="select-option danger" value="hard">questões de nível dificíl</li>
+                            </ul>
+                            <div class="gap-2 mt-2 d-centered ">
+                                <button id="startQuizButton" class="especial-button mtb-10 disabled">Iniciar
+                                    Quiz</button>
+                                <button class="especial-button" id="openModalBtn">Ver respostas</button>
+                            </div>
+                        </div>
+                        <div class="questionArea">
+                            <div class="question">...</div>
+                            <div class="options playable-sound">
+
+                            </div>
+                        </div>
+                        <h3 class="text-center">Conclusão:</h3>
+                        <div class="progress">
+
+                            <div class="progress--bar anim-pbc">0%</div>
+
+                        </div>
+
+                        <div class="tables-area">
+                            <h2 class="title-bar w-100">Use a tabela para calcular</h2>
+                            <p class="text-center">Digite nos quadrados da tabela,se desejar mude o formato(T-1:uma
+                                caracteristica,T-2:duas caracteristica).</p>
+                            <div class="d-centered">
+                                <div class="table">
+                                    <div onclick="Table2()" class="empty">T-1</div>
+                                    <div class="header"><input type="text" maxlength="1"></div>
+                                    <div class="header"><input type="text" maxlength="1"></div>
+                                    <div class="header"><input type="text" maxlength="1"></div>
+                                    <div class="div"><input type="text" maxlength="2"></div>
+                                    <div class="div"><input type="text" maxlength="2"></div>
+                                    <div class="header"><input type="text" maxlength="1"></div>
+                                    <div class="div"><input type="text" maxlength="2"></div>
+                                    <div class="div"><input type="text" maxlength="2"></div>
+                                </div>
+
+                                <div class="table2">
+                                    <div onclick="Table1()" class="empty">T-2</div>
+                                    <div class="header"><input type="text" maxlength="2"></div>
+                                    <div class="header"><input type="text" maxlength="2"></div>
+                                    <div class="header"><input type="text" maxlength="2"></div>
+                                    <div class="header"><input type="text" maxlength="2"></div>
+                                    <div class="header"><input type="text" maxlength="2"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                    <div class="header"><input type="text" maxlength="2"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                    <div class="header"><input type="text" maxlength="2"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                    <div class="header"><input type="text" maxlength="2"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                    <div class="div"><input type="text" maxlength="4"></div>
+                                </div>
+                            </div>
+                            <button class="especial-button mtb-10" onclick="limparTabelas()">Limpar Tabelas</button>
+
+                            <textarea class="w-100" cols="30" rows="10"></textarea>
+
+                        </div>
+                    </div>
+
+                    <div class="modal" id="modal">
+                        <div class="modal-content">
+                            <h2 class="text-center">Questões</h2>
+                            <div class="d-centered gap-10 mb-10">
+                                <button class="level-btn easy-btn" id="easyBtn">Nível Fácil</button>
+                                <button class="level-btn medium-btn" id="mediumBtn">Nível Médio</button>
+                                <button class="level-btn hard-btn" id="hardBtn">Nível Difícil</button>
+                            </div>
+
+                            <ul class="question-list" id="questionList">
+                                <!-- Questões serão carregadas aqui -->
+                            </ul>
+                            <div class="d-centered w-100">
+                                <button class="level-btn" id="closeModalBtn">Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+
+            </div>
+        </div>
+        <!-- Rodapé -->
+        <div class="footer">
+            &copy; 2023 Mendel's Legacy - Todos os direitos reservados
+            <br>
+            Músicas geradas por <a href="https://mubert.com/render" target="_blank">mubert</a>
+        </div>
+        </div>
+
+        <!-- Audios -->
+        <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
+        <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
+        <audio id="audio" src="../Assets/sounds/Musica1.mp3"></audio>
+    </main>
+
+    <script src="../Assets/js/darkmode.js"></script>
+    <script src="../Assets/js/sounds.js"></script>
+    <script src="../Assets/js/questions.js"></script>
+    <script src="../Assets/js/questionsScript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mendel's Legacy</title>
+    <link rel="stylesheet" href="../Assets/css/anim.css">
+    <link rel="stylesheet" href="../Assets/css/class.css">
+    <link rel="stylesheet" href="../Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Assets/css/style.css">
+    <link rel="stylesheet" href="../Assets/css/styles-dark.css">
+    <link rel="stylesheet" href="../Assets/css/extraButtons.css">
+    <!-- O ID deve coincidir com o elemento no JavaScript -->
+    <link rel="stylesheet" href="../Assets/css/styles-light.css">
+    <!-- Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;800&family=Rubik&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="../Assets/icons/system-icon.png" type="image/x-icon" />
+    <title>Mendel's Legacy</title>
+
+</head>
+
+<body class="light-mode ">
+
+    <div class="preload flex-column anim-preload">
+        <img src="../Assets/imgs/Mendel_legancy_intro.gif" alt="Logo" />
+    </div>
+
+    <div id="settings-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="title-bar">Configurações do Sistema</h2>
+            <div class="setting">
+                <div class="d-flex">
+                    <label>Modo Escuro:</label>
+                    <input type="checkbox" class="checkbox" id="chk" />
+                    <label id="dark-mode-toggle" class="label" for="chk">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="setting">
+                <label style="padding-bottom: 15px;">Música:</label>
+                <div class="music-content">
+                    <!-- Musica #1 -->
+                    <div class="music-area">
+                        <span>Music #1</span>
+                        <button class="music-button" data-src="../Assets/Musics/music1.wav">Play</button>
+                    </div>
+                    <!-- Musica #2 -->
+                    <div class="music-area">
+                        <span>Music #2</span>
+                        <button class="music-button" data-src="../Assets/Musics/music2.wav">Play</button>
+                    </div>
+                    <!-- Musica #3 -->
+                    <div class="music-area">
+                        <span>Music #3</span>
+                        <button class="music-button" data-src="../Assets/Musics/music3.wav">Play</button>
+                    </div>
+                    <!-- Musica #4 -->
+                    <div class="music-area">
+                        <span>Music #4</span>
+                        <button class="music-button" data-src="../Assets/Musics/music4.wav">Play</button>
+                    </div>
+                    <!-- Musica #5 -->
+                    <div class="music-area">
+                        <span>Music #5</span>
+                        <button class="music-button" data-src="../Assets/Musics/music5.wav">Play</button>
+                    </div>
+                    <!-- Musica #6 -->
+                    <div class="music-area">
+                        <span>Music #6</span>
+                        <button class="music-button" data-src="../Assets/Musics/music6.wav">Play</button>
+                    </div>
+                    <!-- Musica #7 -->
+                    <div class="music-area">
+                        <span>Music #7</span>
+                        <button class="music-button" data-src="../Assets/Musics/music7.wav">Play</button>
+                    </div>
+                    <!-- Musica #8 -->
+                    <div class="music-area">
+                        <span>Music #8</span>
+                        <button class="music-button" data-src="../Assets/Musics/music8.wav">Play</button>
+                    </div>
+                    <!-- Musica #9 -->
+                    <div class="music-area">
+                        <span>Music #9</span>
+                        <button class="music-button" data-src="../Assets/Musics/music9.wav">Play</button>
+                    </div>
+                    <!-- Musica #10 -->
+                    <div class="music-area">
+                        <span>Music #10</span>
+                        <button class="music-button" data-src="../Assets/Musics/music10.wav">Play</button>
+                    </div>
+                    <!-- Musica #11 -->
+                    <div class="music-area">
+                        <span>Music #11</span>
+                        <button class="music-button" data-src="../Assets/Musics/music11.wav">Play</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex">
+                <div class="setting">
+                    <label for="volume-slider">Volume:</label>
+                    <input type="range" id="volume-slider" min="0" max="100">
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Menu lateral -->
+    <div class="navigation expanded">
+
+        <div class="d-centered">
+            <div class="menu-toggle">
+                <img src="../Assets/icons/Sidebar Icons/expand-menu-icon.png" class="icon" alt="Ìcone do menu">
+            </div>
+        </div>
+
+
+        <ul>
+            <li class="active">
+                <a href="index.html">
+                    <span class="icon icon-active"><img
+                            src="../Assets/icons/Sidebar Icons/home-icon-sidebar.png" /></span>
+                    <span class="title active">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="practice.html">
+                    <span class="icon"><img src="../Assets/icons/Sidebar Icons/practice-icon-sidebar.png" /></span>
+                    <span class="title">Prática</span>
+                </a>
+            </li>
+            <li>
+                <a href="theory.html">
+                    <span class="icon"><img src="../Assets/icons/Sidebar Icons/theory-icon-sidebar.png" /></span>
+                    <span class="title">Teoria</span>
+                </a>
+            </li>
+            <li>
+                <a href="lab.html">
+                    <span class="icon"><img src="../Assets/icons/Sidebar Icons/lab-icon-sidebar.png" /></span>
+                    <span class="title">Laboratório</span>
+                </a>
+            </li>
+            <li>
+                <a href="questions.html">
+                    <span class="icon"><img src="../Assets/icons/Sidebar Icons/quiz-icon-sidebar.png" /></span>
+                    <span class="title">Questões</span>
+                </a>
+            </li>
+            <li class="config">
+                <a href="#" id="settingsButton">
+                    <span class="icon rotate"><img src="../Assets/icons/sidebar Icons/config-icon-sidebar.png" /></span>
+                    <span class="title ">Definicões</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+
+
+    <main class="d-flex margin-default flex-column">
+
+        <header class="w-100  logo">
+            <img id="logo-img" src="../Assets/imgs/Mendel_legancy_logo.png" alt="Mendel's Legacy">
+        </header>
+
+
+        <div class="flex-column ">
+
+
+
+            <!-- Conteúdo principal -->
+            <div class="content">
+                <header>
+                    <h2 class="title-bar">O que é Mendel's Legacy</h2>
+                    <p>
+                        Mendel's Legacy é um sistema educacional dedicado ao estudo das leis de Mendel e genética.
+                        Oferecemos uma variedade de recursos e atividades interativas para ajudar você a entender os
+                        conceitos
+                        de hereditariedade e genética de maneira prática e envolvente.
+                    </p>
+                </header>
+                <section class="container">
+                    <div class="row ">
+                        <div class=" col-6">
+                            <div class="feature">
+
+
+                                <div class="feature-content">
+                                    <h2 class="title-bar">Teoria de Mendel</h2>
+                                    <div class="flex-container">
+                                        <p>Nossa seção de Teoria de Mendel oferece uma resumo das leis
+                                            de Mendel e genética. Explore os seguintes recursos:</p>
+                                        <ul>
+                                            <li>Textos explicativos que cobrem conceitos básicos sobre a teoria.
+                                            </li>
+                                            <li>imagens para ilustrar os princípios genéticos.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex ">
+                                        <div class="feature-image">
+                                            <img src="../Assets/icons/teory-icon.png" alt="Imagem da funcionalidade">
+
+                                        </div>
+                                        <p>Prepare-se para explorar a história das descobertas de Mendel e compreender
+                                            como
+                                            ele desvendou os segredos da hereditariedade.</p>
+                                    </div>
+                                    <div class="wrapper mb-10">
+                                        <a class="cta" href="theory.html">A teoria</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="feature">
+                                <div class="feature-content">
+                                    <h2 class="title-bar">Prática</h2>
+                                    <div class="flex-container">
+                                        <p>Na prática, o sistema gera uma tabela exibindo as combinações
+                                            genéticas previstas com base nas características selecionadas
+                                            e nos organismos escolhidos.
+                                            Explore os seguintes recursos:</p>
+                                        <ul>
+                                            <li>Configuração da tabela.</li>
+                                            <li>Simulações de possíveis resultados.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="feature-image">
+                                            <img src="../Assets/icons/practice-img.png" alt="Imagem da funcionalidade">
+                                        </div>
+                                        <p>Esteja pronto para colocar em prática o conhecimento adquirido e criar
+                                            automaticamente uma tabela.</p>
+                                    </div>
+                                    <div class="wrapper mb-10">
+                                        <a class="cta" href="practice.html">Praticar agora</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="feature">
+                                <div class="feature-content">
+                                    <h2 class="title-bar">Laboratório</h2>
+                                    <div class="flex-container">
+                                        <p>Explore o emocionante mundo da genética de forma prática em nosso Laboratório
+                                            Genético. Aqui, você pode:</p>
+                                        <ul>
+                                            <li>Configurar tabelas genéticas personalizadas.</li>
+                                            <li>Explorar uma variedade de combinações genéticas.</li>
+                                            <li>Preencher tabelas genéticas e verificar os resultados.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="feature-image">
+                                            <img src="../Assets/icons/lab-img.png" alt="Imagem da funcionalidade">
+                                        </div>
+                                        <p>Experimente a genética de maneira interativa e compreenda como os fatores
+                                            genéticos influenciam características hereditárias.</p>
+                                    </div>
+                                    <div class="wrapper mb-10">
+                                        <a class="cta" href="lab.html">Explorar o laboratório</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="feature">
+                                <div class="feature-content">
+                                    <h2 class="title-bar">Quiz</h2>
+                                    <div class="flex-container">
+                                        <p>Nossa seção de Quiz oferece uma maneira divertida e educativa de testar seus
+                                            conhecimentos em genética. Explore os seguintes recursos:</p>
+                                        <ul>
+                                            <li>Desafios de perguntas e respostas sobre genética.</li>
+                                            <li>Quizzes temáticos e de nível variado.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="feature-image">
+                                            <img src="../Assets/icons/questions-img.png" alt="Imagem da funcionalidade">
+                                        </div>
+                                        <p>Prepare-se para testar seu conhecimento em genética com uma variedade de
+                                            quizzes
+                                            temáticos e desafios de perguntas e respostas.</p>
+                                    </div>
+                                    <div class="wrapper mb-10">
+                                        <a class="cta" href="quiz.html">Iniciar o quiz</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="container p-12">
+                    <div class="team-section ">
+                        <h1 class="text-center title-bar">Feira de Ciências 2023</h1>
+                        <h2 class="text-start">Equipe</h2>
+                        <div class="row">
+                            <div class="col-6">
+
+                                <div class="team-member">
+                                    <img src="../Assets/photos/andré-photo.jpeg" alt="Nome do Membro 1">
+                                    <div class="text-start">
+                                        <p class="text-bold">André Almeida</p>
+                                        <p class="text-primary title">Orientador</p>
+                                    </div>
+                                </div>
+
+                                <div class="team-member">
+                                    <img src="../Assets/photos/tiago-photo.jfif" alt="Nome do Membro 2">
+                                    <div class="text-start">
+                                        <p class="text-bold">TIAGO FERREIRA</p>
+                                        <p class="text-danger">Programador</p>
+                                    </div>
+                                </div>
+
+                                <div class="team-member">
+                                    <img src="../Assets/photos/pedro-photo.jfif" alt="Nome do Membro 3">
+                                    <div class="text-start">
+                                        <p class="text-bold">PEDRO OTAVIO</p>
+                                        <p class="text-danger">Programador</p>
+                                    </div>
+                                </div>
+
+                                <div class="team-member">
+                                    <img src="../Assets/photos/johnatan-photo.jpeg" alt="Nome do Membro 4">
+                                    <div class="text-start">
+                                        <p class="text-bold">JOHNATAN CAVALCANTE</p>
+                                        <p class="text-desinger">Programador e Designer</p>
+                                    </div>
+                                </div>
+
+                                <div class="team-member">
+                                    <img src="../Assets/photos/davi-photo.png" alt="Nome do Membro 5">
+                                    <div class="text-start">
+                                        <p class="text-bold">DAVI FRANCISCO</p>
+                                        <p class="text-success">Membro</p>
+                                    </div>
+                                </div>
+
+                                <div class="team-member">
+                                    <img src="../Assets/photos/adrian-photo.jfif" alt="Nome do Membro 6">
+                                    <div class="text-start">
+                                        <p class="text-bold">ANTONIO ADRIAN</p>
+                                        <p class="text-success">Membro</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-6">
+
+                                <div class="team-member">
+                                    <img src="../Assets/photos/carol-photo.jfif" alt="Nome do Membro 7">
+                                    <div class="text-start">
+                                        <p class="text-bold">ANA CAROLINA</p>
+                                        <p class="text-danger">Programadora</p>
+                                    </div>
+                                </div>
+
+                                <div class="team-member">
+                                    <img src="../Assets/photos/kelly-photo.jfif" alt="Nome do Membro 8">
+                                    <div class="text-start">
+                                        <p class="text-bold">JENNIFER KELLY</p>
+                                        <p class="text-warning">Planejamento de Layout</p>
+                                    </div>
+                                </div>
+
+                                <div class="team-member">
+                                    <img src="../Assets/photos/helena-photo.jfif" alt="Nome do Membro 9">
+                                    <div class="text-start">
+                                        <p class="text-bold">MARIA HELENA</p>
+                                        <p class="text-warning">Planejamento de Layout</p>
+                                    </div>
+                                </div>
+
+                                <div class="team-member">
+                                    <img src="../Assets/photos/lira-photo.jfif" alt="Nome do Membro 10">
+                                    <div class="text-start">
+                                        <p class="text-bold">JENNIFFER LIRA</p>
+                                        <p class="text-danger">Programadora</p>
+                                    </div>
+                                </div>
+
+                                <div class="team-member">
+                                    <img src="../Assets/photos/samya-photo.jfif" alt="Nome do Membro 11">
+                                    <div class="text-start">
+                                        <p class="text-bold">SAMYA EVELYN</p>
+                                        <p class="text-success">Membro</p>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        <!-- Rodapé -->
+        <div class="footer">
+            &copy; 2023 Mendel's Legacy - Todos os direitos reservados
+            <br>
+            Músicas geradas por <a href="https://mubert.com/render" target="_blank">Mubert</a>
+        </div>
+        </div>
+
+        <!-- Audios -->
+        <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
+        <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
+        <!-- Volume -->
+        <div id="volumeDisplay" class="volume-display">Volume: 100%</div>
+    </main>
+
+    <script src="../Assets/js/darkmode.js"></script>
+    <script src="../Assets/js/sounds.js"></script>
+    <script src="../Assets/js/settingsModal.js"></script>
+    <script src="../Assets/js/menu.js"></script>
+
+</body>
+
+</html>
