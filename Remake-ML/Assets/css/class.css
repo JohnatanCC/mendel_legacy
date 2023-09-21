@@ -64,4 +64,6 @@ margin:  0 auto;
     justify-content: center;
 }
 
-
+.event-none {
+    pointer-events: none;
+}

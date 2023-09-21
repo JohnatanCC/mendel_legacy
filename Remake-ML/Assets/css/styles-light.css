@@ -19,6 +19,14 @@
     color: var(--light);
 }
 
+.table-card {
+    background-color: var(--background-light);
+}
+.card-footer {
+    background-color: var(--bg);
+
+}
+
 .light-mode div .table input,.light-mode div .table2 input {
     color: var(--dark);
 }

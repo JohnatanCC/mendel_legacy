@@ -18,7 +18,7 @@
 
 .menu-toggle {
     border-radius: 10px;
-    margin: 20px auto;
+    margin: 20px 20px 20px 30px;
     padding: 5px;
     transition: ease 0.4s;
 }
@@ -86,6 +86,11 @@
     transition: width 0.4s;
 }
 
+.active {
+    background-color: var(--light);
+    color: #333 !important;
+}
+
 .navigation {
     height: 100vh;
     position: fixed;
@@ -122,7 +127,7 @@
 
 .navigation ul li:hover {
 
-    transform: scale(1.10);
+    transform: scale(1.05);
 }
 
 
@@ -168,14 +173,12 @@
 }
 
 
-.active {
-    background-color: var(--light);
-    color: #333 !important;
-}
+
 
 
 .config {
     background-color: var(--dark-green);
+    margin-top: 40px;
 }
 
 
@@ -581,7 +584,8 @@
 .questionArea {
     max-width: 500px;
     margin: 0 auto;
-    height: 500px;
+    min-height: 500px;
+
 }
 
 .question {
@@ -652,7 +656,7 @@
 }
 
 .scoreArea {
-    background-color: var(--light);
+    background-color: var(--background-light);
     padding: 20px;
     width: 500px;
     border: double var(--dark-green) 4px;
@@ -919,10 +923,12 @@ div input[type="number"] {
     grid-gap: 0px;
     margin-top: 30px;
     gap: 2px;
+    padding: 5px;
 }
 
 .table2 {
     display: none;
+    padding: 5px;
 }
 
 .table div:hover,
@@ -1169,18 +1175,6 @@ textarea {
 
 }
 
-:root {
-    --green: #56c696;
-    --dark-green: #3fa77a;
-    --light: #FFF;
-    --background-light: #e8f2ee;
-    --background-dark: #222;
-    --title: 'Exo 2', sans-serif;
-    --dark: #333;
-    --bg: #f3f8fa;
-    --white: #fff;
-    --black: #181c1a;
-}
 
 /* Estilos para o modal de configurações */
 #settings-modal {
@@ -1188,6 +1182,7 @@ textarea {
     position: fixed;
     z-index: 100;
     left: 0;
+    height: 100%;
     top: 0;
     width: 100%;
     overflow: auto;
@@ -1223,9 +1218,6 @@ label {
     font-weight: bold;
 }
 
-l #volume-slider {
-    width: 100%;
-}
 
 .preload {
     background-image: url('../imgs/background_intro.gif');
@@ -1292,6 +1284,68 @@ l #volume-slider {
     transform: scale(1.05);
 }
 
+.table-cards-content {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+/* Estilização para o card da tabela */
+.table-card {
+    background-color: var(--background-light);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+ 
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Estilização para as informações da tabela */
+.card-info {
+    margin-top: 10px;
+    font-size: 14px;
+    background-color: var(--dark-green);
+    color: var(--light);
+    width: 100%;
+    gap: 6px;
+    font-size: 16px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute; 
+    top: 100%;
+    left: 0; 
+    display: none; 
+    flex-direction: column !important;
+    z-index: 1;
+}
+
+.card-footer {
+    background-color: var(--bg);
+
+}
+
+/* Estilização para o botão de classificação */
+.card-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--dark-green);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Estilização para o botão de classificação ao passar o mouse */
+.card-btn:hover {
+    background-color: #36936b;
+}
+
 
 body {
     margin: 0;
@@ -1303,6 +1357,40 @@ body {
     /* Adicione a transição da cor do texto */
 }
 
+/* Estilo para o elemento select */
+.custom-select-lab {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid var(--dark-green);
+    border-radius: 5px;
+    background-color: var(--green);
+    cursor: pointer;
+    outline: none;
+    font-family: var(--title);
+    color: var(--light);
+}
+
+/* Estilo para as opções (option) */
+.custom-select-lab option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: var(--bg);
+    color: #333;
+    font-family: var(--title);
+}
+
+/* Estilo quando o select está aberto */
+.custom-select-lab:focus {
+    border-color: var(--dark-green);
+    box-shadow: 0 0 5px var(--green);
+}
+
+/* Estilo para as opções quando o select está aberto */
+
+.custom-select-lab option:hover  {
+    background-color: var(--green);
+    color: var(--light);
+}
 @media (max-width:884px) {
     .page-buttons>button {
         font-size: 0;
@@ -1316,4 +1404,41 @@ body {
     .text-button {
         margin: 0;
     }
+    .col-6 {
+        width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+    .margin-default {
+        margin-left: 90px;
+    }
 }
+
+:root {
+    --green: #56c696;
+    --dark-green: #3fa77a;
+    --light: #FFF;
+    --background-light: #e8f2ee;
+    --background-dark: #222;
+    --title: 'Exo 2', sans-serif;
+    --dark: #333;
+    --bg: #f3f8fa;
+    --white: #fff;
+    --black: #252525;
+}
+
+
+/* Estiliza o select */
+select {
+    appearance: none; /* Remove a aparência padrão da seta */
+    -webkit-appearance: none; /* Para navegadores baseados no WebKit (como Chrome e Safari) */
+    -moz-appearance: none; /* Para navegadores baseados no Gecko (como Firefox) */
+    background-image: url('../icons//down-arrow.png'); /* Substitua pelo caminho da sua imagem de seta personalizada */
+    background-position: right center; /* Posiciona a imagem à direita do select */
+    
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    padding-right: 20px; /* Aumenta o espaço à direita para a imagem */
+  }
+  

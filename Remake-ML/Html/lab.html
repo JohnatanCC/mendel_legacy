@@ -24,11 +24,7 @@
 
 <body class="light-mode ">
 
-    <div class="preload flex-column anim-preload">
-        <img src="../Assets/imgs/Mendel_legancy_intro.gif" alt="Logo" />
-    </div>
-
-    <div id="settings-modal">
+    <div id="settings-modal" class="anim-entrance">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 class="title-bar">Configurações do Sistema</h2>
@@ -50,7 +46,7 @@
                     <!-- Musica #1 -->
                     <div class="music-area">
                         <span>Music #1</span>
-                        <button class="music-button" data-src="../Assets/Musics/music1.wav">Play</button>
+                        <button class="music-button" data-src="../Assets/Musics/music1.mp3">Play</button>
                     </div>
                     <!-- Musica #2 -->
                     <div class="music-area">
@@ -121,49 +117,51 @@
 
 
     <!-- Menu lateral -->
-    <div class="navigation">
+    <div class="navigation expanded">
 
         <div class="d-centered">
-            <div class="menu-toggle"></div>
-            <img src="../Assets/icons/Sidebar Icons/expand-menu-icon.png" class="icon" alt="Ìcone do menu">
+            <div class="menu-toggle">
+                <img src="../Assets/icons/Sidebar Icons/expand-menu-icon.png" class="icon" alt="Ìcone do menu">
+            </div>
         </div>
 
+
         <ul>
-            <li class="list">
+            <li>
                 <a href="index.html">
-                    <span class="icon"><img src="../Assets/icons/Sidebar Icons/home-icon-sidebar.png" /></span>
-                    <span class="title">Home</span>
+                    <span class="icon "><img src="../Assets/icons/Sidebar Icons/home-icon-sidebar.png" /></span>
+                    <span class="title ">Home</span>
                 </a>
             </li>
-            <li class="list">
+            <li>
                 <a href="practice.html">
                     <span class="icon"><img src="../Assets/icons/Sidebar Icons/practice-icon-sidebar.png" /></span>
                     <span class="title">Prática</span>
                 </a>
             </li>
-            <li class="list ">
+            <li>
                 <a href="theory.html">
                     <span class="icon"><img src="../Assets/icons/Sidebar Icons/theory-icon-sidebar.png" /></span>
                     <span class="title">Teoria</span>
                 </a>
             </li>
-            <li class="list active">
-                <a href="lab.html">
+            <li class="active">
+                <a>
                     <span class="icon icon-active"><img
                             src="../Assets/icons/Sidebar Icons/lab-icon-sidebar.png" /></span>
                     <span class="title active">Laboratório</span>
                 </a>
             </li>
-            <li class="list">
+            <li>
                 <a href="questions.html">
                     <span class="icon"><img src="../Assets/icons/Sidebar Icons/quiz-icon-sidebar.png" /></span>
                     <span class="title">Questões</span>
                 </a>
             </li>
-            <li class="list">
+            <li class="config">
                 <a href="#" id="settingsButton">
-                    <span class="icon"><img src="../Assets/icons/sidebar Icons/config-icon-sidebar.png" /></span>
-                    <span class="title">Definicões</span>
+                    <span class="icon rotate"><img src="../Assets/icons/sidebar Icons/config-icon-sidebar.png" /></span>
+                    <span class="title ">Definicões</span>
                 </a>
             </li>
 
@@ -186,15 +184,92 @@
             <!-- Conteúdo principal -->
             <div class="content">
                 <header>
-                    <h2 class="title-bar">O que é Mendel's Legacy</h2>
+                    <h2 class="title-bar">O Laboratório de Mendel</h2>
                     <p>
-                        Mendel's Legacy é um sistema educacional dedicado ao estudo das leis de Mendel e genética.
-                        Oferecemos uma variedade de recursos e atividades interativas para ajudar você a entender os
-                        conceitos
-                        de hereditariedade e genética de maneira prática e envolvente.
+                        No Laboratório de Mendel, você têm a oportunidade de colocar em prática os princípios da
+                        teoria de
+                        Mendel. Nesta seção, selecione as características genéticas específicas e os organismos
+                        correspondentes para criar suas próprias combinações. Depois de configurar os cruzamentos
+                        desejados,escolha uma tabela que mostra as possíveis combinações genéticas com base nas
+                        características selecionadas.
                     </p>
                 </header>
+                <section class="container mb-4">
+
+                    <form class="config-form" action="">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="organismSelect">Selecione o organismo:</label>
+                                <select id="organismSelect" class="custom-select-lab">
+                                    <option value="1">Ervilhas</option>
+                                </select>
+
+                                <label for="numCharacteristicsInput1">Quantidade de Características:</label>
+                                <select id="numCharacteristicsInput1" class="custom-select-lab">
+                                    <option value="1">Uma caracteristica</option>
+                                    <option value="2">Duas caracteristicas</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label for="characteristic1Select">1º Característica:</label>
+                                <select id="characteristic1Select" class="custom-select-lab">
+                                    <option value="1">Altura das flores (TT)</option>
+                                    <option value="2">Posição das flores (AA)</option>
+                                    <option value="3">Cor da flor (PP)</option>
+                                    <option value="4">Cor da vagem (GG)</option>
+                                    <option value="5">Forma da vagem (SS)</option>
+                                    <option value="6">Cor da semente (YY)</option>
+                                </select>
+                                <div class="disabled">
+                                    <label for="characteristic2Select">2º Característica:</label>
+                                    <select id="characteristic2Select" class="custom-select-lab">
+                                        <option value="1">Altura das flores (TT)</option>
+                                        <option value="2">Posição das flores (AA)</option>
+                                        <option value="3">Cor da flor (PP)</option>
+                                        <option value="4">Cor da vagem (GG)</option>
+                                        <option value="5">Forma da vagem (SS)</option>
+                                        <option value="6">Cor da semente (YY)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </section>
+
                 <section class="container">
+                    <h2>Classificando: Altura</h2>
+                    <h3 class="title-bar">Ervilhas</h3>
+                    <!-- cards com as tabelas -->
+                    <div class="table-cards-content"> 
+                        <!-- card da tabela -->
+                        <div class="table-card">
+
+                       
+
+                            <div class="table event-none">
+                                <div onclick="Table2()" class="empty"></div>
+                                <div class="header">T</div>
+                                <div class="header">t</div>
+                                <div class="header">T</div>
+                                <div class="div"></div>
+                                <div class="div"></div>
+                                <div class="header">t</div>
+                                <div class="div"></div>
+                                <div class="div"></div>
+                            </div>
+                            <div class="card-footer">
+                            <button class="card-btn" onclick="toggleInfo(this)">Ver informações</button>
+                            <div class="card-info anim-entrance" >
+                                <span>Pai: Homozigótico</span>
+                                <span>Mãe: Homozigótico</span>
+                                <span>Classificar: Altura</span>
+                            </div>
+                            <button class="card-btn">Classificar</button>
+                        </div>
+                        </div>
+
+                    </div>
 
                 </section>
 
@@ -211,15 +286,239 @@
         <!-- Audios -->
         <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
         <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
-        <!-- Volume -->
-        <div id="volumeDisplay" class="volume-display">Volume: 100%</div>
+    
     </main>
 
     <script src="../Assets/js/darkmode.js"></script>
     <script src="../Assets/js/sounds.js"></script>
     <script src="../Assets/js/settingsModal.js"></script>
+    <script src="../Assets/js/menu.js"></script>
     <script src="../Assets/js/lab.js"></script>
 
 </body>
 
 </html>
+
+<!-- <style>
+    .table div:hover {
+        cursor: pointer;
+        background-color: #00b38079;
+        opacity: 0.5;
+        transition: all ease .4s;
+    }
+
+    .header {
+        background-color: var(--green) !important;
+        color: #FFF !important;
+        pointer-events: none;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .gene-option {
+        display: flex;
+        background: #FFF;
+        border: 4px solid var(--green);
+        flex-direction: row;
+        border-radius: 5px;
+        align-items: center;
+        margin: 20px 0;
+        padding: 10px;
+        flex-wrap: wrap;
+        text-align: center;
+        width: 100%;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .gene-option-item img.selected {
+        animation: pulse 1s infinite;
+    }
+
+    .gene-option-item img {
+        width: 70px;
+        height: 70px;
+        background-color: #eee;
+        border: 2px dashed #ddd;
+        cursor: pointer;
+    }
+
+    .gene-option-item p {
+        background-color: #dfdfdf;
+        border: 2px double #f5f5f5;
+        font-weight: bold;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+   
+    
+
+    .table {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-gap: 0px;
+        margin-top: 30px;
+    }
+
+    .table .div {
+        background-color: #FFF;
+    }
+
+    .table div {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #ddd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+
+    }
+
+    .table img {
+        width: 70px;
+    }
+
+    .gene-option-item img:before {
+        content: "";
+        position: absolute;
+        border-radius: 50px;
+        width: 100px;
+        height: 50px;
+        background-color: rgba(0, 128, 0, 0.3);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+
+    .table div.active:before {
+        opacity: 1;
+    }
+
+    @keyframes pulse {
+
+        0%,
+        100% {
+            transform: scale(1);
+            background-color: rgba(0, 128, 0, 0.3);
+        }
+
+        50% {
+            transform: scale(1.05);
+            background-color: rgba(0, 128, 0, 0.3);
+        }
+    }
+
+    .ui-check-btn {
+        position: fixed;
+        bottom: 0px;
+        display: flex;
+      
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background: linear-gradient(90deg, transparent, #0003, transparent);
+        
+    }
+
+    .ui-check-btn button {
+        margin:10px 0;
+
+    }
+
+    button {
+        display: block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: var(--green);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: var(--dark-green);
+    }
+
+    .empty {
+        opacity: 0;
+        pointer-events: none;
+    }
+</style>
+
+ 
+        <h1>Classificando:???</h1>
+        <div class="gene-option">
+            <div class="gene-option-item">
+                <img src="" alt="" data-gene="TT">
+                <p>Planta Alta</p>          
+                
+                <p>Homozigótico dominante</p>
+            </div>
+            <div class="gene-option-item">
+                <img src="Assets/imgs/small-plant.png" alt="Planta Genótipo tt" data-gene="tt">
+                <p>Planta Pequena</p>
+                <p>Homozigotico recessivo</p>
+            </div>
+        </div>
+        <p class="text-center box"><b>
+            </b>
+        </b>
+            Escolha uma planta e depois preencha a tabela.
+            <br>
+            Verde:Posição correta;
+            <br>
+            Vermelho:Posição incorreta;
+        </p>
+        <div class="row gap-10" style="flex-wrap: nowrap;">
+            <div class="col-6">
+                <div class="table">
+                    <div class="empty"></div>
+                    <div class="header">T</div>
+                    <div class="header">t</div>
+                    <div class="header">T</div>
+                    <div class="div" data-gene="TT"></div>
+                    <div class="div" data-gene="TT"></div>
+
+                    <div class="header">T</div>
+                    <div class="div" data-gene="TT"></div>
+                    <div class="div" data-gene="TT"></div>
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div class="table">
+                    <div class="empty"></div>
+                    <div class="header">T</div>
+                    <div class="header">t</div>
+                    <div class="header">T</div>
+                    <div class="div">?</div>
+                    <div class="div">?</div>
+
+                    <div class="header">t</div>
+                    <div class="div">?</div>
+                    <div class="div">?</div>
+                </div>
+               
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+</main>
+
+<div class="ui-check-btn">
+    <button id="checkButton">Verificar Combinação</button>
+</div> -->
+

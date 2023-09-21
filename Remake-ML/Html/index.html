@@ -28,7 +28,7 @@
         <img src="../Assets/imgs/Mendel_legancy_intro.gif" alt="Logo" />
     </div>
 
-    <div id="settings-modal">
+    <div id="settings-modal" class="anim-entrance">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 class="title-bar">Configurações do Sistema</h2>
@@ -50,7 +50,7 @@
                     <!-- Musica #1 -->
                     <div class="music-area">
                         <span>Music #1</span>
-                        <button class="music-button" data-src="../Assets/Musics/music1.wav">Play</button>
+                        <button class="music-button" data-src="../Assets/Musics/music1.mp3">Play</button>
                     </div>
                     <!-- Musica #2 -->
                     <div class="music-area">
@@ -132,7 +132,7 @@
 
         <ul>
             <li class="active">
-                <a href="index.html">
+                <a>
                     <span class="icon icon-active"><img
                             src="../Assets/icons/Sidebar Icons/home-icon-sidebar.png" /></span>
                     <span class="title active">Home</span>
@@ -306,7 +306,7 @@
                                             temáticos e desafios de perguntas e respostas.</p>
                                     </div>
                                     <div class="wrapper mb-10">
-                                        <a class="cta" href="quiz.html">Iniciar o quiz</a>
+                                        <a class="cta" href="questions.html">Iniciar o quiz</a>
                                     </div>
                                 </div>
                             </div>
@@ -340,7 +340,7 @@
                                 <div class="team-member">
                                     <img src="../Assets/photos/pedro-photo.jfif" alt="Nome do Membro 3">
                                     <div class="text-start">
-                                        <p class="text-bold">PEDRO OTAVIO</p>
+                                        <p class="text-bold">PEDRO OTÁVIO</p>
                                         <p class="text-danger">Programador</p>
                                     </div>
                                 </div>
@@ -364,7 +364,7 @@
                                 <div class="team-member">
                                     <img src="../Assets/photos/adrian-photo.jfif" alt="Nome do Membro 6">
                                     <div class="text-start">
-                                        <p class="text-bold">ANTONIO ADRIAN</p>
+                                        <p class="text-bold">ANTÔNIO ADRIAN</p>
                                         <p class="text-success">Membro</p>
                                     </div>
                                 </div>
@@ -412,11 +412,7 @@
                                         <p class="text-success">Membro</p>
                                     </div>
                                 </div>
-
-
-
                             </div>
-
                         </div>
                     </div>
                 </section>
@@ -434,8 +430,7 @@
         <!-- Audios -->
         <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
         <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
-        <!-- Volume -->
-        <div id="volumeDisplay" class="volume-display">Volume: 100%</div>
+
     </main>
 
     <script src="../Assets/js/darkmode.js"></script>

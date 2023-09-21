@@ -98,7 +98,7 @@
 }
 
 .dark-mode .especial-button {
-    background-color: var(--background-dark);
+    background-color: var(--black);
     color: #FFF;
 }
 
@@ -150,6 +150,19 @@
 
 .dark-mode .label {
     background-color: var(--dark);
+}
+
+.dark-mode div select, div input[type="number"] {
+    background-color: var(--background-dark);
+    color: var(--light);
+}
+
+.table-card {
+    background-color: var(--background-dark);
+}
+
+.card-footer {
+    background-color: var(--black);
 }
 
 /* styles-dark.css */

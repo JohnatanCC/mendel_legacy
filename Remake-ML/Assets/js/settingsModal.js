@@ -17,6 +17,7 @@ function disableButtons() {
     // Desativa todos os botões
     musicButtons.forEach((button) => {
         button.classList.add("disabled");
+        
     });
     buttonsDisabled = true;
 
@@ -26,7 +27,7 @@ function disableButtons() {
             button.classList.remove("disabled");
         });
         buttonsDisabled = false;
-    }, 1000); // 1000 milissegundos = 1 segundo
+    }, 1500); // 1000 milissegundos = 1 segundo
 }
 
 musicButtons.forEach((button) => {
@@ -64,7 +65,7 @@ musicButtons.forEach((button) => {
 
         currentButton = button; // Define o novo botão atual
         button.textContent = "Pause";
-        button.style.backgroundColor = "red";
+        button.style.backgroundColor = "#dc3545";
 
         disableButtons(); // Desativa temporariamente os botões
     });

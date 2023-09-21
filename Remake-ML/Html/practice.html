@@ -23,57 +23,150 @@
 
 <body class="light-mode ">
 
+    <div id="settings-modal" class="anim-entrance">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="title-bar">Configurações do Sistema</h2>
+            <div class="setting">
+                <div class="d-flex">
+                    <label>Modo Escuro:</label>
+                    <input type="checkbox" class="checkbox" id="chk" />
+                    <label id="dark-mode-toggle" class="label" for="chk">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="setting">
+                <label style="padding-bottom: 15px;">Música:</label>
+                <div class="music-content">
+                    <!-- Musica #1 -->
+                    <div class="music-area">
+                        <span>Music #1</span>
+                        <button class="music-button" data-src="../Assets/Musics/music1.mp3">Play</button>
+                    </div>
+                    <!-- Musica #2 -->
+                    <div class="music-area">
+                        <span>Music #2</span>
+                        <button class="music-button" data-src="../Assets/Musics/music2.wav">Play</button>
+                    </div>
+                    <!-- Musica #3 -->
+                    <div class="music-area">
+                        <span>Music #3</span>
+                        <button class="music-button" data-src="../Assets/Musics/music3.wav">Play</button>
+                    </div>
+                    <!-- Musica #4 -->
+                    <div class="music-area">
+                        <span>Music #4</span>
+                        <button class="music-button" data-src="../Assets/Musics/music4.wav">Play</button>
+                    </div>
+                    <!-- Musica #5 -->
+                    <div class="music-area">
+                        <span>Music #5</span>
+                        <button class="music-button" data-src="../Assets/Musics/music5.wav">Play</button>
+                    </div>
+                    <!-- Musica #6 -->
+                    <div class="music-area">
+                        <span>Music #6</span>
+                        <button class="music-button" data-src="../Assets/Musics/music6.wav">Play</button>
+                    </div>
+                    <!-- Musica #7 -->
+                    <div class="music-area">
+                        <span>Music #7</span>
+                        <button class="music-button" data-src="../Assets/Musics/music7.wav">Play</button>
+                    </div>
+                    <!-- Musica #8 -->
+                    <div class="music-area">
+                        <span>Music #8</span>
+                        <button class="music-button" data-src="../Assets/Musics/music8.wav">Play</button>
+                    </div>
+                    <!-- Musica #9 -->
+                    <div class="music-area">
+                        <span>Music #9</span>
+                        <button class="music-button" data-src="../Assets/Musics/music9.wav">Play</button>
+                    </div>
+                    <!-- Musica #10 -->
+                    <div class="music-area">
+                        <span>Music #10</span>
+                        <button class="music-button" data-src="../Assets/Musics/music10.wav">Play</button>
+                    </div>
+                    <!-- Musica #11 -->
+                    <div class="music-area">
+                        <span>Music #11</span>
+                        <button class="music-button" data-src="../Assets/Musics/music11.wav">Play</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex">
+                <div class="setting">
+                    <label for="volume-slider">Volume:</label>
+                    <input type="range" id="volume-slider" min="0" max="100">
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
     <!-- Menu lateral -->
-    <div class="navigation">
+    <div class="navigation expanded">
+
+        <div class="d-centered">
+            <div class="menu-toggle">
+                <img src="../Assets/icons/Sidebar Icons/expand-menu-icon.png" class="icon" alt="Ìcone do menu">
+            </div>
+        </div>
+
+
         <ul>
-            <li class="list">
+            <li>
                 <a href="index.html">
-                    <span class="icon "><img
-                            src="../Assets/icons/Asidebar Icons/home-icon-asidebar.png" /></span>
+                    <span class="icon "><img src="../Assets/icons/Sidebar Icons/home-icon-sidebar.png" /></span>
                     <span class="title ">Home</span>
                 </a>
             </li>
-            <li class="list active">
-                <a href="practice.html">
-                    <span class="icon icon-active"><img src="../Assets/icons/Asidebar Icons/practice-icon-asidebar.png" /></span>
+            <li class="active">
+                <a >
+                    <span class="icon icon-active"><img src="../Assets/icons/Sidebar Icons/practice-icon-sidebar.png" /></span>
                     <span class="title active">Prática</span>
                 </a>
             </li>
-            <li class="list ">
+            <li >
                 <a href="theory.html">
-                    <span class="icon"><img src="../Assets/icons/Asidebar Icons/theory-icon-asidebar.png" /></span>
+                    <span class="icon"><img
+                            src="../Assets/icons/Sidebar Icons/theory-icon-sidebar.png" /></span>
                     <span class="title">Teoria</span>
                 </a>
             </li>
             <li>
                 <a href="lab.html">
-                    <span class="icon"><img src="../Assets/icons/Asidebar Icons/lab-icon-asidebar.png" /></span>
-                    <span class="title">Laboratório</span>
+                    <span class="icon"><img
+                            src="../Assets/icons/Sidebar Icons/lab-icon-sidebar.png" /></span>
+                    <span class="title ">Laboratório</span>
                 </a>
             </li>
-            <li class="list">
-                <a href="../../questions.html">
-                    <span class="icon"><img src="../Assets/icons/Asidebar Icons/questions-icon-asidebar.png" /></span>
+            <li>
+                <a href="questions.html">
+                    <span class="icon"><img src="../Assets/icons/Sidebar Icons/quiz-icon-sidebar.png" /></span>
                     <span class="title">Questões</span>
                 </a>
             </li>
-            <li class="list">
-                <a class=" d-flex align-items-center">
-                    <span class="icon"><img src="../Assets/icons/Asidebar Icons/darkmode-icon-asidebar.png" /></span>
-                    <div class="title">
-                        <input type="checkbox" class="checkbox" id="chk" />
-                        <label id="dark-mode-toggle" class="label" for="chk">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                            <div class="ball"></div>
-                        </label>
-                    </div>
+            <li class="config">
+                <a href="#" id="settingsButton">
+                    <span class="icon rotate"><img src="../Assets/icons/sidebar Icons/config-icon-sidebar.png" /></span>
+                    <span class="title ">Definicões</span>
                 </a>
             </li>
 
-
         </ul>
     </div>
+
 
 
 
@@ -84,8 +177,8 @@
         </header>
 
 
-       
-       
+
+
         <!-- Rodapé -->
         <div class="footer">
             &copy; 2023 Mendel's Legacy - Todos os direitos reservados
@@ -96,6 +189,9 @@
     </main>
 
     <script src="../Assets/js/darkmode.js"></script>
+    <script src="../Assets/js/sounds.js"></script>
+    <script src="../Assets/js/settingsModal.js"></script>
+    <script src="../Assets/js/menu.js"></script>
 </body>
 
 </html>

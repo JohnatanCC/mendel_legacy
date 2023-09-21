@@ -121,15 +121,15 @@ function finishQuiz() {
     let points = Math.floor((correctAnswers / totalQuestionsForDifficulty) * 100);
 
     if (points < 50) {
-        document.querySelector(".scoreText1").innerHTML = "Vish tente denovo!";
+        document.querySelector(".scoreText1").innerHTML = "Você teve um desempenho abaixo do esperado. Continue estudando e tente novamente para melhorar seus conhecimentos.";
         document.querySelector(".scorePct").style.color = "#DC3545";
     } else if (points >= 50 && points < 70) {
         document.querySelector(".scoreText1").innerHTML =
-            "Bom mas pode ser melhor!";
+            "Você está no caminho certo, mas ainda há espaço para melhorias. Continue praticando e você alcançará um desempenho ainda melhor na próxima vez.";
         document.querySelector(".scorePct").style.color = "#FFC107";
     } else if (points >= 70) {
         document.querySelector(".scoreText1").innerHTML =
-            "Parabéns, você tem potencial!";
+            "Parabéns! Você teve um ótimo desempenho no quiz. Seus conhecimentos estão afiados. Continue assim e continue aprendendo.";
         document.querySelector(".scorePct").style.color = "#198754";
     }
 
