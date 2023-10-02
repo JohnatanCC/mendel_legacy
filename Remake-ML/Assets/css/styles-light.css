@@ -19,12 +19,18 @@
     color: var(--light);
 }
 
-.table-card {
+.light-mode .table-card {
     background-color: var(--background-light);
 }
-.card-footer {
+.light-mode .card-footer .card-footer {
     background-color: var(--bg);
 
+}
+
+.light-mode .custom-select-lab option {
+    background-color: var(--bg);
+    color: #333;
+  
 }
 
 .light-mode div .table input,.light-mode div .table2 input {
@@ -35,7 +41,7 @@
     background-color: var(--background-light);
 }
 
-.light-mode .table .div,.light-mode .table2 .div {
+.light-mode .table .cell,.light-mode .table2 .cell {
     background-color: var(--light);
 }
 
@@ -47,6 +53,17 @@
     background-color: var(--light);
 }
 
+.light-mode .verification-results {
+    background-color: var(--light);
+}
+
+.light-mode .theory-area {
+    background-color: var(--background-light);
+}
+
+.light-mode .characteristic-image {
+    background-color: var(--light);
+}
 
 /* styles-light.css */
 .light-mode {

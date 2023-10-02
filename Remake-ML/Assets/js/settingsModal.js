@@ -3,6 +3,7 @@ const settingsButton = document.querySelector("#settingsButton");
 const darkModeToggle = document.getElementById("dark-mode-toggle");
 const volumeSlider = document.getElementById("volume-slider");
 
+
 // Elemento de áudio único para todas as músicas
 const audio = new Audio();
 let isPlaying = false; // Variável para controlar o estado de reprodução da música

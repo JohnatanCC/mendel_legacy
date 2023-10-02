@@ -8,7 +8,7 @@
 
 .menu-toggle img {
     width: 50px;
-    
+
 }
 
 .menu-toggle:hover {
@@ -388,10 +388,9 @@
     border-radius: 10px;
 }
 
+
 .team-member:hover {
-    transform: scale(1.05);
-    background: linear-gradient(90deg, transparent, #cdcdcd7a, transparent);
-    transition: all ease 0.5s;
+    transform: scale(1.05); /* Aumenta em 10% ao passar o mouse */
 }
 
 .team-member {
@@ -469,6 +468,7 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    
     user-select: none;
 }
 
@@ -803,6 +803,7 @@
     cursor: pointer;
     font-size: 16px;
     margin-right: 10px;
+
 }
 
 .easy-btn {
@@ -866,11 +867,12 @@ div input[type="number"] {
     font-size: 20px;
     color: #333;
     background-color: #fff;
+   
 }
 
-#table .cell img {
-    max-width: 100%;
-    max-height: 100%;
+.cell img {
+    max-width: 80px;
+    max-height: 80px;
 }
 
 
@@ -897,21 +899,16 @@ div input[type="number"] {
     background-color: #00986e;
 }
 
-.ui-check-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-
-
-.header {
+.header,
+.cell-header {
     background-color: var(--dark-green);
     color: #FFF !important;
+    box-shadow: var(--better-boxShadow);
 }
 
 .table2 {
     display: grid;
-    grid-template-columns: repeat(5, 80px);
+    grid-template-columns: repeat(5, 100px);
     grid-gap: 0px;
     margin-top: 30px;
     gap: 2px;
@@ -919,38 +916,42 @@ div input[type="number"] {
 
 .table {
     display: grid;
-    grid-template-columns: repeat(3, 80px);
+    grid-template-columns: repeat(3, 100px);
     grid-gap: 0px;
     margin-top: 30px;
     gap: 2px;
     padding: 5px;
+    transition: all ease 0.4s;
 }
 
 .table2 {
     display: none;
     padding: 5px;
+
 }
+
+.cell:hover {
+    border: dashed 2px var(--dark-green);
+}
+
 
 .table div:hover,
-.table2 div:hover {
-    transform: scale(0.95);
+.table2 div:hover,
+.cell:hover {
+    background-image: url('../imgs/cell-bg.png');
+    background-position: center;
+    background-size: contain;
 }
 
-.table div:active,
-.table2 div:active {
-    transform: scale(0.95);
-}
-
-
-.table .div,
-.table2 .div {
-    background-color: var(--light);
+.cell {
+    border: 2px solid #ccc;
+box-shadow: var(--better-boxShadow);
 }
 
 .table div,
 .table2 div {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border: 1px solid var(--light);
     display: flex;
     justify-content: center;
@@ -1048,10 +1049,8 @@ textarea {
 }
 
 .theory-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
+    border-radius: 10px;
     margin: 20px auto;
     padding: 10px;
     max-width: 1350px;
@@ -1220,7 +1219,6 @@ label {
 
 
 .preload {
-    background-image: url('../imgs/background_intro.gif');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1233,7 +1231,7 @@ label {
     z-index: 1000;
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: var(--light);
 }
 
 /* Estilo para a área de música */
@@ -1291,11 +1289,9 @@ label {
 }
 
 /* Estilização para o card da tabela */
-.table-card {
-    background-color: var(--background-light);
+.table-card , .table-card-classification {
     border: 1px solid #ccc;
     border-radius: 5px;
- 
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -1314,17 +1310,18 @@ label {
     text-align: center;
     border-radius: 5px;
     padding: 5px;
-    position: absolute; 
+    position: absolute;
     top: 100%;
-    left: 0; 
-    display: none; 
+    left: 0;
+    display: none;
     flex-direction: column !important;
     z-index: 1;
 }
 
 .card-footer {
     background-color: var(--bg);
-
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 /* Estilização para o botão de classificação */
@@ -1333,12 +1330,43 @@ label {
     margin-top: 10px;
     padding: 10px 20px;
     background-color: var(--dark-green);
-    color: #fff;
+    color: #fff !important;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
     font-size: 16px;
     width: 100%;
+    box-shadow: var(--better-boxShadow);
+}
+
+.form-btn:hover{
+    box-shadow: 0 0 0 2px var(--dark-green);
+    background-color: transparent;
+    color: #333;
+    
+}
+
+.form-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--green);
+    color: #fff ;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    transition: all ease .4s;
+    margin-left: 12px;
+    width:150px;
+    box-shadow: var(--better-boxShadow);
+    
+}
+
+.card-btn a:hover {
+    color: #FFF !important;
 }
 
 /* Estilização para o botão de classificação ao passar o mouse */
@@ -1346,6 +1374,11 @@ label {
     background-color: #36936b;
 }
 
+#filter-form {
+    border-radius: 5px;
+    background-color: var(--bg);
+    padding-bottom: 10px;
+}
 
 body {
     margin: 0;
@@ -1370,14 +1403,7 @@ body {
     color: var(--light);
 }
 
-/* Estilo para as opções (option) */
-.custom-select-lab option {
-    padding: 10px;
-    font-size: 16px;
-    background-color: var(--bg);
-    color: #333;
-    font-family: var(--title);
-}
+
 
 /* Estilo quando o select está aberto */
 .custom-select-lab:focus {
@@ -1387,13 +1413,129 @@ body {
 
 /* Estilo para as opções quando o select está aberto */
 
-.custom-select-lab option:hover  {
+.custom-select-lab option:hover {
     background-color: var(--green);
     color: var(--light);
 }
+
+
+.characteristics-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 2px solid var(--dark-green);
+    border-radius: 10px;
+}
+
+.characteristics-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.characteristics-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.characteristic-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    gap: 10px;
+}
+
+
+.characteristic-info {
+    background-color: var(--dark-green);
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    color: var(--light);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.characteristic-image {
+    display: flex;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    flex-direction: column;
+    background-color: var(--light);
+}
+
+.characteristic-image:hover {
+    border-color: var(--dark-green);
+}
+
+.gene-option-item {
+    background-image: url('../imgs/cell-bg.png');
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    text-align: center;
+}
+
+.characteristic-images img {
+    border-radius: 5px;
+    width: 130px;
+    max-height: 130px;
+}
+
+.verification-results {
+    display: flex;
+    padding: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.result-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.red {
+    background-color: var(--bs-danger);
+}
+
+.green {
+    background-color: var(--bs-success);
+}
+
+#error-count {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+#correct-count {
+    font-weight: bold;
+    color: #00b380;
+}
+
+.selected {
+    opacity: 0.8;
+}
+
 @media (max-width:884px) {
     .page-buttons>button {
         font-size: 0;
+    }
+
+    .theory-area {
+        flex-direction: column;
     }
 
     .page-buttons {
@@ -1404,6 +1546,7 @@ body {
     .text-button {
         margin: 0;
     }
+
     .col-6 {
         width: 100%;
     }
@@ -1411,6 +1554,7 @@ body {
     .row {
         flex-direction: column;
     }
+
     .margin-default {
         margin-left: 90px;
     }
@@ -1427,18 +1571,25 @@ body {
     --bg: #f3f8fa;
     --white: #fff;
     --black: #252525;
+    --better-boxShadow:rgb(50 93 66 / 25%) 0px 43px 13px -36px inset, rgba(0, 0, 0, 0.3) 0px 0px 38px 0px inset;
 }
 
 
 /* Estiliza o select */
 select {
-    appearance: none; /* Remove a aparência padrão da seta */
-    -webkit-appearance: none; /* Para navegadores baseados no WebKit (como Chrome e Safari) */
-    -moz-appearance: none; /* Para navegadores baseados no Gecko (como Firefox) */
-    background-image: url('../icons//down-arrow.png'); /* Substitua pelo caminho da sua imagem de seta personalizada */
-    background-position: right center; /* Posiciona a imagem à direita do select */
-    
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    padding-right: 20px; /* Aumenta o espaço à direita para a imagem */
-  }
-  
+    appearance: none;
+    /* Remove a aparência padrão da seta */
+    -webkit-appearance: none;
+    /* Para navegadores baseados no WebKit (como Chrome e Safari) */
+    -moz-appearance: none;
+    /* Para navegadores baseados no Gecko (como Firefox) */
+    background-image: url('../icons//down-arrow.png');
+    /* Substitua pelo caminho da sua imagem de seta personalizada */
+    background-position: right center;
+    /* Posiciona a imagem à direita do select */
+
+    background-repeat: no-repeat;
+    /* Evita que a imagem se repita */
+    padding-right: 20px;
+    /* Aumenta o espaço à direita para a imagem */
+}

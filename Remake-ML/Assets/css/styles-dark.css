@@ -1,4 +1,9 @@
 /* styles-dark.css */
+
+.dark-mode .preload {
+    background-color: var(--dark);
+}
+
 .dark-mode .navigation {
     background-color: var(--dark);
     color: var(--light);
@@ -7,6 +12,23 @@
     background-color: var(--dark);
     color: var(--light);
 }
+
+.dark-mode textarea {
+    color: var(--light);
+}
+
+.dark-mode #filter-form {
+    background-color: var(--black);
+}
+
+.dark-mode .theory-area {
+    background-color: var(--background-dark);
+}
+
+.dark-mode .form-btn {
+    color: #FFF;
+}
+
 .dark-mode .content h2 {
     color: var(--green);
 }
@@ -83,7 +105,7 @@
 
 }
 
-.dark-mode .table .div,.dark-mode .table2 .div {
+.dark-mode .table .cell,.dark-mode .table2 .cell {
     background-color: var(--dark);
 
 }
@@ -157,12 +179,30 @@
     color: var(--light);
 }
 
-.table-card {
+.dark-mode .table-card {
     background-color: var(--background-dark);
 }
 
-.card-footer {
+.dark-mode .card-footer {
     background-color: var(--black);
+}
+
+.dark-mode .custom-select-lab option {
+    background-color: var(--background-dark);
+    color: var(--light);
+
+}
+.dark-mode .verification-results {
+background-color: var(--dark);
+}
+
+
+.dark-mode .characteristic-image {
+    background-color: var(--dark);
+}
+
+.dark-mode .characteristics-section {
+    background-color: var(--background-dark);
 }
 
 /* styles-dark.css */

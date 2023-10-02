@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mendel's Legacy</title>
     <link rel="stylesheet" href="../Assets/css/anim.css">
-    <link rel="stylesheet" href="../Assets/css/class.css">
     <link rel="stylesheet" href="../Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Assets/css/style.css">
+    <link rel="stylesheet" href="../Assets/css/class.css">
     <link rel="stylesheet" href="../Assets/css/styles-dark.css">
+    <link id="stylesheet" rel="stylesheet" href="styles-light.css">
     <link rel="stylesheet" href="../Assets/css/extraButtons.css">
     <!-- O ID deve coincidir com o elemento no JavaScript -->
     <link rel="stylesheet" href="../Assets/css/styles-light.css">
@@ -17,8 +18,6 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;800&family=Rubik&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="shortcut icon" href="../Assets/icons/system-icon.png" type="image/x-icon" />
-    <title>Mendel's Legacy</title>
 
 </head>
 
@@ -115,13 +114,12 @@
 
 
 
-
     <!-- Menu lateral -->
     <div class="navigation expanded">
 
         <div class="d-centered">
             <div class="menu-toggle">
-                <img src="../Assets/icons/Sidebar Icons/expand-menu-icon.png" class="icon" alt="Ìcone do menu">
+                <img src="../Assets/icons/Sidebar_Icons/expand-menu-icon.png" class="icon" alt="Ìcone do menu">
             </div>
         </div>
 
@@ -129,44 +127,45 @@
         <ul>
             <li>
                 <a href="index.html">
-                    <span class="icon "><img src="../Assets/icons/Sidebar Icons/home-icon-sidebar.png" /></span>
+                    <span class="icon "><img src="../Assets/icons/Sidebar_Icons/home-icon-sidebar.png" /></span>
                     <span class="title ">Home</span>
                 </a>
             </li>
-            <li>
+            <li >
                 <a href="practice.html">
-                    <span class="icon"><img src="../Assets/icons/Sidebar Icons/practice-icon-sidebar.png" /></span>
+                    <span class="icon"><img
+                            src="../Assets/icons/Sidebar_Icons/practice-icon-sidebar.png" /></span>
                     <span class="title">Prática</span>
                 </a>
             </li>
             <li>
                 <a href="theory.html">
-                    <span class="icon"><img src="../Assets/icons/Sidebar Icons/theory-icon-sidebar.png" /></span>
+                    <span class="icon"><img src="../Assets/icons/Sidebar_Icons/theory-icon-sidebar.png" /></span>
                     <span class="title">Teoria</span>
                 </a>
             </li>
             <li class="active">
-                <a>
-                    <span class="icon icon-active"><img
-                            src="../Assets/icons/Sidebar Icons/lab-icon-sidebar.png" /></span>
-                    <span class="title active">Laboratório</span>
+                <a href="lab.html">
+                    <span class="icon  icon-active"><img src="../Assets/icons/Sidebar_Icons/lab-icon-sidebar.png" /></span>
+                    <span class="title active ">Laboratório</span>
                 </a>
             </li>
             <li>
                 <a href="questions.html">
-                    <span class="icon"><img src="../Assets/icons/Sidebar Icons/quiz-icon-sidebar.png" /></span>
+                    <span class="icon"><img src="../Assets/icons/Sidebar_Icons/quiz-icon-sidebar.png" /></span>
                     <span class="title">Questões</span>
                 </a>
             </li>
             <li class="config">
                 <a href="#" id="settingsButton">
-                    <span class="icon rotate"><img src="../Assets/icons/sidebar Icons/config-icon-sidebar.png" /></span>
+                    <span class="icon rotate"><img src="../Assets/icons/Sidebar_Icons/config-icon-sidebar.png" /></span>
                     <span class="title ">Definicões</span>
                 </a>
             </li>
 
         </ul>
     </div>
+
 
 
 
@@ -177,128 +176,24 @@
         </header>
 
 
-        <div class="flex-column ">
 
 
-
-            <!-- Conteúdo principal -->
-            <div class="content">
-                <header>
-                    <h2 class="title-bar">O Laboratório de Mendel</h2>
-                    <p>
-                        No Laboratório de Mendel, você têm a oportunidade de colocar em prática os princípios da
-                        teoria de
-                        Mendel. Nesta seção, selecione as características genéticas específicas e os organismos
-                        correspondentes para criar suas próprias combinações. Depois de configurar os cruzamentos
-                        desejados,escolha uma tabela que mostra as possíveis combinações genéticas com base nas
-                        características selecionadas.
-                    </p>
-                </header>
-                <section class="container mb-4">
-
-                    <form class="config-form" action="">
-                        <div class="row">
-                            <div class="col-6">
-                                <label for="organismSelect">Selecione o organismo:</label>
-                                <select id="organismSelect" class="custom-select-lab">
-                                    <option value="1">Ervilhas</option>
-                                </select>
-
-                                <label for="numCharacteristicsInput1">Quantidade de Características:</label>
-                                <select id="numCharacteristicsInput1" class="custom-select-lab">
-                                    <option value="1">Uma caracteristica</option>
-                                    <option value="2">Duas caracteristicas</option>
-                                </select>
-                            </div>
-                            <div class="col-6">
-                                <label for="characteristic1Select">1º Característica:</label>
-                                <select id="characteristic1Select" class="custom-select-lab">
-                                    <option value="1">Altura das flores (TT)</option>
-                                    <option value="2">Posição das flores (AA)</option>
-                                    <option value="3">Cor da flor (PP)</option>
-                                    <option value="4">Cor da vagem (GG)</option>
-                                    <option value="5">Forma da vagem (SS)</option>
-                                    <option value="6">Cor da semente (YY)</option>
-                                </select>
-                                <div class="disabled">
-                                    <label for="characteristic2Select">2º Característica:</label>
-                                    <select id="characteristic2Select" class="custom-select-lab">
-                                        <option value="1">Altura das flores (TT)</option>
-                                        <option value="2">Posição das flores (AA)</option>
-                                        <option value="3">Cor da flor (PP)</option>
-                                        <option value="4">Cor da vagem (GG)</option>
-                                        <option value="5">Forma da vagem (SS)</option>
-                                        <option value="6">Cor da semente (YY)</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-
-                </section>
-
-                <section class="container">
-                    <h2>Classificando: Altura</h2>
-                    <h3 class="title-bar">Ervilhas</h3>
-                    <!-- cards com as tabelas -->
-                    <div class="table-cards-content"> 
-                        <!-- card da tabela -->
-                        <div class="table-card">
-
-                       
-
-                            <div class="table event-none">
-                                <div onclick="Table2()" class="empty"></div>
-                                <div class="header">T</div>
-                                <div class="header">t</div>
-                                <div class="header">T</div>
-                                <div class="div"></div>
-                                <div class="div"></div>
-                                <div class="header">t</div>
-                                <div class="div"></div>
-                                <div class="div"></div>
-                            </div>
-                            <div class="card-footer">
-                            <button class="card-btn" onclick="toggleInfo(this)">Ver informações</button>
-                            <div class="card-info anim-entrance" >
-                                <span>Pai: Homozigótico</span>
-                                <span>Mãe: Homozigótico</span>
-                                <span>Classificar: Altura</span>
-                            </div>
-                            <button class="card-btn">Classificar</button>
-                        </div>
-                        </div>
-
-                    </div>
-
-                </section>
-
-            </div>
-        </div>
         <!-- Rodapé -->
         <div class="footer">
             &copy; 2023 Mendel's Legacy - Todos os direitos reservados
             <br>
-            Músicas geradas por <a href="https://mubert.com/render" target="_blank">Mubert</a>
+            Musicas geradas por <a href="https://mubert.com/render" target="_blank">mubert</a>:
         </div>
         </div>
-
-        <!-- Audios -->
-        <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
-        <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
-    
     </main>
 
     <script src="../Assets/js/darkmode.js"></script>
     <script src="../Assets/js/sounds.js"></script>
     <script src="../Assets/js/settingsModal.js"></script>
     <script src="../Assets/js/menu.js"></script>
-    <script src="../Assets/js/lab.js"></script>
-
 </body>
 
 </html>
-
 <!-- <style>
     .table div:hover {
         cursor: pointer;

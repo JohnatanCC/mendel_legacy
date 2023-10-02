@@ -114,18 +114,18 @@ const updateSlideDisplay = () => {
   const contentHTML = content.map(paragraph => `<p class="text">${paragraph}</p>`).join("");
 
   slideContainer.innerHTML = `
-    <div class="theory-area">
-      <div class="gap-4 d-centered-no-align">
+    <div class="theory-area gap-4 d-centered-no-align">
+
         <div class="img-fluid mr-4">
           <img src="${img}" alt="image" />
         </div>
         <div>
           <header>
-            <h1>${title}</h1>
+            <h2 class="title-bar">${title}</h2>
           </header>
           ${contentHTML}
         </div>
-      </div>
+  
     </div>
   `;
 };
