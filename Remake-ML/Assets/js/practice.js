@@ -117,28 +117,39 @@
 
 // Função para classificar um gene
 function classifyOneGeneId1() {
-    const characteristicImages = document.querySelector(".characteristic-images");
+    const cardDataId = 1;
+   const characteristicImages = document.querySelector(".characteristic-images");
     const tableCard = document.querySelector(".table-card-classification");
 
     // Limpe o conteúdo existente nas imagens das características
     characteristicImages.innerHTML = "";
 
-    // Itere sobre os dados em classificationData e crie as imagens
-    classificationData.forEach(data => {
-        // Crie a imagem da característica
-        const characteristicImage = document.createElement("div");
-        characteristicImage.classList.add("characteristic-image");
-        characteristicImage.innerHTML = `
-            <div class="gene-option-item">
-                <img src="${data.imageSrc}" class="anim-floating" alt="${data.imageAlt}" data-gene="${data.gene}">
-            </div>
-            <div class="characteristic-info">
-                <span>${data.characteristic}</span>
-            </div>
-        `;
+    // Encontre o objeto correspondente em cardData com base no cardDataId
+    const cardDataItem = cardData.find(item => item.id === cardDataId);
 
-        characteristicImages.appendChild(characteristicImage);
-    });
+    // Verifique se o objeto foi encontrado
+    if (cardDataItem) {
+        // Itere sobre os dados em classificationData e crie as imagens
+        classificationData.forEach(data => {
+            // Verifique se o cardDataId do objeto classificationData corresponde ao cardDataId atual
+            if (data.cardDataId === cardDataId) {
+                // Crie a imagem da característica
+                const characteristicImage = document.createElement("div");
+                characteristicImage.classList.add("characteristic-image");
+                characteristicImage.innerHTML = `
+                    <div class="gene-option-item">
+                        <img src="${data.imageSrc}" class="anim-floating" alt="${data.imageAlt}" data-gene="${data.gene}">
+                    </div>
+                    <div class="characteristic-info">
+                        <span>${data.characteristic}</span>
+                    </div>
+                `;
+
+                characteristicImages.appendChild(characteristicImage);
+            }
+        });
+    }
+
 
     //Tabela para classificar
   const tableHTML = `
@@ -191,31 +202,32 @@ function classifyOneGeneId1() {
         let correctCount = 0;
         let errorCount = 0;
 
-        options.forEach(option => {
-            option.addEventListener("click", () => {
-                const img = option.querySelector("img");
+     
+    options.forEach(option => {
+        option.addEventListener("click", () => {
+            const img = option.querySelector("img");
 
-                options.forEach(opt => {
-                    opt.classList.remove("selected");
-                    opt.querySelector("img").classList.remove("selected");
-                });
-
-                option.classList.add("selected");
-                img.classList.add("selected");
+            options.forEach(opt => {
+                opt.classList.remove("selected");
+                opt.querySelector("img").classList.remove("selected");
             });
-        });
 
-        tableCells.forEach(cell => {
-            cell.addEventListener("click", () => {
-                if (document.querySelector(".selected")) {
-                    const selectedImg = document.querySelector(".selected img");
-                    const clonedImg = selectedImg.cloneNode(true);
-                    cell.innerHTML = '';
-                    cell.appendChild(clonedImg);
-                    cell.classList.add("active");
-                }
-            });
+            option.classList.add("selected");
+            img.classList.add("selected");
         });
+    });
+
+    tableCells.forEach(cell => {
+        cell.addEventListener("click", () => {
+            if (document.querySelector(".selected")) {
+                const selectedImg = document.querySelector(".selected img");
+                const clonedImg = selectedImg.cloneNode(true);
+                cell.innerHTML = '';
+                cell.appendChild(clonedImg);
+                cell.classList.add("active");
+            }
+        });
+    });
 
         const checkButton = document.querySelector(".verify-btn");
         checkButton.addEventListener("click", () => {

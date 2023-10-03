@@ -28,7 +28,7 @@ function disableButtons() {
             button.classList.remove("disabled");
         });
         buttonsDisabled = false;
-    }, 1500); // 1000 milissegundos = 1 segundo
+    }, 1000); // 1000 milissegundos = 1 segundo
 }
 
 musicButtons.forEach((button) => {
