@@ -116,8 +116,83 @@
     //plant
 
 // Função para classificar um gene
+
 function classifyOneGeneId1() {
     const cardDataId = 1;
+   const characteristicImages = document.querySelector(".characteristic-images");
+    const tableCard = document.querySelector(".table-card-classification");
+
+    // Limpe o conteúdo existente nas imagens das características
+    characteristicImages.innerHTML = "";
+
+    // Encontre o objeto correspondente em cardData com base no cardDataId
+    const cardDataItem = cardData.find(item => item.id === cardDataId);
+
+    // Verifique se o objeto foi encontrado
+    if (cardDataItem) {
+        // Itere sobre os dados em classificationData e crie as imagens
+        classificationData.forEach(data => {
+            // Verifique se o cardDataId do objeto classificationData corresponde ao cardDataId atual
+            if (data.cardDataId === cardDataId) {
+                // Crie a imagem da característica
+                const characteristicImage = document.createElement("div");
+                characteristicImage.classList.add("characteristic-image");
+                characteristicImage.innerHTML = `
+                    <div class="gene-option-item">
+                        <img src="${data.imageSrc}" class="anim-floating" alt="${data.imageAlt}" data-gene="${data.gene}">
+                    </div>
+                    <div class="characteristic-info">
+                        <span>${data.characteristic}</span>
+                    </div>
+                `;
+
+                characteristicImages.appendChild(characteristicImage);
+            }
+        });
+    }
+
+
+    //Tabela para classificar
+  const tableHTML = `
+    <div class="table">
+        <div class="empty"></div>
+        <div class="cell-header event-none">T</div>
+        <div class="cell-header event-none">T</div>
+        <div class="cell-header event-none">T</div>
+        <div data-gene="tall" class="cell"></div>
+        <div data-gene="tall" class="cell"></div>
+        <div class="cell-header event-none">T</div>
+        <div data-gene="tall" class="cell"></div>
+        <div data-gene="tall" class="cell"></div>
+    </div>
+    <div class="card-footer">
+        <button class="card-btn verify-btn">Verificar</button>
+        <button class="card-btn reset-btn">Reiniciar</button>
+    </div>
+    <!-- Contador de acertos e erros -->
+    <div class="verification-results">
+        <div class="result-item">
+            <div class="result-circle green"></div>
+            <span>Acertos: <span id="correct-count">0</span></span>
+        </div>
+        <div class="result-item">
+            <div class="result-circle red"></div>
+            <span>Erros: <span id="error-count">0</span></span>
+        </div>
+    </div>
+`;
+
+    // Adicione a tabela ao elemento "table-card"
+    tableCard.innerHTML = tableHTML;
+
+    // Agora, selecione o classificationTable após a geração da tabela
+    const classificationTable = tableCard.querySelector(".table");
+
+    // Chame a função de classificação de organismo
+    classificationOrganism();
+}
+function classifyOneGeneId3() {
+    const cardDataId = 3;
    const characteristicImages = document.querySelector(".characteristic-images");
     const tableCard = document.querySelector(".table-card-classification");
 
