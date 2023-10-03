@@ -16,13 +16,28 @@ const cardData = [
             <a href="#characteristics-section" onclick="classifyOneGeneId1()" class="card-btn">Classificar</a>
         `
     },
-  
     {
-        //cuidado com esses espaços
         id: 2,
         organism: "Ervilhas",
         numCharacteristics: 1,
-        characteristic1: "Posição das Flores (AA)",
+        characteristic1: "Posição das flores (Tt)",
+        characteristic2: "Vazio",
+        headerGenes: ["T", "t", "T", "", "", "t", "", ""],
+        footerContent: `
+            <button class="card-btn" onclick="toggleInfo(this)">Ver informações</button>
+            <div class="card-info anim-entrance">
+                <span>Pai: Homozigótico</span>
+                <span>Mãe: Homozigótico</span>
+                <span>Classificar: Posição das flores (Tt)</span>
+            </div>
+            <a href="#characteristics-section" onclick="classifyOneGeneId1()" class="card-btn">Classificar</a>
+        `
+    },
+    {
+        id: 3,
+        organism: "Ervilhas",
+        numCharacteristics: 1,
+        characteristic1: "Posição das flores (AA)",
         characteristic2: "Vazio",
         headerGenes: ["A", "A", "A", "", "", "A", "", ""],
         footerContent: `
@@ -32,26 +47,46 @@ const cardData = [
                 <span>Mãe: Homozigótico</span>
                 <span>Classificar: Posição das flores (AA)</span>
             </div>
-            <a href="#characteristics-section" onclick="classifyOneGeneId2()" class="card-btn">Classificar</a>
+            <a href="#characteristics-section" onclick="classifyOneGeneId1()" class="card-btn">Classificar</a>
         `
     },
+  
     {
-        id: 3,
+        id: 4,
         organism: "Ervilhas",
         numCharacteristics: 1,
-        characteristic1: "Cor da flor (PP)",
+        characteristic1: "Posição das flores (Aa)",
         characteristic2: "Vazio",
-        headerGenes: ["P", "P", "P", "", "", "P", "", ""],
+        headerGenes: ["A", "a", "A", "", "", "a", "", ""],
         footerContent: `
             <button class="card-btn" onclick="toggleInfo(this)">Ver informações</button>
             <div class="card-info anim-entrance">
                 <span>Pai: Homozigótico</span>
                 <span>Mãe: Homozigótico</span>
-                <span>Classificar: Cor da flor (PP)</span>
+                <span>Classificar: Posição das flores (AA)</span>
             </div>
-            <a href="#characteristics-section" onclick="classifyOneGeneId3()" class="card-btn">Classificar</a>
+            <a href="#characteristics-section" onclick="classifyOneGeneId1()" class="card-btn">Classificar</a>
         `
     },
+  
+   
+    // {
+    //     id: ??,
+    //     organism: "Ervilhas",
+    //     numCharacteristics: 1,
+    //     characteristic1: "Cor da flor (PP)",
+    //     characteristic2: "Vazio",
+    //     headerGenes: ["P", "P", "P", "", "", "P", "", ""],
+    //     footerContent: `
+    //         <button class="card-btn" onclick="toggleInfo(this)">Ver informações</button>
+    //         <div class="card-info anim-entrance">
+    //             <span>Pai: Homozigótico</span>
+    //             <span>Mãe: Homozigótico</span>
+    //             <span>Classificar: Cor da flor (PP)</span>
+    //         </div>
+    //         <a href="#characteristics-section" onclick="classifyOneGeneId3()" class="card-btn">Classificar</a>
+    //     `
+    // },
     {
         id: 4,
         organism: "Ervilhas",
