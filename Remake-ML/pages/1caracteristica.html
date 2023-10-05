@@ -1,86 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mendel | Uma característica</title>
-  <link rel="shortcut icon" href="../Assets/icons/system-icon(old).png" type="image/x-icon" />
-  <link rel="stylesheet" href="../Assets/css/anim.css" />
-  <link rel="stylesheet" href="../Assets/css/class.css" />
-  <link rel="stylesheet" href="../Assets/css/style.css" />
-  <!-- Estilos de fonts -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;800&family=Rubik&display=swap');
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mendel's Legacy</title>
+  <link rel="stylesheet" href="../Assets/css/anim.css">
+  <link rel="stylesheet" href="../Assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../Assets/css/class.css">
+    <link rel="stylesheet" href="../Assets/css/style.css">
+  <link rel="stylesheet" href="../Assets/css/styles-dark.css">
+  <link id="stylesheet" rel="stylesheet" href="styles-light.css">
+  <link rel="stylesheet" href="../Assets/css/extraButtons.css">
+  <!-- O ID deve coincidir com o elemento no JavaScript -->
+  <link rel="stylesheet" href="../Assets/css/styles-light.css">
+  <!-- Fonts -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;800&family=Rubik&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 
-<body class="bg-practice ml-default">
-  <div class="play-buttom">
-    <img src="../Assets/icons/play-icon.png" id="playMusic" alt="" />
-  </div>
-  <div id="volumeDisplay" class="volume-display">Volume: 100%</div>
+<body class="light-mode ">
 
-  <div class="menu-expand">
-    <img id="expand-icon" src="../Assets/icons/expand-menu-icon.png" alt="Menu expand" />
-    Menu
+  <div id="settings-modal" class="anim-entrance">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="title-bar">Configurações do Sistema</h2>
+      <div class="setting">
+        <div class="d-flex">
+          <label>Modo Escuro:</label>
+          <input type="checkbox" class="checkbox" id="chk" />
+          <label id="dark-mode-toggle" class="label" for="chk">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball"></div>
+          </label>
+        </div>
+      </div>
+
+      <div class="setting">
+        <label style="padding-bottom: 15px;">Música:</label>
+        <div class="music-content">
+          <!-- Musica #1 -->
+          <div class="music-area">
+            <span>Music #1</span>
+            <button class="music-button" data-src="../Assets/Musics/music1.wav">Play</button>
+          </div>
+          <!-- Musica #2 -->
+          <div class="music-area">
+            <span>Music #2</span>
+            <button class="music-button" data-src="../Assets/Musics/music2.wav">Play</button>
+          </div>
+          <!-- Musica #3 -->
+          <div class="music-area">
+            <span>Music #3</span>
+            <button class="music-button" data-src="../Assets/Musics/music3.wav">Play</button>
+          </div>
+          <!-- Musica #4 -->
+          <div class="music-area">
+            <span>Music #4</span>
+            <button class="music-button" data-src="../Assets/Musics/music4.wav">Play</button>
+          </div>
+          <!-- Musica #5 -->
+          <div class="music-area">
+            <span>Music #5</span>
+            <button class="music-button" data-src="../Assets/Musics/music5.wav">Play</button>
+          </div>
+          <!-- Musica #6 -->
+          <div class="music-area">
+            <span>Music #6</span>
+            <button class="music-button" data-src="../Assets/Musics/music6.wav">Play</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex">
+        <div class="setting">
+          <label for="volume-slider">Volume:</label>
+          <input type="range" id="volume-slider" min="0" max="100">
+        </div>
+      </div>
+
+
+
+    </div>
   </div>
 
-  <div class="navigation">
+
+
+  <!-- Menu lateral -->
+  <div class="navigation expanded">
+
+    <div class="d-centered">
+      <div class="menu-toggle">
+        <img src="../Assets/icons/Sidebar_Icons/expand-menu-icon.png" class="icon" alt="Ìcone do menu">
+      </div>
+    </div>
+
+
     <ul>
-      <li class="list">
-        <a href="../index.html">
-          <span class="icon"><img src="../Assets/icons/home-icon-navbar.png" /></span>
-          <span class="title">Home</span>
+      <li>
+        <a href="../Html/index.html">
+          <span class="icon "><img src="../Assets/icons/Sidebar_Icons/home-icon-sidebar.png" /></span>
+          <span class="title ">Home</span>
         </a>
       </li>
-      <li class="list active">
-        <a class="active-link" href="#">
-          <span class="icon"><img src="../Assets/icons/practice-icon-navbar.png" /></span>
+      <li>
+        <a href="../Html/practice.html">
+          <span class="icon"><img src="../Assets/icons/Sidebar_Icons/practice-icon-sidebar.png" /></span>
           <span class="title">Prática</span>
         </a>
       </li>
-      <li class="list">
-        <a href="../theory.html">
-          <span class="icon"><img src="../Assets/icons/theory-icon-navbar.png" /></span>
+      <li>
+        <a href="../Html/theory.html">
+          <span class="icon"><img src="../Assets/icons/Sidebar_Icons/theory-icon-sidebar.png" /></span>
           <span class="title">Teoria</span>
         </a>
       </li>
-      <li class="list">
-        <a href="../lab.html">
-          <span class="icon"><img src="../Assets/icons/lab-icon-navbar.png" /></span>
-          <span class="title">Lab (Demo)</span>
+      <li class="active">
+        <a href="../Html/lab.html">
+          <span class="icon  icon-active"><img src="../Assets/icons/Sidebar_Icons/lab-icon-sidebar.png" /></span>
+          <span class="title active ">Laboratório</span>
         </a>
       </li>
-      <li class="list">
-        <a href="../questions.html">
-          <span class="icon"><img src="../Assets/icons/questions-icon-navbar.png" /></span>
+      <li>
+        <a href="../Html/questions.html">
+          <span class="icon"><img src="../Assets/icons/Sidebar_Icons/quiz-icon-sidebar.png" /></span>
           <span class="title">Questões</span>
+        </a>
+      </li>
+      <li class="config">
+        <a href="#" id="settingsButton">
+          <span class="icon rotate"><img src="../Assets/icons/Sidebar_Icons/config-icon-sidebar.png" /></span>
+          <span class="title ">Definicões</span>
         </a>
       </li>
 
     </ul>
   </div>
 
-  <!-- Sounds -->
-  <audio id="audioElement">
-    <source src="../Assets/sounds/music.mp3" type="audio/mpeg" />
-  </audio>
-  <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
-  <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
 
-  <div class="overlay" id="overlay">
-    <div class="message-box" id="message-box">
-      <div id="close-message">
-        <img src="../Assets/icons/close-icon.png" alt="Close button" />
-      </div>
-      <p id="text">Carregando...</p>
-    </div>
-  </div>
 
-  <main class="anim-long-entrance d-centered ml-default">
-    <div class="d-centered mtb-10" id="d-centered">
+
+  <main class="d-flex margin-default flex-column">
+
+    <header class="w-100  logo">
+      <img id="logo-img" src="../Assets/imgs/Mendel_legancy_logo.png" alt="Mendel's Legacy">
+    </header>
+    <div class="content">
+      <div class="flex-column">
+
+        <header>
+          <h2 class="title-bar">O Laboratório</h2>
+          <p>
+            No Laboratório, o sistema gera uma tabela exibindo as combinações genéticas previstas com base nas
+            características
+            selecionadas e nos organismos escolhidos.
+          </p>
+        </header>
+
+        <section id="lab-section" class="container">
+
+          <div class="overlay" id="overlay">
+            <div class="message-box" id="message-box">
+              <div id="close-message">
+                <img src="../Assets/icons/close-icon.png" alt="Close button">
+              </div>
+              <p>Por favor, selecione um organismo e a quantidade de características.</p>
+            </div>
+          </div>
+
+
+          <!-- Sounds -->
+
+          <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
+          <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
+
+
+
+          <di<div class="d-centered mtb-10" id="d-centered">
       <div class="calc-features">
         <h1>Calculando uma característica</h1>
 
@@ -820,44 +919,30 @@
       </script>
     </div>
     </div>
+      </div>
+    </div>
+
+    </section>
+
+    </div>
+
+
+    <!-- Rodapé -->
+    <div class="footer">
+      &copy; 2023 Mendel's Legacy - Todos os direitos reservados
+      <br>
+      Musicas geradas por <a href="https://mubert.com/render" target="_blank">mubert</a>:
+    </div>
+    </div>
   </main>
 
-  <script async src="../Assets/js/fraction.js"></script>
-  <script async src="../Assets/js/actions.js"></script>
-  <script async src="../Assets/js/menu.js"></script>
-  <script async src="../Assets/js/sounds.js"></script>
+  <script src="../Assets/js/darkmode.js"></script>
+  <script src="../Assets/js/sounds.js"></script>
+  <script src="../Assets/js/settingsModal.js"></script>
+  <script src="../Assets/js/menu.js"></script>
+  <script src="../Assets/js/alerts.js"></script>
+  <script src="../Assets//js/fraction.js"></script>
+
 </body>
 
 </html>
-
-<!--
-
-Seleção de Elementos:
-
-const text = document.getElementById("text");: Pega o elemento com o ID "text".
-Função mostrarInterface(id):
-
-Essa função recebe um id como argumento e serve para alternar entre diferentes interfaces no documento. Ela esconde todas as interfaces, remove a classe "ativa" delas, e adiciona a classe "ativa" à interface com o id especificado, tornando-a visível.
-Função caracteristicas():
-
-Essa função é chamada para calcular e exibir valores com base nas características das plantas e cruzamento de alelos.
-Ela obtém os valores selecionados nos formulários e, dependendo das escolhas, atribui valores específicos a um elemento de visualização (input). Isso é feito para diferentes combinações de características, como altura, posição das flores, cor da flor, cor da vagem, forma da vagem, cor da semente e textura da semente.
-Função createTable():
-
-Essa função é responsável por criar uma tabela de resultados com base nos alelos cruzados.
-Ela é acionada por um botão chamado "criadorTabela" e manipula os valores inseridos nos campos de visualização.
-Dependendo dos valores, ela cria uma tabela com resultados de combinações de alelos das plantas paternas e maternas.
-Ela também verifica se os campos estão vazios e exibe uma mensagem de erro se necessário.
-Função disabledBtn():
-
-Essa função trata do comportamento dos botões em relação à habilitação e desabilitação.
-O botão "criadorTabela" é desabilitado quando os campos de alelos paternos e maternos estão preenchidos, para evitar a criação de múltiplas tabelas.
-O botão "btnLimpar" permite remover a tabela de resultados e reativar o botão "criadorTabela".
-Execução das Funções:
-
-disabledBtn();: Chama a função para tratar a habilitação e desabilitação de botões.
-createTable();: Chama a função para criar a tabela de resultados com base nas combinações de alelos.
-No geral, este código é utilizado para criar uma ferramenta interativa que calcula e exibe combinações de alelos de plantas com base em características específicas.
-Ele manipula a exibição de interfaces, cálculos de cruzamento de alelos e criação de tabelas de resultados. Note que este código presume a existência de elementos HTML com IDs e classes específicas para funcionar corretamente.
-
--->

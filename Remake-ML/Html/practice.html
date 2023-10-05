@@ -153,9 +153,6 @@
 
 
         <div class="flex-column">
-
-
-
             <!-- Conteúdo principal -->
             <div class="content">
                 <header>
@@ -182,13 +179,15 @@
                                     <option value="Todos">Todos</option>
                                     <option value="Ervilhas">Ervilhas</option>
                                 </select>
-
-                                <label  for="numCharacteristicsInput1">Quantidade de Características:</label>
-                                <select class="disabled" id="numCharacteristicsInput1" class="custom-select-lab">
-                                    <option value="Todos">Todos</option>
-                                    <option value="1">Uma característica</option>
-                                    <option value="2">Duas características</option>
-                                </select>
+                    
+                                <label>Quantidade de Características:</label>
+                                <div class="d-flex gap-2">
+                    
+                                    <span class="btn-characteristics active">Uma</span>
+                                    <span class="btn-characteristics disabled">Duas </span>
+                    
+                                </div>
+                    
                             </div>
                             <div class="col-6">
                                 <label for="characteristic1Select">1º Característica:</label>
@@ -203,7 +202,7 @@
                                 </select>
                                 <div>
                                     <label for="characteristic2Select">2º Característica:</label>
-                                    <select id="characteristic2Select" class="custom-select-lab">
+                                    <select id="characteristic2Select" class="custom-select-lab disabled">
                                         <option value="Vazio">Vazio</option>
                                         <option value="Todas">Todas</option>
                                         <option value="Altura das flores (TT)">Altura das flores (TT)</option>
@@ -215,14 +214,14 @@
                                     </select>
                                 </div>
                             </div>
-
+                    
                         </div>
                         <button class="form-btn" type="submit">Configurar</button>
                     </form>
 
                 </section>
 
-                <section class="container">
+                <section id="tables" class="container d-none">
                 <h2 class="title-bar" id="classification-title">Classificando:<span id="selected-organism"> organismo</span></h2>
 
                     <!-- cards com as tabelas -->

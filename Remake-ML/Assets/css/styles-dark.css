@@ -1,9 +1,5 @@
 /* styles-dark.css */
 
-.dark-mode .preload {
-    background-color: var(--dark);
-}
-
 .dark-mode .navigation {
     background-color: var(--dark);
     color: var(--light);
@@ -17,12 +13,23 @@
     color: var(--light);
 }
 
+.dark-mode .btn-characteristics.active {
+    background-color: var(--dark-green);
+    color: #FFF;
+    box-shadow: 0 0 0 0 transparent;
+    color: var(--light) !important;
+}
+
 .dark-mode #filter-form {
     background-color: var(--black);
 }
 
 .dark-mode .theory-area {
     background-color: var(--background-dark);
+}
+
+.dark-mode .btn-characteristics {
+    color: #FFF;
 }
 
 .dark-mode .form-btn {

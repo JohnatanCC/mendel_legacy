@@ -106,10 +106,9 @@
                     <span class="title ">Home</span>
                 </a>
             </li>
-            <li >
+            <li>
                 <a href="practice.html">
-                    <span class="icon"><img
-                            src="../Assets/icons/Sidebar_Icons/practice-icon-sidebar.png" /></span>
+                    <span class="icon"><img src="../Assets/icons/Sidebar_Icons/practice-icon-sidebar.png" /></span>
                     <span class="title">Prática</span>
                 </a>
             </li>
@@ -121,7 +120,8 @@
             </li>
             <li class="active">
                 <a href="lab.html">
-                    <span class="icon  icon-active"><img src="../Assets/icons/Sidebar_Icons/lab-icon-sidebar.png" /></span>
+                    <span class="icon  icon-active"><img
+                            src="../Assets/icons/Sidebar_Icons/lab-icon-sidebar.png" /></span>
                     <span class="title active ">Laboratório</span>
                 </a>
             </li>
@@ -149,8 +149,118 @@
         <header class="w-100  logo">
             <img id="logo-img" src="../Assets/imgs/Mendel_legancy_logo.png" alt="Mendel's Legacy">
         </header>
+        <div class="content">
+            <div class="flex-column">
+
+                <header>
+                    <h2 class="title-bar">O Laboratório</h2>
+                    <p>
+                        No Laboratório, o sistema gera uma tabela exibindo as combinações genéticas previstas com base nas
+                        características
+                        selecionadas e nos organismos escolhidos.
+                    </p>
+                </header>
+
+                <section id="lab-section" class="container">
+
+                    <div class="overlay" id="overlay">
+                        <div class="message-box" id="message-box">
+                            <div id="close-message">
+                                <img src="../Assets/icons/close-icon.png" alt="Close button">
+                            </div>
+                            <p>Por favor, selecione um organismo e a quantidade de características.</p>
+                        </div>
+                    </div>
 
 
+                    <!-- Sounds -->
+
+                    <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
+                    <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
+
+
+
+                    <div class="d-centered">
+                        <div class="selection">
+                            <h2 class="text-center title-bar">Seleção do organismo</h2>
+                            <form id="formularioOrganismo" method="post">
+                                <div class="d-centered">
+                                    <div class="custom-radio">
+                                        <div class="row justify-center">
+
+
+                                            <div class="w-100 interaction">
+
+                                                <div class="tex-center gap-10 d-centered flex-row">
+                                                    <img src="../Assets/icons/plant-icon.png" width="50px">
+                                                    <h3 style="color: #6DB47C;">Plantas</h3>
+                                                </div>
+                                                <div class="d-flex flex-column">
+                                                    <input class="playable-sound" type="radio" id="organismo"
+                                                        name="organismo" value="ervilha" required>
+                                                    <label for="organismo">Ervilha</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <h2 class="text-center title-bar">Quantidade de características</h2>
+                                        <input id="uma" class="playable-sound" type="radio" name="qtdcaracter"
+                                            value="uma" required>
+                                        <label for="uma">Uma característica</label>
+                                        <input id="duas" class="playable-sound" type="radio" name="qtdcaracter"
+                                            value="duas" required>
+                                        <label for="duas">Duas características</label>
+                                    </div>
+
+                            </form>
+
+                        </div>
+
+
+                        <button type="button" onclick="qualOrganismo()">
+                            Prosseguir
+                        </button>
+
+
+
+                        <script>
+                            function qualOrganismo() {
+
+
+                                var organismo = document.querySelector('input[name="organismo"]:checked');
+                                var qtdcaracter = document.querySelector('input[name="qtdcaracter"]:checked');
+
+                                if (!organismo || !qtdcaracter) {
+                                    errorSound.play();
+                                    overlay.style.transform = 'scale(1)';
+                                    return;
+                                }
+
+                                // Armazene os valores selecionados nas variáveis
+                                var organismoSelecionado = organismo.value;
+                                var qtdcaracterSelecionada = qtdcaracter.value;
+
+                                // Faça o que você precisa com os valores selecionados
+                                console.log("Organismo selecionado:", organismoSelecionado);
+                                console.log("Quantidade de características selecionada:", qtdcaracterSelecionada);
+
+
+                                if (organismo.value === "ervilha") {
+                                    if (qtdcaracter.value === "uma") {
+                                        window.location.href = "../pages/1caracteristica.html";
+                                    } else if (qtdcaracter.value === "duas") {
+                                        window.location.href = "../pages/2caracteristica.html";
+                                    }
+                                }
+                            }
+                        </script>
+                    </div>
+            </div>
+        </div>
+
+        </section>
+
+        </div>
 
 
         <!-- Rodapé -->
@@ -166,6 +276,7 @@
     <script src="../Assets/js/sounds.js"></script>
     <script src="../Assets/js/settingsModal.js"></script>
     <script src="../Assets/js/menu.js"></script>
+    <script src="../Assets/js/alerts.js"></script>
 </body>
 
 </html>
@@ -391,4 +502,3 @@
 <div class="ui-check-btn">
     <button id="checkButton">Verificar Combinação</button>
 </div> -->
-

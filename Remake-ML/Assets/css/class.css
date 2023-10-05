@@ -1,3 +1,7 @@
+body.no-scroll {
+    overflow: hidden;
+}
+
 .title-bar {
     border-bottom: 2px solid #ccc;
     padding-bottom: 5px;
@@ -66,4 +70,21 @@ margin:  0 auto;
 
 .event-none {
     pointer-events: none;
+}
+
+.text-pink {
+    color: #DD1E84 !important;
+}
+
+.text-leader {
+    color:#d5486b !important;
+}
+
+.blur-effect {
+    filter: blur(10px);
+    transition: all 0.4s ease-in;
+}
+
+.d-grid {
+    display: grid;
 }
