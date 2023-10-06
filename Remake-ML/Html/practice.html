@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Assets/css/anim.css">
+    <link rel="stylesheet" href="../Assets/css/class.css">
+    <link rel="stylesheet" href="../Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Assets/css/style.css">
+    <link rel="stylesheet" href="../Assets/css/styles-light.css">
+    <link rel="stylesheet" href="../Assets/css/styles-dark.css">
+    <link rel="stylesheet" href="../Assets/css/extraButtons.css">
+    <!-- O ID deve coincidir com o elemento no JavaScript -->
+
+    <!-- Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;800&family=Rubik&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="../Assets/icons/system-icon.png" type="image/x-icon" />
+    <title>Mendel's Legacy</title>
+
+</head>
+
+<body class="light-mode ">
+
+    <div id="settings-modal" class="anim-entrance">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="title-bar">Configurações do Sistema</h2>
+            <div class="setting">
+                <div class="d-flex">
+                    <label>Modo Escuro:</label>
+                    <input type="checkbox" class="checkbox" id="chk" />
+                    <label id="dark-mode-toggle" class="label" for="chk">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="setting">
+                <label style="padding-bottom: 15px;">Música:</label>
+                <div class="music-content">
+                    <!-- Musica #1 -->
+                    <div class="music-area">
+                        <span>Music #1</span>
+                        <button class="music-button" data-src="../Assets/Musics/music1.wav">Play</button>
+                    </div>
+                    <!-- Musica #2 -->
+                    <div class="music-area">
+                        <span>Music #2</span>
+                        <button class="music-button" data-src="../Assets/Musics/music2.wav">Play</button>
+                    </div>
+                    <!-- Musica #3 -->
+                    <div class="music-area">
+                        <span>Music #3</span>
+                        <button class="music-button" data-src="../Assets/Musics/music3.wav">Play</button>
+                    </div>
+                    <!-- Musica #4 -->
+                    <div class="music-area">
+                        <span>Music #4</span>
+                        <button class="music-button" data-src="../Assets/Musics/music4.wav">Play</button>
+                    </div>
+                    <!-- Musica #5 -->
+                    <div class="music-area">
+                        <span>Music #5</span>
+                        <button class="music-button" data-src="../Assets/Musics/music5.wav">Play</button>
+                    </div>
+                    <!-- Musica #6 -->
+                    <div class="music-area">
+                        <span>Music #6</span>
+                        <button class="music-button" data-src="../Assets/Musics/music6.wav">Play</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex">
+                <div class="setting">
+                    <label for="volume-slider">Volume:</label>
+                    <input type="range" id="volume-slider" min="0" max="100">
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Menu lateral -->
+    <div class="navigation expanded">
+<div class="menu-extend">
+    <div class="menu-toggle-extend">
+        <img src="../Assets/icons/Sidebar_Icons/expand-menu-icon.png" class="icon" alt="Ìcone do menu">
+    </div>
+</div>
+        <div class="d-centered">
+            <div class="menu-toggle">
+                <img src="../Assets/icons/Sidebar_Icons/expand-menu-icon.png" class="icon" alt="Ìcone do menu">
+            </div>
+        </div>
+
+
+        <ul>
+            <li>
+                <a href="index.html">
+                    <span class="icon "><img src="../Assets/icons/Sidebar_Icons/home-icon-sidebar.png" /></span>
+                    <span class="title ">Home</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="practice.html">
+                    <span class="icon icon-active"><img
+                            src="../Assets/icons/Sidebar_Icons/practice-icon-sidebar.png" /></span>
+                    <span class="title active">Prática</span>
+                </a>
+            </li>
+            <li>
+                <a href="theory.html">
+                    <span class="icon"><img src="../Assets/icons/Sidebar_Icons/theory-icon-sidebar.png" /></span>
+                    <span class="title">Teoria</span>
+                </a>
+            </li>
+            <li>
+                <a href="lab.html">
+                    <span class="icon"><img src="../Assets/icons/Sidebar_Icons/lab-icon-sidebar.png" /></span>
+                    <span class="title">Laboratório</span>
+                </a>
+            </li>
+            <li>
+                <a href="questions.html">
+                    <span class="icon"><img src="../Assets/icons/Sidebar_Icons/quiz-icon-sidebar.png" /></span>
+                    <span class="title">Questões</span>
+                </a>
+            </li>
+            <li class="config">
+                <a href="#" id="settingsButton">
+                    <span class="icon rotate"><img src="../Assets/icons/Sidebar_Icons/config-icon-sidebar.png" /></span>
+                    <span class="title ">Definicões</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+
+
+    <main class="d-flex margin-default flex-column">
+
+        <header class="w-100  logo">
+            <img id="logo-img" src="../Assets/imgs/Mendel_legancy_logo.png" alt="Mendel's Legacy">
+        </header>
+
+
+        <div class="flex-column">
+            <!-- Conteúdo principal -->
+            <div class="content">
+                <header>
+                    <h2 class="title-bar">A Prática</h2>
+                    <p class="p-2">
+                        Na Prática, você tem a oportunidade de aplicar os princípios da teoria de Mendel de forma
+                        interativa. Nesta seção,
+                        escolha características genéticas específicas e organismos correspondentes para criar suas
+                        próprias combinações
+                        genéticas. Após configurar os cruzamentos desejados, selecione uma tabela que apresenta as
+                        possíveis combinações
+                        genéticas com base nas características selecionadas. Em seguida, classifique essas combinações
+                        de acordo com suas
+                        características correspondentes.
+                    </p>
+                </header>
+                <section class="container mb-4">
+
+                    <form id="filter-form">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="organismSelect">Selecione o organismo:</label>
+                                <select id="organismSelect" class="custom-select-lab">
+                                    <option value="Todos">Todos</option>
+                                    <option value="Ervilhas">Ervilhas</option>
+                                </select>
+                    
+                                <label>Quantidade de Características:</label>
+                                <div class="d-flex gap-2">
+                    
+                                    <span class="btn-characteristics active">Uma</span>
+                                    <span class="btn-characteristics disabled">Duas </span>
+                    
+                                </div>
+                    
+                            </div>
+                            <div class="col-6">
+                                <label for="characteristic1Select">1º Característica:</label>
+                                <select id="characteristic1Select" class="custom-select-lab">
+                                    <option value="Todas">Todas</option>
+                                    <option value="Altura das flores (TT)">Altura das flores (TT)</option>
+                                    <option value="Posição das flores (AA)">Posição das flores (AA)</option>
+                                    <option value="Cor da flor (PP)">Cor da flor (PP)</option>
+                                    <option value="Cor da vagem (GG)">Cor da vagem (GG)</option>
+                                    <option value="Forma da vagem (SS)">Forma da vagem (SS)</option>
+                                    <option value="Cor da semente (YY)">Cor da semente (YY)</option>
+                                </select>
+                                <div>
+                                    <label for="characteristic2Select">2º Característica:</label>
+                                    <select id="characteristic2Select" class="custom-select-lab disabled">
+                                        <option value="Vazio">Vazio</option>
+                                        <option value="Todas">Todas</option>
+                                        <option value="Altura das flores (TT)">Altura das flores (TT)</option>
+                                        <option value="Posição das flores (AA)">Posição das flores (AA)</option>
+                                        <option value="Cor da flor (PP)">Cor da flor (PP)</option>
+                                        <option value="Cor da vagem (GG)">Cor da vagem (GG)</option>
+                                        <option value="Forma da vagem (SS)">Forma da vagem (SS)</option>
+                                        <option value="Cor da semente (YY)">Cor da semente (YY)</option>
+                                    </select>
+                                </div>
+                            </div>
+                    
+                        </div>
+                        <button class="form-btn" type="submit">Configurar</button>
+                    </form>
+
+                </section>
+
+                <section id="tables" class="container d-none">
+                <h2 class="title-bar" id="classification-title">Classificando:<span id="selected-organism"> organismo</span></h2>
+
+                    <!-- cards com as tabelas -->
+                    <div class="table-cards-content">
+
+
+                    </div>
+                </section>
+
+                <section id="characteristics-section" class="characteristics-section container">
+                    <h2 class="title-bar">Vamos Classificar!</h2>
+                    <h2>Selecione as imagens e coloque-as na tabela abaixo</h2>
+
+                    <div class="d-centered">
+                        <div class="characteristics-container">
+                            <!-- Imagens das características -->
+                            <div class="characteristic-images">
+
+                            </div>
+                            <!-- Tabela de classificação -->
+                            <div class="table-card-classification">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        </div>
+        <!-- Rodapé -->
+        <div class="footer">
+            &copy; 2023 Mendel's Legacy - Todos os direitos reservados
+            <br>
+            Músicas geradas por <a href="https://mubert.com/render" target="_blank">Mubert</a>
+        </div>
+        </div>
+
+        <!-- Audios -->
+        <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
+        <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
+
+    </main>
+
+    <script src="../Assets/js/darkmode.js"></script>
+    <script src="../Assets/js/sounds.js"></script>
+    <script src="../Assets/js/settingsModal.js"></script>
+    <script src="../Assets/js/menu.js"></script>
+    <script src="../Assets/js/practice.js"></script>
+    <script src="../Assets/js/practiceData.js"></script>
+
+</body>
+
+</html>

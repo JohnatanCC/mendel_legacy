@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mendel's Legacy</title>
+    <link rel="stylesheet" href="../Assets/css/anim.css">
+    <link rel="stylesheet" href="../Assets/css/bootstrap.min.css">
+   
+    <link rel="stylesheet" href="../Assets/css/class.css">
+    <link rel="stylesheet" href="../Assets/css/style.css">
+    <link rel="stylesheet" href="../Assets/css/styles-dark.css">
+    <link rel="stylesheet" href="../Assets/css/extraButtons.css">
+    <!-- O ID deve coincidir com o elemento no JavaScript -->
+    <link rel="stylesheet" href="../Assets/css/styles-light.css">
+    <!-- Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;800&family=Rubik&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="../Assets/icons/system-icon.png" type="image/x-icon" />
+    <title>Mendel's Legacy</title>
+</head>
+
+<body class="light-mode ">
+
+    <div id="settings-modal" class="anim-entrance">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="title-bar">Configurações do Sistema</h2>
+            <div class="setting">
+                <div class="d-flex">
+                    <label>Modo Escuro:</label>
+                    <input type="checkbox" class="checkbox" id="chk" />
+                    <label id="dark-mode-toggle" class="label" for="chk">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
+            </div>
+        <div class="setting">
+            <label style="padding-bottom: 15px;">Música:</label>
+            <div class="music-content">
+                <!-- Musica #1 -->
+                <div class="music-area">
+                    <span>Music #1</span>
+                    <button class="music-button" data-src="../Assets/Musics/music1.wav">Play</button>
+                </div>
+                <!-- Musica #2 -->
+                <div class="music-area">
+                    <span>Music #2</span>
+                    <button class="music-button" data-src="../Assets/Musics/music2.wav">Play</button>
+                </div>
+                <!-- Musica #3 -->
+                <div class="music-area">
+                    <span>Music #3</span>
+                    <button class="music-button" data-src="../Assets/Musics/music3.wav">Play</button>
+                </div>
+                <!-- Musica #4 -->
+                <div class="music-area">
+                    <span>Music #4</span>
+                    <button class="music-button" data-src="../Assets/Musics/music4.wav">Play</button>
+                </div>
+                <!-- Musica #5 -->
+                <div class="music-area">
+                    <span>Music #5</span>
+                    <button class="music-button" data-src="../Assets/Musics/music5.wav">Play</button>
+                </div>
+                <!-- Musica #6 -->
+                <div class="music-area">
+                    <span>Music #6</span>
+                    <button class="music-button" data-src="../Assets/Musics/music6.wav">Play</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div class="setting">
+                <label for="volume-slider">Volume:</label>
+                <input type="range" id="volume-slider" min="0" max="100">
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+
+
+
+    <!-- Menu lateral -->
+    <div class="navigation expanded">
+<div class="menu-extend">
+    <div class="menu-toggle-extend">
+        <img src="../Assets/icons/Sidebar_Icons/expand-menu-icon.png" class="icon" alt="Ìcone do menu">
+    </div>
+</div>
+        <div class="d-centered">
+            <div class="menu-toggle">
+                <img src="../Assets/icons/Sidebar_Icons/expand-menu-icon.png" class="icon" alt="Ìcone do menu">
+            </div>
+        </div>
+
+
+        <ul>
+            <li>
+                <a href="index.html">
+                    <span class="icon "><img src="../Assets/icons/Sidebar_Icons/home-icon-sidebar.png" /></span>
+                    <span class="title ">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="practice.html">
+                    <span class="icon"><img src="../Assets/icons/Sidebar_Icons/practice-icon-sidebar.png" /></span>
+                    <span class="title">Prática</span>
+                </a>
+            </li>
+            <li class="active">
+                <a>
+                    <span class="icon icon-active"><img
+                            src="../Assets/icons/Sidebar_Icons/theory-icon-sidebar.png" /></span>
+                    <span class="title active">Teoria</span>
+                </a>
+            </li>
+            <li>
+                <a href="lab.html">
+                    <span class="icon"><img src="../Assets/icons/Sidebar_Icons/lab-icon-sidebar.png" /></span>
+                    <span class="title">Laboratório</span>
+                </a>
+            </li>
+            <li>
+                <a href="questions.html">
+                    <span class="icon"><img src="../Assets/icons/Sidebar_Icons/quiz-icon-sidebar.png" /></span>
+                    <span class="title">Questões</span>
+                </a>
+            </li>
+            <li class="config">
+                <a href="#" id="settingsButton">
+                    <span class="icon rotate"><img src="../Assets/icons/Sidebar_Icons/config-icon-sidebar.png" /></span>
+                    <span class="title ">Definicões</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+
+
+    <main class="d-flex margin-default flex-column">
+
+        <header class="w-100  logo">
+            <img id="logo-img" src="../Assets/imgs/Mendel_legancy_logo.png" alt="Mendel's Legacy">
+        </header>
+
+
+        <div class="flex-column ">
+
+
+
+            <!-- Conteúdo principal -->
+            <div class="content">
+                <header>
+                    <h2 class="title-bar">A teoria de mendel</h2>
+                    <p class="p-2">
+                        Veja o começo do <i>legado de Mendel</i>, conheça seus
+                        experimentos e descubra como suas descobertas revolucionaram
+                        nosso entendimento sobre hereditariedade.
+                    </p>
+                </header>
+
+                <section>
+
+                    <div class="slider-container mtb-10">
+                        <div class="slider">
+                            <div class="container-content">
+                                <article id="activeSlide" class="activeSlide"></article>
+                            </div>
+                        </div>
+
+                        <div class="page-buttons anim-opacity">
+                            <button id="prev" class="playable-sound">
+                                <div class="page-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFF"
+                                        class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                                    </svg>
+                                </div>
+
+                                <span class="text-button ">Anterior</span>
+                            </button>
+                            <div class="d-flex number-page">
+                                <span>Pagína:</span> <span class="numero" id="index">1</span>
+                            </div>
+
+
+                            <button class="playable-sound" id="next">
+
+                                <span class="text-button">Próximo</span>
+                                <div class="page-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFF"
+                                        class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+            </div>
+        </div>
+        <!-- Rodapé -->
+        <div class="footer">
+            &copy; 2023 Mendel's Legacy - Todos os direitos reservados
+            <br>
+            Músicas geradas por <a href="https://mubert.com/render" target="_blank">Mubert</a>
+        </div>
+        </div>
+
+        <!-- Audios -->
+        <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
+        <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
+    </main>
+
+    <script src="../Assets/js/darkmode.js"></script>
+    <script src="../Assets/js/sounds.js"></script>
+    <script src="../Assets/js/theory.js"></script>
+    <script src="../Assets/js/menu.js"></script>
+    <script src="../Assets/js/settingsModal.js"></script>
+
+</body>
+
+</html>
