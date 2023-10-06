@@ -9,10 +9,11 @@ let expanded = false;
 menuExtend.addEventListener('click', () => {
     menuToggle.style.display = "none";
     if (!expanded) {
-    navigation.style.width = "100%";
+        navigation.style.width = "100%";
+        navigation.style.borderRight = "var(--light) 10px solid"
     } else {
     navigation.style.width = "0px ";
-    }
+    }        navigation.style.borderRight = "none"
 
      expanded = !expanded;
 });

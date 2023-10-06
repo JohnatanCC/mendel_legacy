@@ -799,11 +799,11 @@ function classifyOneGeneId8() {
         <div class="cell-header event-none">S</div>
         <div class="cell-header event-none">S</div>
         <div class="cell-header event-none">S</div>
-        <div data-gene="smoth" class="cell"></div>
-        <div data-gene="smoth" class="cell"></div>
+        <div data-gene="yellow" class="cell"></div>
+        <div data-gene="yellow" class="cell"></div>
         <div class="cell-header event-none">S</div>
-        <div data-gene="smoth" class="cell"></div>
-        <div data-gene="rough" class="cell"></div>
+        <div data-gene="yellow" class="cell"></div>
+        <div data-gene="yellow" class="cell"></div>
     </div>
     <div class="card-footer">
         <button class="card-btn verify-btn">Verificar</button>

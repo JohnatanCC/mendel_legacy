@@ -119,18 +119,21 @@ startButton.addEventListener('click', () => {
 function finishQuiz() {
     let totalQuestionsForDifficulty = selectedQuestions.length;
     let points = Math.floor((correctAnswers / totalQuestionsForDifficulty) * 100);
-
+    const prizeImage = document.querySelector(".prizeImage");
     if (points < 50) {
         document.querySelector(".scoreText1").innerHTML = "Você teve um desempenho abaixo do esperado. Continue estudando e tente novamente para melhorar seus conhecimentos.";
         document.querySelector(".scorePct").style.color = "#DC3545";
+        prizeImage.src = "../Assets/imgs/sad-eve.png";
     } else if (points >= 50 && points < 70) {
         document.querySelector(".scoreText1").innerHTML =
             "Você está no caminho certo, mas ainda há espaço para melhorias. Continue praticando e você alcançará um desempenho ainda melhor na próxima vez.";
         document.querySelector(".scorePct").style.color = "#FFC107";
+        prizeImage.src = "../Assets/imgs/normal-eve.png";
     } else if (points >= 70) {
         document.querySelector(".scoreText1").innerHTML =
             "Parabéns! Você teve um ótimo desempenho no quiz. Seus conhecimentos estão afiados. Continue assim e continue aprendendo.";
         document.querySelector(".scorePct").style.color = "#198754";
+        prizeImage.src = "../Assets/imgs/happy-eve.png";
     }
 
     document.querySelector(".scorePct").innerHTML = `Acertou ${points}%`;
