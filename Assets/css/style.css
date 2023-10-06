@@ -2075,6 +2075,10 @@ body {
         width: 300px;
     }
 
+    .team-section h2 {
+        text-align: center;
+    }
+
     .theory-area {
         flex-direction: column;
     }
@@ -2161,6 +2165,7 @@ body {
     .responsive-feature {
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
 
     .content {
