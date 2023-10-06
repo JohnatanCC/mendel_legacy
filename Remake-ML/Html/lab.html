@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mendel's Legacy</title>
+        <link rel="stylesheet" href="../Assets/css/lab.css">
     <link rel="stylesheet" href="../Assets/css/anim.css">
     <link rel="stylesheet" href="../Assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../Assets/css/style.css">
+    
     <link rel="stylesheet" href="../Assets/css/class.css">
-    <link rel="stylesheet" href="../Assets/css/styles-dark.css">
-    <link id="stylesheet" rel="stylesheet" href="styles-light.css">
+    <link rel="stylesheet" href="../Assets/css/style.css">
+    <!-- <link rel="stylesheet" href="../Assets/css/styles-dark.css"> -->
+    <!-- <link id="stylesheet" rel="stylesheet" href="styles-light.css"> -->
     <link rel="stylesheet" href="../Assets/css/extraButtons.css">
-    <!-- O ID deve coincidir com o elemento no JavaScript -->
-    <link rel="stylesheet" href="../Assets/css/styles-light.css">
+    <!-- <link rel="stylesheet" href="../Assets/css/styles-light.css"> -->
+
     <!-- Fonts -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;800&family=Rubik&display=swap">
@@ -28,7 +30,7 @@
             <span class="close">&times;</span>
             <h2 class="title-bar">Configurações do Sistema</h2>
             <div class="setting">
-                <div class="d-flex">
+                <div class="d-flex disabled">
                     <label>Modo Escuro:</label>
                     <input type="checkbox" class="checkbox" id="chk" />
                     <label id="dark-mode-toggle" class="label" for="chk">
@@ -91,7 +93,11 @@
 
     <!-- Menu lateral -->
     <div class="navigation expanded">
-
+<div class="menu-extend">
+    <div class="menu-toggle-extend">
+        <img src="../Assets/icons/Sidebar_Icons/expand-menu-icon.png" class="icon" alt="Ìcone do menu">
+    </div>
+</div>
         <div class="d-centered">
             <div class="menu-toggle">
                 <img src="../Assets/icons/Sidebar_Icons/expand-menu-icon.png" class="icon" alt="Ìcone do menu">
@@ -154,7 +160,7 @@
 
                 <header>
                     <h2 class="title-bar">O Laboratório</h2>
-                    <p>
+                    <p class="p-2">
                         No Laboratório, o sistema gera uma tabela exibindo as combinações genéticas previstas com base nas
                         características
                         selecionadas e nos organismos escolhidos.
@@ -280,225 +286,3 @@
 </body>
 
 </html>
-<!-- <style>
-    .table div:hover {
-        cursor: pointer;
-        background-color: #00b38079;
-        opacity: 0.5;
-        transition: all ease .4s;
-    }
-
-    .header {
-        background-color: var(--green) !important;
-        color: #FFF !important;
-        pointer-events: none;
-    }
-
-    .container {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .gene-option {
-        display: flex;
-        background: #FFF;
-        border: 4px solid var(--green);
-        flex-direction: row;
-        border-radius: 5px;
-        align-items: center;
-        margin: 20px 0;
-        padding: 10px;
-        flex-wrap: wrap;
-        text-align: center;
-        width: 100%;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .gene-option-item img.selected {
-        animation: pulse 1s infinite;
-    }
-
-    .gene-option-item img {
-        width: 70px;
-        height: 70px;
-        background-color: #eee;
-        border: 2px dashed #ddd;
-        cursor: pointer;
-    }
-
-    .gene-option-item p {
-        background-color: #dfdfdf;
-        border: 2px double #f5f5f5;
-        font-weight: bold;
-        padding: 5px;
-        border-radius: 10px;
-    }
-
-   
-    
-
-    .table {
-        display: grid;
-        grid-template-columns: repeat(3, 100px);
-        grid-gap: 0px;
-        margin-top: 30px;
-    }
-
-    .table .div {
-        background-color: #FFF;
-    }
-
-    .table div {
-        width: 100px;
-        height: 100px;
-        border: 2px solid #ddd;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        font-size: 20px;
-        color: #333;
-
-    }
-
-    .table img {
-        width: 70px;
-    }
-
-    .gene-option-item img:before {
-        content: "";
-        position: absolute;
-        border-radius: 50px;
-        width: 100px;
-        height: 50px;
-        background-color: rgba(0, 128, 0, 0.3);
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s;
-    }
-
-    .table div.active:before {
-        opacity: 1;
-    }
-
-    @keyframes pulse {
-
-        0%,
-        100% {
-            transform: scale(1);
-            background-color: rgba(0, 128, 0, 0.3);
-        }
-
-        50% {
-            transform: scale(1.05);
-            background-color: rgba(0, 128, 0, 0.3);
-        }
-    }
-
-    .ui-check-btn {
-        position: fixed;
-        bottom: 0px;
-        display: flex;
-      
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        background: linear-gradient(90deg, transparent, #0003, transparent);
-        
-    }
-
-    .ui-check-btn button {
-        margin:10px 0;
-
-    }
-
-    button {
-        display: block;
-        margin-top: 20px;
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: var(--green);
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: var(--dark-green);
-    }
-
-    .empty {
-        opacity: 0;
-        pointer-events: none;
-    }
-</style>
-
- 
-        <h1>Classificando:???</h1>
-        <div class="gene-option">
-            <div class="gene-option-item">
-                <img src="" alt="" data-gene="TT">
-                <p>Planta Alta</p>          
-                
-                <p>Homozigótico dominante</p>
-            </div>
-            <div class="gene-option-item">
-                <img src="Assets/imgs/small-plant.png" alt="Planta Genótipo tt" data-gene="tt">
-                <p>Planta Pequena</p>
-                <p>Homozigotico recessivo</p>
-            </div>
-        </div>
-        <p class="text-center box"><b>
-            </b>
-        </b>
-            Escolha uma planta e depois preencha a tabela.
-            <br>
-            Verde:Posição correta;
-            <br>
-            Vermelho:Posição incorreta;
-        </p>
-        <div class="row gap-10" style="flex-wrap: nowrap;">
-            <div class="col-6">
-                <div class="table">
-                    <div class="empty"></div>
-                    <div class="header">T</div>
-                    <div class="header">t</div>
-                    <div class="header">T</div>
-                    <div class="div" data-gene="TT"></div>
-                    <div class="div" data-gene="TT"></div>
-
-                    <div class="header">T</div>
-                    <div class="div" data-gene="TT"></div>
-                    <div class="div" data-gene="TT"></div>
-                </div>
-
-            </div>
-            <div class="col-6">
-                <div class="table">
-                    <div class="empty"></div>
-                    <div class="header">T</div>
-                    <div class="header">t</div>
-                    <div class="header">T</div>
-                    <div class="div">?</div>
-                    <div class="div">?</div>
-
-                    <div class="header">t</div>
-                    <div class="div">?</div>
-                    <div class="div">?</div>
-                </div>
-               
-            </div>
-        </div>
-
-
-
-    </div>
-    </div>
-</main>
-
-<div class="ui-check-btn">
-    <button id="checkButton">Verificar Combinação</button>
-</div> -->

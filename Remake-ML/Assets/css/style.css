@@ -6,6 +6,25 @@
     transition: background-color 0.6s ease, color 0.2s ease;
 }
 
+.menu-toggle-extend {
+    position: fixed;
+    top: 25px;
+    z-index: 99;
+    left: 20px;
+    opacity: 0.8;
+    padding: 5px;
+    display: none;
+    border: var(--dark-green);
+    background-color: var(--green);
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.menu-toggle-extend img {
+    width: 50px;
+    height: 50px;
+}
+
 .overlay {
     position: fixed;
     flex-direction: column;
@@ -231,7 +250,7 @@
     position: fixed;
     background-color: var(--green);
     border-right: var(--light) 10px solid;
-    z-index: 99;
+    z-index: 98;
     overflow-x: hidden;
     transition: width 0.4s;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
@@ -738,7 +757,8 @@
 .option {
     display: flex;
     align-items: center;
-    height: 50px;
+    min-height: 50px;
+    max-height: 70px;
     background-color: var(--light);
     border-radius: 10px;
     margin-bottom: 10px;
@@ -1453,7 +1473,7 @@ label {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
     transition: ease 0.4s;
-    z-index: 1;
+
 }
 
 .table-card:hover,
@@ -1595,6 +1615,7 @@ body {
 .characteristics-section h2 {
     font-size: 24px;
     margin-bottom: 20px;
+    padding: 10px 0;
 }
 
 .characteristics-container {
@@ -1740,10 +1761,7 @@ body {
     box-shadow: 0 0 0 0 transparent;
 }
 
-.selection h2 {
-    padding: 5px;
-    margin: 0;
-}
+
 
 
 .selection {
@@ -1760,8 +1778,10 @@ body {
     color: #FFF;
     text-align: center;
     margin: 10px 0;
-    color: var(--light);
+    color: var(--black);
     text-align: center;
+    margin: 0;
+    padding: 5px;
 }
 
 .selection button:hover {
@@ -1810,14 +1830,15 @@ body {
 
 #lab-section input {
     padding: 10px;
-        font-size: larger;
-        font-weight: bold;
-        width: 150px;
-        border: 2px solid #388C5A;
-        border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    width: 150px;
+    border: 2px solid #388C5A;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
 }
+
 .custom-radio input {
     display: none;
 }
@@ -2049,8 +2070,104 @@ body {
 }
 
 @media (max-width:884px) {
+    .theory-area img {
+        width: 300px;
+    }
+
+    .theory-area {
+        flex-direction: column;
+    }
+
+    .table div,
+    .table2 div,
+    .table2-classification div {
+        width: 80px;
+        height: 80px;
+
+    }
+
+    .table div,
+    .table2 div {
+        width: 80px;
+        height: 80px;
+    }
+
+    .img-fluid {
+        text-align: center;
+        margin: 0;
+    }
+
+    .custom-select,
+    .progress,
+    .tables-area {
+        width: 100%;
+    }
+
+    #table {
+        grid-template-columns: repeat(3, 80px);
+    }
+
+    #table .cell {
+        width: 80px;
+        height: 80px;
+    }
+
+    .table {
+        grid-template-columns: repeat(3, 80px);
+    }
+
+    .table2 {
+        grid-template-columns: repeat(5, 80px);
+        transform: scale(0.8);
+    }
+
+    
+
+    .characteristics-container {
+        flex-direction: column;
+    }
+
+    .characteristic-images {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .menu-toggle-extend {
+        display: block;
+    }
+
     .page-buttons>button {
         font-size: 0;
+    }
+
+    .navigation ul {
+        padding-top: 100px;
+    }
+
+    .team-section {
+        padding: 5px;
+    }
+
+    .cta {
+        width: 100% !important;
+    }
+
+    .responsive-feature {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .logo img {
+        width: 250px;
     }
 
     .theory-area {
@@ -2075,8 +2192,17 @@ body {
     }
 
     .margin-default {
-        margin-left: 90px;
+        margin-left: 0px;
     }
+
+    .preload img {
+        width: 250px;
+    }
+
+    .navigation {
+        width: 0px;
+    }
+
 }
 
 :root {

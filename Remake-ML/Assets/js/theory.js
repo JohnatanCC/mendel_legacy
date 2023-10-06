@@ -117,7 +117,7 @@ const updateSlideDisplay = () => {
     <div class="theory-area gap-4 d-centered-no-align">
 
         <div class="img-fluid mr-4">
-          <img src="${img}" alt="image" />
+          <img  src="${img}" alt="image" />
         </div>
         <div>
           <header>

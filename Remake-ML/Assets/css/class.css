@@ -88,3 +88,19 @@ margin:  0 auto;
 .d-grid {
     display: grid;
 }
+
+.gap-10 {
+    gap: 10px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
