@@ -2026,6 +2026,11 @@ div input[type="number"] {
         align-items: center;
     }
 
+        .navigation {
+            box-shadow: none;
+            border: transparent;
+        }
+
     .col-6 {
         width: 100%;
     }

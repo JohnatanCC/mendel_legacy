@@ -2100,6 +2100,11 @@ div input[type="number"] {
         width: 300px;
     }
 
+          .navigation {
+              box-shadow: none;
+              border: transparent;
+          }
+
     .theory-area {
         flex-direction: column;
     }
