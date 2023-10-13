@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const blurEffect = document.querySelector(".blur-effect");
  const body = document.body;
     const introductionText = [
-        "Olá! Eu sou Eve, a ervilha. Bem-vindo ao Mendel's Legacy (Beta). Aqui você aprenderá sobre as leis de Mendel e também poderá praticar seus conhecimentos sobre as suas Leis.",
+        "Olá! Eu sou Eve, a ervilha. Bem-vindo ao Mendel's Legacy (Beta). Aqui você aprenderá sobre as leis de Mendel e também poderá praticar seus conhecimentos sobre as suas leis.",
         "Em Mendel's Legacy você verá as seguintes funcionalidades:",
         "A Teoria, onde você aprenderá os princípios básicos das leis de Mendel.",
         "O Quiz, onde você poderá testar seus conhecimentos por meio de questionários de níveis variados.",

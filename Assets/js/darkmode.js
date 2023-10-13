@@ -6,7 +6,7 @@ let isDarkMode = localStorage.getItem('darkMode') === 'enabled';
 function enableDarkMode() {
     body.classList.remove('light-mode');
     body.classList.add('dark-mode');
-    body.style.background = 'var(--background-color)'; // Defina o background do body
+    body.style.background = 'var(--background-color)'; 
     localStorage.setItem('darkMode', 'enabled');
     logo.classList.add('icon');
     
@@ -15,7 +15,7 @@ function enableDarkMode() {
 function enableLightMode() {
     body.classList.remove('dark-mode');
     body.classList.add('light-mode');
-    body.style.background = 'var(--background-color)'; // Defina o background do body
+    body.style.background = 'var(--background-color)'; 
     localStorage.setItem('darkMode', 'disabled');
     logo.classList.remove('icon');
 }

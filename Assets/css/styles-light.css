@@ -18,6 +18,9 @@
     background-color: var(--green);
     color: var(--light);
 }
+.light-mode .custom-radio label {
+    background-color: var(--background-light);
+}
 
 .light-mode .table-card {
     background-color: var(--background-light);

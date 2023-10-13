@@ -2,9 +2,22 @@
 // Adicione este código onde você lida com o envio do formulário (após a filtragem)
 const classificationTitle = document.getElementById("classification-title");
 const selectedOrganism = organismSelect.options[organismSelect.selectedIndex].text;
+const characteristicToggle = document.querySelector(".characteristic-toggle");
+const characteristicImages = document.querySelector(".characteristic-images");
+const tableCard = document.querySelector(".table-card-classification");
 
+characteristicToggle.addEventListener('click', () => {
+    const toggleStyle = getComputedStyle(characteristicToggle);
+    if (toggleStyle.getPropertyValue('bottom') === '0px') {
+        characteristicImages.style.bottom = '0';
+        characteristicToggle.style.bottom = '210px';
 
+    } else {
 
+        characteristicImages.style.bottom = '-250px';
+        characteristicToggle.style.bottom = '0';
+    }
+});
 
 function toggleInfo(button) {
     const infoDiv = button.nextElementSibling; // Pega a próxima div após o botão
@@ -211,8 +224,7 @@ filterForm.addEventListener("submit", function (e) {
 
 function classifyOneGeneId1() {
     const cardDataId = 1;
-    const characteristicImages = document.querySelector(".characteristic-images");
-    const tableCard = document.querySelector(".table-card-classification");
+
 
     // Limpe o conteúdo existente nas imagens das características
     characteristicImages.innerHTML = "";

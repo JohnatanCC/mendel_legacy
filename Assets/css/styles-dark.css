@@ -13,6 +13,12 @@
     color: var(--light);
 }
 
+.dark-mode .characteristic-images {
+    background: linear-gradient(90deg, transparent, black 50%, transparent);
+}
+.dark-mode .characteristic-toggle img {
+    background-color: var(--background-dark);
+}
 .dark-mode .btn-characteristics.active {
     background-color: var(--dark-green);
     color: #FFF;
@@ -207,9 +213,23 @@ background-color: var(--dark);
 .dark-mode .characteristic-image {
     background-color: var(--dark);
 }
+.dark-mode .message-box ,.dark-mode .message-box p {
+    background-color: var(--background-dark);
+}
+.dark-mode #lab-section {
+    background-color: var(--background-dark);
+}
+
+.dark-mode .selection {
+    background-color: var(--dark);
+}
+
+.dark-mode .custom-radio label {
+    background-color: var(--background-color);
+}
 
 .dark-mode .characteristics-section {
-    background-color: var(--background-dark);
+    background-color: var(--black);
 }
 
 /* styles-dark.css */
