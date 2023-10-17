@@ -9,18 +9,16 @@
   <link rel="stylesheet" href="../Assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="../Assets/css/class.css">
   <link rel="stylesheet" href="../Assets/css/style.css">
-  <!-- <link rel="stylesheet" href="../Assets/css/styles-dark.css"> -->
-  <!-- <link id="stylesheet" rel="stylesheet" href="styles-light.css"> -->
   <link rel="stylesheet" href="../Assets/css/extraButtons.css">
   <!-- O ID deve coincidir com o elemento no JavaScript -->
   <link rel="stylesheet" href="../Assets/css/styles-light.css">
-  <!-- <link rel="stylesheet" href="../Assets/css/styles-light.css"> -->
   <link rel="stylesheet" href="../Assets/css/lab.css">
+    <link rel="stylesheet" href="../Assets/css/styles-dark.css">
   <!-- Fonts -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;800&family=Rubik&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+  <link rel="shortcut icon" href="../Assets/icons/system-icon.png" type="image/x-icon" />
 </head>
 
 <body class="light-mode ">
@@ -30,7 +28,7 @@
       <span class="close">&times;</span>
       <h2 class="title-bar">Configurações do Sistema</h2>
       <div class="setting">
-        <div class="d-flex disabled">
+        <div class="d-flex">
           <label>Modo Escuro:</label>
           <input type="checkbox" class="checkbox" id="chk" />
           <label id="dark-mode-toggle" class="label" for="chk">
@@ -148,21 +146,27 @@
 
 
 
+  <main class="d-centered margin-default flex-column">
 
-  <main class="d-centered  margin-default">
-    <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
-    <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
+    <header class="w-100  logo">
+      <img id="logo-img" src="../Assets/imgs/Mendel_legancy_logo.png" alt="Mendel's Legacy">
+    </header>
 
-    <div class="overlay" id="overlay">
-      <div class="message-box" id="message-box">
-        <div id="close-message">
-          <img src="../Assets/icons/close-icon.png" alt="Close button" />
+  
+
+      <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
+      <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
+
+      <div class="overlay" id="overlay">
+        <div class="message-box" id="message-box">
+          <div id="close-message">
+            <img src="../Assets/icons/close-icon.png" alt="Close button" />
+          </div>
+          <p id="text">Carregando...</p>
         </div>
-        <p id="text">Carregando...</p>
       </div>
-    </div>
 
-    <main class="anim-long-entrance  d-centered ml-default">
+
       <div class="d-centered mtb-10" id="d-centered">
         <div class="calc-features">
           <h1>Calculando uma característica</h1>
@@ -207,7 +211,7 @@
                 <div class="d-centered pais mtb-10 d-none">
                   <div class="flex-column d-centered">
                     <h2 class="text-bold">Visualizar</h2>
-                    <input placeholder="??" class="vizu2" id="visualizacao" name="visualizacao" value="" size="1"
+                    <input placeholder="??" class="vizu2 view" id="visualizacao" name="visualizacao" value="" size="1"
                       disabled />
                   </div>
                 </div>
@@ -257,7 +261,7 @@
                   <div class="d-centered mtb-10">
                     <div class="flex-column d-centered">
                       <h2 class="text-bold">Visualizar</h2>
-                      <input placeholder="??" type="" id="visualizacao2" name="visualizacao2" value="" size="1"
+                      <input placeholder="??" class="view" type="" id="visualizacao2" name="visualizacao2" value="" size="1"
                         disabled />
                     </div>
                   </div>
@@ -287,9 +291,9 @@
                   <h2 class="title-bar mtb-10">Verificação e finalização</h2>
 
                   <label for="posicao">Visualização alelo Paterno</label>
-                  <input placeholder="??" class="mtb-10" id="verAleloPai" size="1" disabled />
+                  <input placeholder="?? " class="mtb-10 view" id="verAleloPai" size="1" disabled />
                   <label for="posicao">Visualização alelo Materno</label>
-                  <input class="mtb-10" placeholder="??" id="verAleloMae" size="1" disabled />
+                  <input class="mtb-10 view" placeholder="??" id="verAleloMae" size="1" disabled />
                 </div>
 
                 <div class="d-centered flex-column d-none" id="divlista">
@@ -667,7 +671,7 @@
                 lista.classList.remove("d-none");
 
                 const headers = [
-                  "<th class='bg-transparent' ><img src='../Assets/icons/table-icon.png' class='rotate' width='80px'></th>",
+                  "<th ><img src='../Assets/icons/table-icon.png' class='rotate' width='80px'></th>",
                   `<th>${maternoString[0]}</th>`,
                   `<th>${maternoString[1]}</th>`,
                 ];
@@ -902,17 +906,24 @@
           createTable();
         </script>
       </div>
-      </div>
 
 
-    </main>
+    <div class="footer">
+      &copy; 2023 Mendel's Legacy - Todos os direitos reservados
+      <br>
+      Músicas geradas por <a href="https://mubert.com/render" target="_blank">Mubert</a>
+      <br>
 
-    <script src="../Assets/js/darkmode.js"></script>
-    <script src="../Assets/js/sounds.js"></script>
-    <script src="../Assets/js/settingsModal.js"></script>
-    <script src="../Assets/js/menu.js"></script>
-    <script src="../Assets/js/alerts.js"></script>
-    <script src="../Assets//js/fraction.js"></script>
+    </div>
+    </div>
+  </main>
+
+  <script src="../Assets/js/darkmode.js"></script>
+  <script src="../Assets/js/sounds.js"></script>
+  <script src="../Assets/js/settingsModal.js"></script>
+  <script src="../Assets/js/menu.js"></script>
+  <script src="../Assets/js/alerts.js"></script>
+  <script src="../Assets//js/fraction.js"></script>
 
 </body>
 

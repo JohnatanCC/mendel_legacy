@@ -81,12 +81,22 @@ margin:  0 auto;
 }
 
 .blur-effect {
-    filter: blur(10px);
+    filter: blur(5px);
     transition: all 0.4s ease-in;
 }
 
 .d-grid {
     display: grid;
+}
+.text-important {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--dark-green);
+    font-size: 18px;
+    background-color: #4576491a;
+    padding: 5px;
+    margin: 10px 0;
 }
 
 .gap-10 {
@@ -104,3 +114,4 @@ margin:  0 auto;
 .mb-10 {
     margin-bottom: 10px;
 }
+

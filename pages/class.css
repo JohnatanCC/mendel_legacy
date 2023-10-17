@@ -439,6 +439,12 @@ svg {
 
 }
 
+.empty {
+    border: none !important;
+    cursor: pointer;
+    background-image: none !important;
+}
+
 
 :root {
     --green: #56c696;
@@ -450,4 +456,5 @@ svg {
     --rounded-sm: 10px;
     --rounded-lg: 50px;
     --rounded-xl: 100%;
+    --better-boxShadow: rgb(50 93 66 / 25%) 0px 43px 13px -36px inset, rgba(0, 0, 0, 0.3) 0px 0px 38px 0px inset;
 }

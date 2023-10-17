@@ -42,9 +42,7 @@
     <div class="preload flex-column anim-preload">
         <img src="../Assets/imgs/Mendel_legancy_intro.gif" alt="Logo" />
         <br>
-        <h4 class="text-success">1.2 (Beta)</h4>
-        <br>
-        <h5>Pequena atulização: <i class="text-success">Ajustes Gerais</i></h5>
+        <h4 class="text-success">1.1 (Beta)</h4>
     </div>
 
     <div id="settings-modal" class="anim-entrance">
@@ -333,9 +331,47 @@
                     </section>
 
                     <section class="container p-12">
+                        <h2 class="title-bar">Atualizações</h2>
+
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+
+                                        Atualização 1.1
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>
+                                            16/10/2023
+                                        </strong>
+                                        <ul class="list-group  list-group-flush">
+                                            <li class="list-group-item">
+                                                Ajuste de posições.
+                                            </li>
+                                            <li class="list-group-item">
+                                                Darkmode implementado no laborátorio
+                                            </li>
+                                            <li class="list-group-item">
+                                                Nova tela de classificar na prática
+                                            </li>
+                                            <li class="list-group-item">
+                                                Correção de bugs visuais
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section class="container p-12">
                         <div class="team-section ">
-                            <h1 class="text-center title-bar">Feira de Ciências 2023</h1>
-                            <h2 class="text-start">Criado por alunos da JMF</h2>
+                            <h2 class="title-bar">Feira de Ciências 2023</h2>
                             <div class="row">
                                 <div class="col-6">
 
@@ -437,21 +473,23 @@
 
                 </div>
             </div>
-                <div class="footer">
-                    &copy; 2023 Mendel's Legacy - Todos os direitos reservados
-                    <br>
-                    Músicas geradas por <a href="https://mubert.com/render" target="_blank">Mubert</a>
-                    <br>
-                
-                </div>
-                    </main>
+            <div class="footer">
+                &copy; 2023 Mendel's Legacy - Todos os direitos reservados
+                <br>
+                Músicas geradas por <a href="https://mubert.com/render" target="_blank">Mubert</a>
+                <br>
+
+            </div>
+        </main>
     </div>
 
 
 
     <audio id="click-sound" src="../Assets/sounds/click-sound.wav"></audio>
     <audio id="error-sound" src="../Assets/sounds/error-sound.wav"></audio>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <script src="../Assets/js/home.js"></script>
     <script src="../Assets/js/darkmode.js"></script>
     <script src="../Assets/js/sounds.js"></script>

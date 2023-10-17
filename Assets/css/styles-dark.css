@@ -4,6 +4,7 @@
     background-color: var(--dark);
     color: var(--light);
 }
+
 .dark-mode .content {
     background-color: var(--dark);
     color: var(--light);
@@ -16,9 +17,11 @@
 .dark-mode .characteristic-images {
     background: linear-gradient(90deg, transparent, black 50%, transparent);
 }
+
 .dark-mode .characteristic-toggle img {
     background-color: var(--background-dark);
 }
+
 .dark-mode .btn-characteristics.active {
     background-color: var(--dark-green);
     color: #FFF;
@@ -45,9 +48,11 @@
 .dark-mode .content h2 {
     color: var(--green);
 }
+
 .dark-mode .content p {
     color: var(--light);
 }
+
 .dark-mode .footer {
     background-color: var(--dark);
     color: var(--light);
@@ -68,7 +73,7 @@
 
 .dark-mode .label {
     background-color: var(--background-dark);
-} 
+}
 
 .dark-mode .feature {
     background-color: var(--background-dark);
@@ -89,7 +94,7 @@
     color: var(--light) !important;
 }
 
-.dark-mode .team-section  {
+.dark-mode .team-section {
     background-color: var(--background-dark);
 }
 
@@ -98,7 +103,7 @@
 }
 
 .dark-mode .question {
-    background-color:  var(--background-dark);
+    background-color: var(--background-dark);
 }
 
 .dark-mode .option {
@@ -118,14 +123,16 @@
 
 }
 
-.dark-mode .table .cell,.dark-mode .table2 .cell {
+.dark-mode .table .cell,
+.dark-mode .table2 .cell {
     background-color: var(--dark);
 
 }
 
-.dark-mode .table div,.dark-mode .table2 div {
+.dark-mode .table div,
+.dark-mode .table2 div {
     border-color: var(--background-dark);
- 
+
 }
 
 .dark-mode textarea {
@@ -137,11 +144,35 @@
     color: #FFF;
 }
 
+.dark-mode .accordion-item:last-of-type .accordion-collapse {
+    background-color: var(--background-dark);
+}
+
+.dark-mode .view {
+    background-color: var(--background-dark);
+}
+
+.dark-mode .list-group-item {
+    background-color: var(--background-dark);
+    color: #FFF;
+    border-bottom: 1px solid rgb(255 255 255 / 20%);
+
+}
+
+.dark-mode .calc-features {
+    background-color: var(--dark) !important;
+    color: #FFF !important;
+}
+
+.custom-radio label {
+    background-color: var(--background-dark);
+}
+
 .dark-mode .select-styled {
     background-color: var(--background-dark);
 }
 
-.dark-mode .select-options{
+.dark-mode .select-options {
     background-color: var(--black);
 }
 
@@ -150,7 +181,8 @@
     background-color: var(--black);
 }
 
-.dark-mode div .table input, div .table2 input  {
+.dark-mode div .table input,
+div .table2 input {
     color: var(--light);
 }
 
@@ -158,18 +190,18 @@
     color: var(--light);
 }
 
-.dark-mode .scoreArea  {
+.dark-mode .scoreArea {
     background-color: var(--background-dark);
 }
 
 .dark-mode .number-page>span {
     color: var(--light);
-  
+
 
 }
 
 .dark-mode .number-page {
-    box-shadow:0 5px 0 1px #484848;
+    box-shadow: 0 5px 0 1px #484848;
     background-color: var(--background-dark);
 
 }
@@ -187,7 +219,8 @@
     background-color: var(--dark);
 }
 
-.dark-mode div select, div input[type="number"] {
+.dark-mode div select,
+div input[type="number"] {
     background-color: var(--background-dark);
     color: var(--light);
 }
@@ -205,17 +238,35 @@
     color: var(--light);
 
 }
+
 .dark-mode .verification-results {
-background-color: var(--dark);
+    background-color: var(--dark);
 }
 
 
 .dark-mode .characteristic-image {
     background-color: var(--dark);
 }
-.dark-mode .message-box ,.dark-mode .message-box p {
+
+.dark-mode .table-list ul {
     background-color: var(--background-dark);
 }
+
+.dark-mode table th img {
+    background-color: var(--background-dark) !important;
+}
+
+.dark-mode table td {
+    background: var(--background-dark) ;
+    color: #FFF;
+}
+
+.dark-mode .message-box,
+.dark-mode .message-box p {
+    background-color: var(--background-dark);
+    color: #FFF;
+}
+
 .dark-mode #lab-section {
     background-color: var(--background-dark);
 }
@@ -234,5 +285,6 @@ background-color: var(--dark);
 
 /* styles-dark.css */
 .dark-mode {
-    --background-color: var(--background-dark); /* Cor de fundo no modo escuro */
+    --background-color: var(--background-dark);
+    /* Cor de fundo no modo escuro */
 }
