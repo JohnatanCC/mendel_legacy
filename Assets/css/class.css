@@ -3,7 +3,7 @@ body.no-scroll {
 }
 
 .title-bar {
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--dark-green);
     padding-bottom: 5px;
 }
 
@@ -114,4 +114,6 @@ margin:  0 auto;
 .mb-10 {
     margin-bottom: 10px;
 }
-
+.h-100vh {
+    min-height: 100vh;
+}

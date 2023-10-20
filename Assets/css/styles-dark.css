@@ -144,8 +144,12 @@
     color: #FFF;
 }
 
-.dark-mode .accordion-item:last-of-type .accordion-collapse {
+.dark-mode .accordion-item .accordion-collapse {
     background-color: var(--background-dark);
+}
+
+.dark-mode .view {
+    color: var(--light);
 }
 
 .dark-mode .view {
@@ -200,8 +204,12 @@ div .table2 input {
 
 }
 
+.dark-mode .calc-features h1 {
+        text-shadow: 2px 2px 5px var(--green);
+}
+
 .dark-mode .number-page {
-    box-shadow: 0 5px 0 1px #484848;
+    box-shadow: 0 5px 0 1px #1a3518;
     background-color: var(--background-dark);
 
 }

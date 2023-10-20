@@ -439,6 +439,10 @@ svg {
 
 }
 
+.h-100vh {
+    min-height: 100vh;
+}
+
 .empty {
     border: none !important;
     cursor: pointer;

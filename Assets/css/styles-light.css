@@ -61,7 +61,11 @@
 }
 
 .light-mode .theory-area {
-    background-color: var(--background-light);
+    background-color: var(--bg);
+}
+
+.light-mode .selection {
+    background-color: var(--light);
 }
 
 .light-mode .characteristic-image {
