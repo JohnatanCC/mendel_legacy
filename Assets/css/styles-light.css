@@ -11,9 +11,7 @@
 .light-mode .content h2 {
     color: var(--dark-green);
 }
-.light-mode .content p {
-    color: var(--dark);
-}
+
 .light-mode .footer {
     background-color: var(--green);
     color: var(--light);

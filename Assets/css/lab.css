@@ -1912,6 +1912,17 @@ div input[type="number"] {
     margin-bottom: 10px;
 }
 
+.text-important {
+    text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: var(--dark-green);
+        font-size: 18px;
+        background-color: #cff4d26d;
+        padding: 5px;
+        margin: 10px 0;
+}
+
 #modal-content button {
     background-color: #00b380;
     color: #fff;

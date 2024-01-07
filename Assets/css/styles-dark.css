@@ -200,8 +200,6 @@ div .table2 input {
 
 .dark-mode .number-page>span {
     color: var(--light);
-
-
 }
 
 .dark-mode .calc-features h1 {
@@ -289,6 +287,15 @@ div input[type="number"] {
 
 .dark-mode .characteristics-section {
     background-color: var(--black);
+}
+
+.dark-mode .slick-dots li.slick-active button:before {
+    color: var(--light);
+}
+
+.dark-mode .slick-list {
+    background:var(--dark);
+    box-shadow:0 0 2px var(--dark-green);
 }
 
 /* styles-dark.css */
